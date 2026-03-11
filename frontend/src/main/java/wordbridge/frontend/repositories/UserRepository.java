@@ -16,9 +16,9 @@ public interface UserRepository extends JpaRepository<User, Integer> {
     // and Spring Data JPA automatically translates them into appropriate SQL queries.
     User findByEmail(String email);
 
-    User findByUsername(String userName);
+    //User findByUsername(String userName);
 
-    List<User> findAllByOrderByRegDateTimeDesc();
+    List<User> findAllByOrderByRegDateAndTimeDesc();
 
 }
 

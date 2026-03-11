@@ -64,7 +64,7 @@ public class UserServiceImpl implements UserService{
 @Override //logic to get all users
     public ResponseEntity<ApiResponseDto<?>> getAllUsers() throws UserServiceLogicException {
         try {
-            List<User> users = userRepository.findAllByOrderByRegDateTimeDesc();
+            List<User> users = userRepository.findAllByOrderByRegDateAndTimeDesc();
 
             return ResponseEntity
                     .status(HttpStatus.OK)
