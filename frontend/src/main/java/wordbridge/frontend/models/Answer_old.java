@@ -1,9 +1,9 @@
-package wordbridge.frontend;
+package wordbridge.frontend.models;
 
 import jakarta.persistence.*;
 @Entity
 @Table(name = "answers")
-public class Answer {
+public class Answer_old {
 
 @Id
 @GeneratedValue(strategy = GenerationType.IDENTITY)
