@@ -6,19 +6,19 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-import wordbridge.frontend.models.User;
+import wordbridge.frontend.models.Users;
 
 
 @Repository
-public interface UserRepository extends JpaRepository<User, Integer> {
+public interface UserRepository extends JpaRepository<Users, Integer> {
 
     // Developers can define methods in repository interfaces with custom query keywords,
     // and Spring Data JPA automatically translates them into appropriate SQL queries.
-    User findByEmail(String email);
+    Users findByEmail(String email);
 
     //User findByUsername(String userName);
 
-    List<User> findAllByOrderByRegDateAndTimeDesc();
+    List<Users> findAllByOrderByRegDateAndTimeDesc();
 
 }
 

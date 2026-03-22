@@ -14,7 +14,7 @@ import wordbridge.frontend.dtos.ApiResponseStatus;
 import wordbridge.frontend.dtos.UserDetailsRequestDto;
 import wordbridge.frontend.dtos.UserRegistrationDto;
 import wordbridge.frontend.exceptions.UserServiceLogicException;
-import wordbridge.frontend.models.User;
+import wordbridge.frontend.models.Users;
 import wordbridge.frontend.exceptions.UserAlreadyExistsException;
 import wordbridge.frontend.exceptions.UserNotFoundException;
 import wordbridge.frontend.repositories.UserRepository;
@@ -36,7 +36,7 @@ public class UserServiceImpl implements UserService{
             }
 
 
-            User newUser = new User(
+            Users newUser = new Users(
                     null, newUserDetails.getFirstName(), newUserDetails.getLastName(), newUserDetails.getPassword(), newUserDetails.getEmail(), LocalDateTime.now()
             );
 
@@ -64,7 +64,7 @@ public class UserServiceImpl implements UserService{
 @Override //logic to get all users
     public ResponseEntity<ApiResponseDto<?>> getAllUsers() throws UserServiceLogicException {
         try {
-            List<User> users = userRepository.findAllByOrderByRegDateAndTimeDesc();
+            List<Users> users = userRepository.findAllByOrderByRegDateAndTimeDesc();
 
             return ResponseEntity
                     .status(HttpStatus.OK)
@@ -84,7 +84,7 @@ public class UserServiceImpl implements UserService{
     public ResponseEntity<ApiResponseDto<?>> updateUser(UserDetailsRequestDto newUserDetails, int id)
             throws UserNotFoundException, UserServiceLogicException {
         try {
-            User user = userRepository.findById(id).orElseThrow(() -> new UserNotFoundException("User not found with id " + id));
+            Users user = userRepository.findById(id).orElseThrow(() -> new UserNotFoundException("User not found with id " + id));
 
             //updates everything for now but this should be broken up into multiple
             //eg users can update their email or username or password but not all at once
@@ -116,7 +116,7 @@ public class UserServiceImpl implements UserService{
     @Override //logic to delete user
     public ResponseEntity<ApiResponseDto<?>> deleteUser(int id) throws UserServiceLogicException, UserNotFoundException {
         try {
-            User user = userRepository.findById(id).orElseThrow(() -> new UserNotFoundException("User not found with id " + id));
+            Users user = userRepository.findById(id).orElseThrow(() -> new UserNotFoundException("User not found with id " + id));
 
             userRepository.delete(user);
 
