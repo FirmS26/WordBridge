@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "@saplingai/sapling-js": "^1.0.37",
+    "aws-sdk": "^2.1693.0",
+    "pg": "^8.20.0"
+  }
+}
