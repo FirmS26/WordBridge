@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AWL Demo</title>
+    <style>
+        body { font-family: Arial; max-width: 600px; margin: auto; padding: 2rem; }
+        ul { list-style: none; padding: 0; }
+        li { margin: 1rem 0; }
+        a { text-decoration: none; color: #0066cc; }
+    </style>
+</head>
+<body>
+    <h1>Academic Word List (Demo)</h1>
+    <ul id="word-list">
+        <!-- Words will be loaded here -->
+    </ul>
+
+    <script>
+        fetch('/api/words')
+            .then(res => res.json())
+            .then(words => {
+                const list = document.getElementById('word-list');
+                words.forEach(word => {
+                    const li = document.createElement('li');
+                    const a = document.createElement('a');
+                    a.href = `word.html?word=${encodeURIComponent(word)}`;
+                    a.textContent = word;
+                    li.appendChild(a);
+                    list.appendChild(li);
+                });
+            })
+            .catch(err => console.error('Error loading words:', err));
+    </script>
+</body>
+</html>

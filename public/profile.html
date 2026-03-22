@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - WordBridge</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(145deg, #1B4A5E 0%, #2E7A6E 100%);
+            min-height: 100vh;
+            padding: 2rem 1rem;
+        }
+        
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        
+        /* Navigation Bar */
+        .navbar {
+            background: white;
+            border-radius: 20px;
+            padding: 1rem 1.5rem;
+            margin-bottom: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .nav-link {
+            text-decoration: none;
+            color: #5A6B7A;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-link:hover {
+            color: #1B4A5E;
+        }
+        
+        .nav-brand {
+            font-weight: 700;
+            color: #1B4A5E;
+        }
+        
+        /* Cards */
+        .card {
+            background: white;
+            border-radius: 20px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            border: none;
+        }
+        
+        /* Profile Header */
+        .profile-header {
+            text-align: center;
+        }
+        
+        .avatar {
+            background: linear-gradient(145deg, #FFB74D, #FFA726);
+            color: #1B4A5E;
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin: 0 auto 1rem auto;
+            box-shadow: 0 8px 20px rgba(255, 183, 77, 0.3);
+        }
+        
+        .profile-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1B4A5E;
+            margin-bottom: 0.25rem;
+        }
+        
+        .profile-email {
+            color: #5A6B7A;
+            font-size: 0.9rem;
+            margin-bottom: 0.75rem;
+        }
+        
+        .badge {
+            display: inline-block;
+            padding: 0.35rem 1rem;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        
+        .badge-success {
+            background: #27AE60;
+            color: white;
+        }
+        
+        .badge-warning {
+            background: #F39C12;
+            color: white;
+        }
+        
+        .badge-secondary {
+            background: #95A5A6;
+            color: white;
+        }
+        
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .stat-card {
+            background: white;
+            border-radius: 16px;
+            padding: 1rem;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .stat-number {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #FFB74D;
+        }
+        
+        .stat-label {
+            font-size: 0.75rem;
+            color: #5A6B7A;
+            margin-top: 0.25rem;
+        }
+        
+        /* Progress Bars */
+        .progress-item {
+            margin-bottom: 1rem;
+        }
+        
+        .progress-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            color: #2C3E50;
+        }
+        
+        .progress-bar-container {
+            background: #E0E0E0;
+            border-radius: 10px;
+            height: 8px;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            background: #FFB74D;
+            height: 100%;
+            border-radius: 10px;
+            transition: width 0.3s;
+        }
+        
+        .progress-fill.locked {
+            background: #E0E0E0;
+        }
+        
+        /* Word List */
+        .word-list {
+            list-style: none;
+            margin-top: 1rem;
+        }
+        
+        .word-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .word-item:last-child {
+            border-bottom: none;
+        }
+        
+        .word-text {
+            font-weight: 500;
+            color: #2C3E50;
+        }
+        
+        /* Buttons */
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-align: center;
+            display: inline-block;
+            text-decoration: none;
+        }
+        
+        .btn-primary {
+            background: #FFB74D;
+            color: #1B4A5E;
+            border: none;
+            width: 100%;
+        }
+        
+        .btn-primary:hover {
+            background: #FFA726;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 183, 77, 0.3);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            border: 2px solid #E74C3C;
+            color: #E74C3C;
+        }
+        
+        .btn-outline:hover {
+            background: #E74C3C;
+            color: white;
+        }
+        
+        .logout-btn {
+            background: transparent;
+            color: #E74C3C;
+            border: 2px solid #E74C3C;
+            padding: 0.6rem 1.5rem;
+            font-size: 0.9rem;
+            margin-top: 1rem;
+        }
+        
+        .logout-btn:hover {
+            background: #E74C3C;
+            color: white;
+            border-color: #E74C3C;
+        }
+        
+        h6 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #1B4A5E;
+            margin-bottom: 1rem;
+        }
+        
+        .text-center {
+            text-align: center;
+        }
+        
+        .mt-3 {
+            margin-top: 1rem;
+        }
+        
+        .mb-3 {
+            margin-bottom: 1rem;
+        }
+        
+        .w-100 {
+            width: 100%;
+        }
+        
+        /* Locked badge */
+        .locked-text {
+            color: #95A5A6;
+            font-size: 0.8rem;
+        }
+
+
+
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Navigation Bar -->
+        <div class="navbar">
+            <a href="index.html" class="nav-link">← Back</a>
+            <span class="nav-brand">My Profile</span>
+            <a href="words.html" class="nav-link">Learn</a>
+        </div>
+
+        <!-- Profile Header -->
+        <div class="card profile-header">
+            <div class="avatar">
+                JD
+            </div>
+            <h3 class="profile-name">John Doe</h3>
+            <p class="profile-email">john@email.com</p>
+            <span class="badge badge-success">Beginner</span>
+        </div>
+
+        <!-- Stats Grid -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number">3</div>
+                <div class="stat-label">Lessons</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">85%</div>
+                <div class="stat-label">Avg Score</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">2</div>
+                <div class="stat-label">Day Streak</div>
+            </div>
+        </div>
+
+        <!-- Progress Section -->
+        <div class="card">
+            <h6>📈 Your Progress</h6>
+            
+            <div class="progress-item">
+                <div class="progress-header">
+                    <span>Academic Word List</span>
+                    <span>3/570</span>
+                </div>
+                <div class="progress-bar-container">
+                    <div class="progress-fill" style="width: 0.5%"></div>
+                </div>
+            </div>
+            
+            <div class="progress-item">
+                <div class="progress-header">
+                    <span>Collocations Mastered</span>
+                    <span>12/7,918</span>
+                </div>
+                <div class="progress-bar-container">
+                    <div class="progress-fill" style="width: 0.15%"></div>
+                </div>
+            </div>
+            
+            <div class="progress-item">
+                <div class="progress-header">
+                    <span>Sentences Written</span>
+                    <span>8</span>
+                </div>
+                <div class="progress-bar-container">
+                    <div class="progress-fill" style="width: 8%"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Words to Review -->
+        <div class="card">
+            <h6>📝 Words to Review</h6>
+            <ul class="word-list">
+                <li class="word-item">
+                    <span class="word-text">analyse</span>
+                    <span class="badge badge-warning">Practice More</span>
+                </li>
+                <li class="word-item">
+                    <span class="word-text">approach</span>
+                    <span class="badge badge-warning">Practice More</span>
+                </li>
+                <li class="word-item">
+                    <span class="word-text">assess</span>
+                    <span class="badge badge-success">Learned ✓</span>
+                </li>
+                <li class="word-item">
+                    <span class="word-text">context</span>
+                    <span class="badge badge-warning">Practice More</span>
+                </li>
+            </ul>
+            
+            <a href="words.html" class="btn btn-primary w-100 mt-3">
+                Continue Learning
+            </a>
+        </div>
+        
+        <!-- Log Out Button -->
+        <div class="text-center">
+            <button onclick="logout()" class="btn btn-outline logout-btn">
+                Log Out
+            </button>
+        </div>
+    </div>
+
+    <script>
+        function logout() {
+            if (confirm('Are you sure you want to log out?')) {
+                // Demo logout
+                alert('Logged out successfully! (Demo version)');
+                window.location.href = 'index.html';
+            }
+        }
+    </script>
+</body>
+</html>
