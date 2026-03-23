@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results - WordBridge</title>
+    <style>
+        body { 
+            font-family: 'Segoe UI', Arial, sans-serif; 
+            max-width: 700px; 
+            margin: 0 auto; 
+            padding: 2rem;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+        }
+        
+        h1 { 
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 0.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .word-highlight {
+            color: #3498db;
+            font-weight: bold;
+            background: #e8f4fc;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+        }
+        
+        .user-sentence {
+            background: #fff;
+            padding: 1rem;
+            border-left: 4px solid #3498db;
+            margin: 1rem 0 2rem 0;
+            font-style: italic;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .section { 
+            margin: 1.5rem 0; 
+            padding: 1.5rem; 
+            border: 1px solid #ddd; 
+            border-radius: 10px;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        
+        h2 { 
+            margin-top: 0;
+            font-size: 1.3rem;
+            color: #2c3e50;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 0.5rem;
+        }
+        
+        .lemmas span, .collocations span {
+            display: inline-block; 
+            background: #f0f0f0; 
+            padding: 0.4rem 0.8rem;
+            margin: 0.3rem; 
+            border-radius: 20px;
+            font-size: 0.9rem;
+            border: 1px solid #ddd;
+        }
+        
+        .guidance { 
+            background: #e7f3ff;
+            border-left: 4px solid #3498db;
+        }
+        
+        .guidance p {
+            font-size: 1.1rem;
+            margin: 0.5rem 0;
+            white-space: pre-line;
+        }
+        
+        .correct { 
+            background: #e6ffe6;
+            border-left: 4px solid #2ecc71;
+        }
+        
+        .correct p {
+            font-size: 1.1rem;
+            color: #27ae60;
+            font-weight: 500;
+        }
+        
+        .button-group {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        
+        button {
+            padding: 0.8rem 1.5rem;
+            background: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            flex: 1;
+        }
+        
+        button:hover {
+            background: #2980b9;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        button.secondary {
+            background: #95a5a6;
+        }
+        
+        button.secondary:hover {
+            background: #7f8c8d;
+        }
+        
+        .loading {
+            text-align: center;
+            color: #7f8c8d;
+            padding: 2rem;
+        }
+        
+        .error {
+            color: #e74c3c;
+            background: #fdeaea;
+            padding: 1rem;
+            border-radius: 5px;
+            margin: 1rem 0;
+        }
+    </style>
+</head>
+<body>
+    <a href="words.html" style="color: #7f8c8d; text-decoration: none; margin-bottom: 1rem; display: inline-block;">← Back to word list</a>
+    
+    <h1>Results for: <span class="word-highlight" id="word"></span></h1>
+    
+    <div class="user-sentence" id="sentence-display"></div>
+
+    <div class="section">
+        <h2>📚 Word Forms (Lemmas)</h2>
+        <div id="lemmas" class="lemmas"></div>
+    </div>
+
+    <div class="section">
+        <h2>🔗 Common Collocations</h2>
+        <div id="collocations" class="collocations"></div>
+    </div>
+
+    <div class="section guidance">
+        <h2>💡 Feedback & Guidance</h2>
+        <p id="guidance">Analyzing your sentence...</p>
+    </div>
+
+    <div class="section correct">
+        <h2>✅ Example Sentence</h2>
+        <p id="correct-answer"></p>
+    </div>
+
+    <div class="button-group">
+        <button onclick="tryAgain()">Try Again</button>
+        <button class="secondary" onclick="window.location.href='words.html'">Choose Another Word</button>
+    </div>
+
+    <script>
+        function tryAgain() {
+            const word = document.getElementById('word').textContent;
+            window.location.href = `word.html?word=${encodeURIComponent(word)}`;
+        }
+
+        (async () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const word = urlParams.get('word');
+            const sentence = urlParams.get('sentence');
+
+            if (!word || !sentence) {
+                window.location.href = 'words.html';
+                return;
+            }
+
+            document.getElementById('word').textContent = word;
+            document.getElementById('sentence-display').innerHTML = 
+                `Your sentence: <strong>"${decodeURIComponent(sentence)}"</strong>`;
+
+            try {
+                // Fetch word details
+                const wordRes = await fetch(`/api/words/${encodeURIComponent(word)}`);
+                if (!wordRes.ok) throw new Error('Word not found');
+                const wordData = await wordRes.json();
+
+                // Display lemmas
+                const lemmasDiv = document.getElementById('lemmas');
+                wordData.lemmas.forEach(lemma => {
+                    const span = document.createElement('span');
+                    span.textContent = lemma;
+                    lemmasDiv.appendChild(span);
+                });
+
+                // Display collocations
+                const collDiv = document.getElementById('collocations');
+                wordData.collocations.forEach(coll => {
+                    const span = document.createElement('span');
+                    span.textContent = coll;
+                    collDiv.appendChild(span);
+                });
+
+                // Get feedback
+                const feedbackRes = await fetch('/api/feedback', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ word, sentence })
+                });
+                
+                if (!feedbackRes.ok) throw new Error('Feedback failed');
+                const feedback = await feedbackRes.json();
+
+                document.getElementById('guidance').textContent = feedback.guidance;
+                document.getElementById('correct-answer').textContent = feedback.correctAnswer;
+
+            } catch (error) {
+                document.getElementById('guidance').innerHTML = 
+                    '<span class="error">⚠️ Error loading results. Please try again.</span>';
+                document.getElementById('correct-answer').textContent = 
+                    'Example: Try using the word in a sentence.';
+                console.error('Error:', error);
+            }
+        })();
+    </script>
+</body>
+</html>

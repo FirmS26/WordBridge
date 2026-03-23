@@ -1,0 +1,5958 @@
+[
+  {
+    "word": "analyse",
+    "lemmas": [
+      "analyse",
+      "analysed",
+      "analyser",
+      "analysers",
+      "analyses",
+      "analysing",
+      "analysis",
+      "analyst",
+      "analysts",
+      "analytic",
+      "analytical",
+      "analytically",
+      "analyze",
+      "analyzed",
+      "analyzes",
+      "analyzing"
+    ]
+  },
+  {
+    "word": "approach",
+    "lemmas": [
+      "approach",
+      "approachable",
+      "approached",
+      "approaches",
+      "approaching",
+      "unapproachable"
+    ]
+  },
+  {
+    "word": "area",
+    "lemmas": [
+      "area",
+      "areas"
+    ]
+  },
+  {
+    "word": "assess",
+    "lemmas": [
+      "assess",
+      "assessable",
+      "assessed",
+      "assesses",
+      "assessing",
+      "assessment",
+      "assessments",
+      "reassess",
+      "reassessed",
+      "reassessing",
+      "reassessment",
+      "unassessed"
+    ]
+  },
+  {
+    "word": "assume",
+    "lemmas": [
+      "assume",
+      "assumed",
+      "assumes",
+      "assuming",
+      "assumption",
+      "assumptions"
+    ]
+  },
+  {
+    "word": "authority",
+    "lemmas": [
+      "authority",
+      "authoritative",
+      "authorities"
+    ]
+  },
+  {
+    "word": "available",
+    "lemmas": [
+      "available",
+      "availability",
+      "unavailable"
+    ]
+  },
+  {
+    "word": "benefit",
+    "lemmas": [
+      "benefit",
+      "beneficial",
+      "beneficiary",
+      "beneficiaries",
+      "benefited",
+      "benefiting",
+      "benefits"
+    ]
+  },
+  {
+    "word": "concept",
+    "lemmas": [
+      "concept",
+      "conception",
+      "concepts",
+      "conceptual",
+      "conceptualisation",
+      "conceptualise",
+      "conceptualised",
+      "conceptualises",
+      "conceptualising",
+      "conceptually"
+    ]
+  },
+  {
+    "word": "consist",
+    "lemmas": [
+      "consist",
+      "consisted",
+      "consistency",
+      "consistent",
+      "consistently",
+      "consisting",
+      "consists",
+      "inconsistencies",
+      "inconsistency",
+      "inconsistent"
+    ]
+  },
+  {
+    "word": "constitute",
+    "lemmas": [
+      "constitute",
+      "constituencies",
+      "constituency",
+      "constituent",
+      "constituents",
+      "constituted",
+      "constitutes",
+      "constituting",
+      "constitution",
+      "constitutions",
+      "constitutional",
+      "constitutionally",
+      "constitutive",
+      "unconstitutional"
+    ]
+  },
+  {
+    "word": "context",
+    "lemmas": [
+      "context",
+      "contexts",
+      "contextual",
+      "contextualise",
+      "contextualised",
+      "contextualising",
+      "uncontextualised",
+      "contextualize",
+      "contextualized",
+      "contextualizing",
+      "uncontextualized"
+    ]
+  },
+  {
+    "word": "contract",
+    "lemmas": [
+      "contract",
+      "contracted",
+      "contracting",
+      "contractor",
+      "contractors",
+      "contracts"
+    ]
+  },
+  {
+    "word": "create",
+    "lemmas": [
+      "create",
+      "created",
+      "creates",
+      "creating",
+      "creation",
+      "creations",
+      "creative",
+      "creatively",
+      "creativity",
+      "creator",
+      "creators",
+      "recreate",
+      "recreated",
+      "recreates",
+      "recreating"
+    ]
+  },
+  {
+    "word": "data",
+    "lemmas": [
+      "data"
+    ]
+  },
+  {
+    "word": "define",
+    "lemmas": [
+      "define",
+      "definable",
+      "defined",
+      "defines",
+      "defining",
+      "definition",
+      "definitions",
+      "redefine",
+      "redefined",
+      "redefines",
+      "redefining",
+      "undefined"
+    ]
+  },
+  {
+    "word": "derive",
+    "lemmas": [
+      "derive",
+      "derivation",
+      "derivations",
+      "derivative",
+      "derivatives",
+      "derived",
+      "derives",
+      "deriving"
+    ]
+  },
+  {
+    "word": "distribute",
+    "lemmas": [
+      "distribute",
+      "distributed",
+      "distributing",
+      "distribution",
+      "distributional",
+      "distributions",
+      "distributive",
+      "distributor",
+      "distributors",
+      "redistribute",
+      "redistributed",
+      "redistributes",
+      "redistributing",
+      "redistribution"
+    ]
+  },
+  {
+    "word": "economy",
+    "lemmas": [
+      "economy",
+      "economic",
+      "economical",
+      "economically",
+      "economics",
+      "economies",
+      "economist",
+      "economists",
+      "uneconomical"
+    ]
+  },
+  {
+    "word": "environment",
+    "lemmas": [
+      "environment",
+      "environmental",
+      "environmentalist",
+      "environmentalists",
+      "environmentally",
+      "environments"
+    ]
+  },
+  {
+    "word": "establish",
+    "lemmas": [
+      "establish",
+      "disestablish",
+      "disestablished",
+      "disestablishes",
+      "disestablishing",
+      "disestablishment",
+      "established",
+      "establishes",
+      "establishing",
+      "establishment",
+      "establishments"
+    ]
+  },
+  {
+    "word": "estimate",
+    "lemmas": [
+      "estimate",
+      "estimated",
+      "estimates",
+      "estimating",
+      "estimation",
+      "estimations",
+      "over‑estimate",
+      "overestimate",
+      "overestimated",
+      "overestimates",
+      "overestimating",
+      "underestimate",
+      "underestimated",
+      "underestimates",
+      "underestimating"
+    ]
+  },
+  {
+    "word": "evident",
+    "lemmas": [
+      "evident",
+      "evidenced",
+      "evidence",
+      "evidential",
+      "evidently"
+    ]
+  },
+  {
+    "word": "export",
+    "lemmas": [
+      "export",
+      "exported",
+      "exporter",
+      "exporters",
+      "exporting",
+      "exports"
+    ]
+  },
+  {
+    "word": "factor",
+    "lemmas": [
+      "factor",
+      "factored",
+      "factoring",
+      "factors"
+    ]
+  },
+  {
+    "word": "finance",
+    "lemmas": [
+      "finance",
+      "financed",
+      "finances",
+      "financial",
+      "financially",
+      "financier",
+      "financiers",
+      "financing"
+    ]
+  },
+  {
+    "word": "formula",
+    "lemmas": [
+      "formula",
+      "formulae",
+      "formulas",
+      "formulate",
+      "formulated",
+      "formulating",
+      "formulation",
+      "formulations",
+      "reformulate",
+      "reformulated",
+      "reformulating",
+      "reformulation",
+      "reformulations"
+    ]
+  },
+  {
+    "word": "function",
+    "lemmas": [
+      "function",
+      "functional",
+      "functionally",
+      "functioned",
+      "functioning",
+      "functions"
+    ]
+  },
+  {
+    "word": "identify",
+    "lemmas": [
+      "identify",
+      "identifiable",
+      "identification",
+      "identified",
+      "identifies",
+      "identifying",
+      "identities",
+      "identity",
+      "unidentifiable"
+    ]
+  },
+  {
+    "word": "income",
+    "lemmas": [
+      "income",
+      "incomes"
+    ]
+  },
+  {
+    "word": "indicate",
+    "lemmas": [
+      "indicate",
+      "indicated",
+      "indicates",
+      "indicating",
+      "indication",
+      "indications",
+      "indicative",
+      "indicator",
+      "indicators"
+    ]
+  },
+  {
+    "word": "individual",
+    "lemmas": [
+      "individual",
+      "individualised",
+      "individuality",
+      "individualism",
+      "individualist",
+      "individualists",
+      "individualistic",
+      "individually",
+      "individuals"
+    ]
+  },
+  {
+    "word": "interpret",
+    "lemmas": [
+      "interpret",
+      "interpretation",
+      "interpretations",
+      "interpretative",
+      "interpreted",
+      "interpreting",
+      "interpretive",
+      "interprets",
+      "misinterpret",
+      "misinterpretation",
+      "misinterpretations",
+      "misinterpreted",
+      "misinterpreting",
+      "misinterprets",
+      "reinterpret",
+      "reinterpreted",
+      "reinterprets",
+      "reinterpreting",
+      "reinterpretation",
+      "reinterpretations"
+    ]
+  },
+  {
+    "word": "involve",
+    "lemmas": [
+      "involve",
+      "involved",
+      "involvement",
+      "involves",
+      "involving",
+      "uninvolved"
+    ]
+  },
+  {
+    "word": "issue",
+    "lemmas": [
+      "issue",
+      "issued",
+      "issues",
+      "issuing"
+    ]
+  },
+  {
+    "word": "labour",
+    "lemmas": [
+      "labour",
+      "labor",
+      "labored",
+      "labors",
+      "laboured",
+      "labouring",
+      "labours"
+    ]
+  },
+  {
+    "word": "legal",
+    "lemmas": [
+      "legal",
+      "illegal",
+      "illegality",
+      "illegally",
+      "legality",
+      "legally"
+    ]
+  },
+  {
+    "word": "legislate",
+    "lemmas": [
+      "legislate",
+      "legislated",
+      "legislates",
+      "legislating",
+      "legislation",
+      "legislative",
+      "legislator",
+      "legislators",
+      "legislature"
+    ]
+  },
+  {
+    "word": "major",
+    "lemmas": [
+      "major",
+      "majorities",
+      "majority"
+    ]
+  },
+  {
+    "word": "method",
+    "lemmas": [
+      "method",
+      "methodical",
+      "methodological",
+      "methodologies",
+      "methodology",
+      "methods"
+    ]
+  },
+  {
+    "word": "occur",
+    "lemmas": [
+      "occur",
+      "occurred",
+      "occurrence",
+      "occurrences",
+      "occurring",
+      "occurs",
+      "reoccur",
+      "reoccurred",
+      "reoccurring",
+      "reoccurs"
+    ]
+  },
+  {
+    "word": "percent",
+    "lemmas": [
+      "percent",
+      "percentage",
+      "percentages"
+    ]
+  },
+  {
+    "word": "period",
+    "lemmas": [
+      "period",
+      "periodic",
+      "periodical",
+      "periodically",
+      "periodicals",
+      "periods"
+    ]
+  },
+  {
+    "word": "policy",
+    "lemmas": [
+      "policy",
+      "policies"
+    ]
+  },
+  {
+    "word": "principle",
+    "lemmas": [
+      "principle",
+      "principled",
+      "principles",
+      "unprincipled"
+    ]
+  },
+  {
+    "word": "proceed",
+    "lemmas": [
+      "proceed",
+      "procedural",
+      "procedure",
+      "procedures",
+      "proceeded",
+      "proceeding",
+      "proceedings",
+      "proceeds"
+    ]
+  },
+  {
+    "word": "process",
+    "lemmas": [
+      "process",
+      "processed",
+      "processes",
+      "processing"
+    ]
+  },
+  {
+    "word": "require",
+    "lemmas": [
+      "require",
+      "required",
+      "requirement",
+      "requirements",
+      "requires",
+      "requiring"
+    ]
+  },
+  {
+    "word": "research",
+    "lemmas": [
+      "research",
+      "researched",
+      "researcher",
+      "researchers",
+      "researches",
+      "researching"
+    ]
+  },
+  {
+    "word": "respond",
+    "lemmas": [
+      "respond",
+      "responded",
+      "respondent",
+      "respondents",
+      "responding",
+      "responds",
+      "response",
+      "responses",
+      "responsive",
+      "responsiveness",
+      "unresponsive"
+    ]
+  },
+  {
+    "word": "role",
+    "lemmas": [
+      "role",
+      "roles"
+    ]
+  },
+  {
+    "word": "section",
+    "lemmas": [
+      "section",
+      "sectioned",
+      "sectioning",
+      "sections"
+    ]
+  },
+  {
+    "word": "sector",
+    "lemmas": [
+      "sector",
+      "sectors"
+    ]
+  },
+  {
+    "word": "significant",
+    "lemmas": [
+      "significant",
+      "insignificant",
+      "insignificantly",
+      "significance",
+      "significantly",
+      "signified",
+      "signifies",
+      "signify",
+      "signifying"
+    ]
+  },
+  {
+    "word": "similar",
+    "lemmas": [
+      "similar",
+      "dissimilar",
+      "similarities",
+      "similarity",
+      "similarly"
+    ]
+  },
+  {
+    "word": "source",
+    "lemmas": [
+      "source",
+      "sourced",
+      "sources",
+      "sourcing"
+    ]
+  },
+  {
+    "word": "specific",
+    "lemmas": [
+      "specific",
+      "specifically",
+      "specification",
+      "specifications",
+      "specificity",
+      "specifics"
+    ]
+  },
+  {
+    "word": "structure",
+    "lemmas": [
+      "structure",
+      "restructure",
+      "restructured",
+      "restructures",
+      "restructuring",
+      "structural",
+      "structurally",
+      "structured",
+      "structures",
+      "structuring",
+      "unstructured"
+    ]
+  },
+  {
+    "word": "theory",
+    "lemmas": [
+      "theory",
+      "theoretical",
+      "theoretically",
+      "theories",
+      "theorist",
+      "theorists"
+    ]
+  },
+  {
+    "word": "vary",
+    "lemmas": [
+      "vary",
+      "invariable",
+      "invariably",
+      "variability",
+      "variable",
+      "variables",
+      "variably",
+      "variance",
+      "variant",
+      "variants",
+      "variation",
+      "variations",
+      "varied",
+      "varies",
+      "varying"
+    ]
+  },
+  {
+    "word": "achieve",
+    "lemmas": [
+      "achieve",
+      "achievable",
+      "achieved",
+      "achievement",
+      "achievements",
+      "achieves",
+      "achieving"
+    ]
+  },
+  {
+    "word": "acquire",
+    "lemmas": [
+      "acquire",
+      "acquired",
+      "acquires",
+      "acquiring",
+      "acquisition",
+      "acquisitions"
+    ]
+  },
+  {
+    "word": "administrate",
+    "lemmas": [
+      "administrate",
+      "administrates",
+      "administration",
+      "administrations",
+      "administrative",
+      "administratively",
+      "administrator",
+      "administrators"
+    ]
+  },
+  {
+    "word": "affect",
+    "lemmas": [
+      "affect",
+      "affected",
+      "affecting",
+      "affective",
+      "affectively",
+      "affects",
+      "unaffected"
+    ]
+  },
+  {
+    "word": "appropriate",
+    "lemmas": [
+      "appropriate",
+      "appropriacy",
+      "appropriately",
+      "appropriateness",
+      "inappropriacy",
+      "inappropriate",
+      "inappropriately"
+    ]
+  },
+  {
+    "word": "aspect",
+    "lemmas": [
+      "aspect",
+      "aspects"
+    ]
+  },
+  {
+    "word": "assist",
+    "lemmas": [
+      "assist",
+      "assistance",
+      "assistant",
+      "assistants",
+      "assisted",
+      "assisting",
+      "assists",
+      "unassisted"
+    ]
+  },
+  {
+    "word": "category",
+    "lemmas": [
+      "category",
+      "categories",
+      "categorisation",
+      "categorise",
+      "categorised",
+      "categorises",
+      "categorising",
+      "categorization",
+      "categorized",
+      "categorizes",
+      "categorizing"
+    ]
+  },
+  {
+    "word": "chapter",
+    "lemmas": [
+      "chapter",
+      "chapters"
+    ]
+  },
+  {
+    "word": "commission",
+    "lemmas": [
+      "commission",
+      "commissioned",
+      "commissioner",
+      "commissioners",
+      "commissioning",
+      "commissions"
+    ]
+  },
+  {
+    "word": "community",
+    "lemmas": [
+      "community",
+      "communities"
+    ]
+  },
+  {
+    "word": "complex",
+    "lemmas": [
+      "complex",
+      "complexities",
+      "complexity"
+    ]
+  },
+  {
+    "word": "compute",
+    "lemmas": [
+      "compute",
+      "computation",
+      "computational",
+      "computations",
+      "computable",
+      "computer",
+      "computed",
+      "computerised",
+      "computers",
+      "computing"
+    ]
+  },
+  {
+    "word": "conclude",
+    "lemmas": [
+      "conclude",
+      "concluded",
+      "concludes",
+      "concluding",
+      "conclusion",
+      "conclusions",
+      "conclusive",
+      "conclusively",
+      "inconclusive",
+      "inconclusively"
+    ]
+  },
+  {
+    "word": "conduct",
+    "lemmas": [
+      "conduct",
+      "conducted",
+      "conducting",
+      "conducts"
+    ]
+  },
+  {
+    "word": "consequent",
+    "lemmas": [
+      "consequent",
+      "consequence",
+      "consequences",
+      "consequently"
+    ]
+  },
+  {
+    "word": "construct",
+    "lemmas": [
+      "construct",
+      "constructed",
+      "constructing",
+      "construction",
+      "constructions",
+      "constructive",
+      "constructs",
+      "reconstruct",
+      "reconstructed",
+      "reconstructing",
+      "reconstruction",
+      "reconstructs"
+    ]
+  },
+  {
+    "word": "consume",
+    "lemmas": [
+      "consume",
+      "consumed",
+      "consumer",
+      "consumers",
+      "consumes",
+      "consuming",
+      "consumption"
+    ]
+  },
+  {
+    "word": "credit",
+    "lemmas": [
+      "credit",
+      "credited",
+      "crediting",
+      "creditor",
+      "creditors",
+      "credits"
+    ]
+  },
+  {
+    "word": "culture",
+    "lemmas": [
+      "culture",
+      "cultural",
+      "culturally",
+      "cultured",
+      "cultures",
+      "uncultured"
+    ]
+  },
+  {
+    "word": "design",
+    "lemmas": [
+      "design",
+      "designed",
+      "designer",
+      "designers",
+      "designing",
+      "designs"
+    ]
+  },
+  {
+    "word": "distinct",
+    "lemmas": [
+      "distinct",
+      "distinction",
+      "distinctions",
+      "distinctive",
+      "distinctively",
+      "distinctly",
+      "indistinct",
+      "indistinctly"
+    ]
+  },
+  {
+    "word": "element",
+    "lemmas": [
+      "element",
+      "elements"
+    ]
+  },
+  {
+    "word": "equate",
+    "lemmas": [
+      "equate",
+      "equated",
+      "equates",
+      "equating",
+      "equation",
+      "equations"
+    ]
+  },
+  {
+    "word": "evaluate",
+    "lemmas": [
+      "evaluate",
+      "evaluated",
+      "evaluates",
+      "evaluating",
+      "evaluation",
+      "evaluations",
+      "evaluative",
+      "re-evaluate",
+      "re-evaluated",
+      "re-evaluates",
+      "re-evaluating",
+      "re-evaluation"
+    ]
+  },
+  {
+    "word": "feature",
+    "lemmas": [
+      "feature",
+      "featured",
+      "features",
+      "featuring"
+    ]
+  },
+  {
+    "word": "final",
+    "lemmas": [
+      "final",
+      "finalise",
+      "finalised",
+      "finalises",
+      "finalising",
+      "finalize",
+      "finalized",
+      "finalizes",
+      "finalizing",
+      "finality",
+      "finally",
+      "finals"
+    ]
+  },
+  {
+    "word": "focus",
+    "lemmas": [
+      "focus",
+      "focused",
+      "focuses",
+      "focusing",
+      "focussed",
+      "focussing",
+      "refocus",
+      "refocused",
+      "refocuses",
+      "refocusing",
+      "refocussed",
+      "refocusses",
+      "refocussing"
+    ]
+  },
+  {
+    "word": "impact",
+    "lemmas": [
+      "impact",
+      "impacted",
+      "impacting",
+      "impacts"
+    ]
+  },
+  {
+    "word": "injure",
+    "lemmas": [
+      "injure",
+      "injured",
+      "injures",
+      "injuries",
+      "injuring",
+      "injury",
+      "uninjured"
+    ]
+  },
+  {
+    "word": "institute",
+    "lemmas": [
+      "institute",
+      "instituted",
+      "institutes",
+      "instituting",
+      "institution",
+      "institutional",
+      "institutionalise",
+      "institutionalised",
+      "institutionalises",
+      "institutionalising",
+      "institutionalized",
+      "institutionalizes",
+      "institutionalizing",
+      "institutionally",
+      "institutions"
+    ]
+  },
+  {
+    "word": "invest",
+    "lemmas": [
+      "invest",
+      "invested",
+      "investing",
+      "investment",
+      "investments",
+      "investor",
+      "investors",
+      "invests",
+      "reinvest",
+      "reinvested",
+      "reinvesting",
+      "reinvestment",
+      "reinvests"
+    ]
+  },
+  {
+    "word": "item",
+    "lemmas": [
+      "item",
+      "itemisation",
+      "itemise",
+      "itemised",
+      "itemises",
+      "itemising",
+      "items"
+    ]
+  },
+  {
+    "word": "journal",
+    "lemmas": [
+      "journal",
+      "journals"
+    ]
+  },
+  {
+    "word": "maintain",
+    "lemmas": [
+      "maintain",
+      "maintained",
+      "maintaining",
+      "maintains",
+      "maintenance"
+    ]
+  },
+  {
+    "word": "normal",
+    "lemmas": [
+      "normal",
+      "abnormal",
+      "abnormally",
+      "normalisation",
+      "normalise",
+      "normalised",
+      "normalises",
+      "normalising",
+      "normalization",
+      "normalize",
+      "normalized",
+      "normalizes",
+      "normalizing",
+      "normality",
+      "normally"
+    ]
+  },
+  {
+    "word": "obtain",
+    "lemmas": [
+      "obtain",
+      "obtainable",
+      "obtained",
+      "obtaining",
+      "obtains",
+      "unobtainable"
+    ]
+  },
+  {
+    "word": "participate",
+    "lemmas": [
+      "participate",
+      "participant",
+      "participants",
+      "participated",
+      "participates",
+      "participating",
+      "participation",
+      "participatory"
+    ]
+  },
+  {
+    "word": "perceive",
+    "lemmas": [
+      "perceive",
+      "perceived",
+      "perceives",
+      "perceiving",
+      "perception",
+      "perceptions"
+    ]
+  },
+  {
+    "word": "positive",
+    "lemmas": [
+      "positive",
+      "positively"
+    ]
+  },
+  {
+    "word": "potential",
+    "lemmas": [
+      "potential",
+      "potentially"
+    ]
+  },
+  {
+    "word": "previous",
+    "lemmas": [
+      "previous",
+      "previously"
+    ]
+  },
+  {
+    "word": "primary",
+    "lemmas": [
+      "primary",
+      "primarily"
+    ]
+  },
+  {
+    "word": "purchase",
+    "lemmas": [
+      "purchase",
+      "purchased",
+      "purchaser",
+      "purchasers",
+      "purchases",
+      "purchasing"
+    ]
+  },
+  {
+    "word": "range",
+    "lemmas": [
+      "range",
+      "ranged",
+      "ranges",
+      "ranging"
+    ]
+  },
+  {
+    "word": "region",
+    "lemmas": [
+      "region",
+      "regional",
+      "regionally",
+      "regions"
+    ]
+  },
+  {
+    "word": "regulate",
+    "lemmas": [
+      "regulate",
+      "deregulated",
+      "deregulates",
+      "deregulating",
+      "deregulation",
+      "regulated",
+      "regulates",
+      "regulating",
+      "regulation",
+      "regulations",
+      "regulator",
+      "regulators",
+      "regulatory",
+      "unregulated"
+    ]
+  },
+  {
+    "word": "relevant",
+    "lemmas": [
+      "relevant",
+      "irrelevance",
+      "irrelevant",
+      "relevance"
+    ]
+  },
+  {
+    "word": "reside",
+    "lemmas": [
+      "reside",
+      "resided",
+      "residence",
+      "resident",
+      "residential",
+      "residents",
+      "resides",
+      "residing"
+    ]
+  },
+  {
+    "word": "resource",
+    "lemmas": [
+      "resource",
+      "resourced",
+      "resourceful",
+      "resources",
+      "resourcing",
+      "unresourceful",
+      "under-resourced"
+    ]
+  },
+  {
+    "word": "restrict",
+    "lemmas": [
+      "restrict",
+      "restricted",
+      "restricting",
+      "restriction",
+      "restrictions",
+      "restrictive",
+      "restrictively",
+      "restricts",
+      "unrestricted",
+      "unrestrictive"
+    ]
+  },
+  {
+    "word": "secure",
+    "lemmas": [
+      "secure",
+      "insecure",
+      "insecurities",
+      "insecurity",
+      "secured",
+      "securely",
+      "secures",
+      "securing",
+      "securities",
+      "security"
+    ]
+  },
+  {
+    "word": "seek",
+    "lemmas": [
+      "seek",
+      "seeking",
+      "seeks",
+      "sought"
+    ]
+  },
+  {
+    "word": "select",
+    "lemmas": [
+      "select",
+      "selected",
+      "selecting",
+      "selection",
+      "selections",
+      "selective",
+      "selectively",
+      "selector",
+      "selectors",
+      "selects"
+    ]
+  },
+  {
+    "word": "site",
+    "lemmas": [
+      "site",
+      "sites"
+    ]
+  },
+  {
+    "word": "strategy",
+    "lemmas": [
+      "strategy",
+      "strategic",
+      "strategies",
+      "strategically",
+      "strategist",
+      "strategists"
+    ]
+  },
+  {
+    "word": "survey",
+    "lemmas": [
+      "survey",
+      "surveyed",
+      "surveying",
+      "surveys"
+    ]
+  },
+  {
+    "word": "text",
+    "lemmas": [
+      "text",
+      "texts",
+      "textual"
+    ]
+  },
+  {
+    "word": "tradition",
+    "lemmas": [
+      "tradition",
+      "non‑traditional",
+      "traditional",
+      "traditionalist",
+      "traditionally",
+      "traditions"
+    ]
+  },
+  {
+    "word": "transfer",
+    "lemmas": [
+      "transfer",
+      "transferable",
+      "transference",
+      "transferred",
+      "transferring",
+      "transfers"
+    ]
+  },
+  {
+    "word": "alternative",
+    "lemmas": [
+      "alternative",
+      "alternatively",
+      "alternatives"
+    ]
+  },
+  {
+    "word": "circumstance",
+    "lemmas": [
+      "circumstance",
+      "circumstances"
+    ]
+  },
+  {
+    "word": "comment",
+    "lemmas": [
+      "comment",
+      "commentaries",
+      "commentary",
+      "commentator",
+      "commentators",
+      "commented",
+      "commenting",
+      "comments"
+    ]
+  },
+  {
+    "word": "compensate",
+    "lemmas": [
+      "compensate",
+      "compensated",
+      "compensates",
+      "compensating",
+      "compensation",
+      "compensations",
+      "compensatory"
+    ]
+  },
+  {
+    "word": "component",
+    "lemmas": [
+      "component",
+      "componentry",
+      "components"
+    ]
+  },
+  {
+    "word": "consent",
+    "lemmas": [
+      "consent",
+      "consensus",
+      "consented",
+      "consenting",
+      "consents"
+    ]
+  },
+  {
+    "word": "considerable",
+    "lemmas": [
+      "considerable",
+      "considerably"
+    ]
+  },
+  {
+    "word": "constant",
+    "lemmas": [
+      "constant",
+      "constancy",
+      "constantly",
+      "constants",
+      "inconstancy",
+      "inconstantly"
+    ]
+  },
+  {
+    "word": "constrain",
+    "lemmas": [
+      "constrain",
+      "constrained",
+      "constraining",
+      "constrains",
+      "constraint",
+      "constraints",
+      "unconstrained"
+    ]
+  },
+  {
+    "word": "contribute",
+    "lemmas": [
+      "contribute",
+      "contributed",
+      "contributes",
+      "contributing",
+      "contribution",
+      "contributions",
+      "contributor",
+      "contributors"
+    ]
+  },
+  {
+    "word": "convene",
+    "lemmas": [
+      "convene",
+      "convention",
+      "convenes",
+      "convened",
+      "convening",
+      "conventional",
+      "conventionally",
+      "conventions",
+      "unconventional"
+    ]
+  },
+  {
+    "word": "coordinate",
+    "lemmas": [
+      "coordinate",
+      "coordinated",
+      "coordinates",
+      "coordinating",
+      "coordination",
+      "coordinator",
+      "coordinators",
+      "co-ordinate",
+      "co‑ordinated",
+      "co‑ordinates",
+      "co‑ordinating",
+      "co‑ordination",
+      "co‑ordinator",
+      "co‑ordinators"
+    ]
+  },
+  {
+    "word": "core",
+    "lemmas": [
+      "core",
+      "cores",
+      "coring",
+      "cored"
+    ]
+  },
+  {
+    "word": "corporate",
+    "lemmas": [
+      "corporate",
+      "corporates",
+      "corporation",
+      "corporations"
+    ]
+  },
+  {
+    "word": "correspond",
+    "lemmas": [
+      "correspond",
+      "corresponded",
+      "correspondence",
+      "corresponding",
+      "correspondingly",
+      "corresponds"
+    ]
+  },
+  {
+    "word": "criteria",
+    "lemmas": [
+      "criteria",
+      "criterion"
+    ]
+  },
+  {
+    "word": "deduce",
+    "lemmas": [
+      "deduce",
+      "deduced",
+      "deduces",
+      "deducing",
+      "deduction",
+      "deductions"
+    ]
+  },
+  {
+    "word": "demonstrate",
+    "lemmas": [
+      "demonstrate",
+      "demonstrable",
+      "demonstrably",
+      "demonstrated",
+      "demonstrates",
+      "demonstrating",
+      "demonstration",
+      "demonstrations",
+      "demonstrative",
+      "demonstratively",
+      "demonstrator",
+      "demonstrators"
+    ]
+  },
+  {
+    "word": "document",
+    "lemmas": [
+      "document",
+      "documentation",
+      "documented",
+      "documenting",
+      "documents"
+    ]
+  },
+  {
+    "word": "dominate",
+    "lemmas": [
+      "dominate",
+      "dominance",
+      "dominant",
+      "dominated",
+      "dominates",
+      "dominating",
+      "domination"
+    ]
+  },
+  {
+    "word": "emphasis",
+    "lemmas": [
+      "emphasis",
+      "emphasise",
+      "emphasised",
+      "emphasising",
+      "emphasize",
+      "emphasized",
+      "emphasizes",
+      "emphasizing",
+      "emphatic",
+      "emphatically"
+    ]
+  },
+  {
+    "word": "ensure",
+    "lemmas": [
+      "ensure",
+      "ensured",
+      "ensures",
+      "ensuring"
+    ]
+  },
+  {
+    "word": "exclude",
+    "lemmas": [
+      "exclude",
+      "excluded",
+      "excludes",
+      "excluding",
+      "exclusion",
+      "exclusionary",
+      "exclusionist",
+      "exclusions",
+      "exclusive",
+      "exclusively"
+    ]
+  },
+  {
+    "word": "framework",
+    "lemmas": [
+      "framework",
+      "frameworks"
+    ]
+  },
+  {
+    "word": "fund",
+    "lemmas": [
+      "fund",
+      "funded",
+      "funder",
+      "funders",
+      "funding",
+      "funds"
+    ]
+  },
+  {
+    "word": "illustrate",
+    "lemmas": [
+      "illustrate",
+      "illustrated",
+      "illustrates",
+      "illustrating",
+      "illustration",
+      "illustrations",
+      "illustrative"
+    ]
+  },
+  {
+    "word": "immigrate",
+    "lemmas": [
+      "immigrate",
+      "immigrant",
+      "immigrants",
+      "immigrated",
+      "immigrates",
+      "immigrating",
+      "immigration"
+    ]
+  },
+  {
+    "word": "imply",
+    "lemmas": [
+      "imply",
+      "implied",
+      "implies",
+      "implying"
+    ]
+  },
+  {
+    "word": "initial",
+    "lemmas": [
+      "initial",
+      "initially"
+    ]
+  },
+  {
+    "word": "instance",
+    "lemmas": [
+      "instance",
+      "instances"
+    ]
+  },
+  {
+    "word": "interact",
+    "lemmas": [
+      "interact",
+      "interacted",
+      "interacting",
+      "interaction",
+      "interactions",
+      "interactive",
+      "interactively",
+      "interacts"
+    ]
+  },
+  {
+    "word": "justify",
+    "lemmas": [
+      "justify",
+      "justifiable",
+      "justifiably",
+      "justification",
+      "justifications",
+      "justified",
+      "justifies",
+      "justifying",
+      "unjustified"
+    ]
+  },
+  {
+    "word": "layer",
+    "lemmas": [
+      "layer",
+      "layered",
+      "layering",
+      "layers"
+    ]
+  },
+  {
+    "word": "link",
+    "lemmas": [
+      "link",
+      "linkage",
+      "linkages",
+      "linked",
+      "linking",
+      "links"
+    ]
+  },
+  {
+    "word": "locate",
+    "lemmas": [
+      "locate",
+      "located",
+      "locating",
+      "location",
+      "locations",
+      "relocate",
+      "relocated",
+      "relocates",
+      "relocating",
+      "relocation"
+    ]
+  },
+  {
+    "word": "maximise",
+    "lemmas": [
+      "maximise",
+      "max",
+      "maximised",
+      "maximises",
+      "maximising",
+      "maximisation",
+      "maximize",
+      "maximized",
+      "maximizes",
+      "maximizing",
+      "maximization",
+      "maximum"
+    ]
+  },
+  {
+    "word": "minor",
+    "lemmas": [
+      "minor",
+      "minorities",
+      "minority",
+      "minors"
+    ]
+  },
+  {
+    "word": "negate",
+    "lemmas": [
+      "negate",
+      "negative",
+      "negated",
+      "negates",
+      "negating",
+      "negatively",
+      "negatives"
+    ]
+  },
+  {
+    "word": "outcome",
+    "lemmas": [
+      "outcome",
+      "outcomes"
+    ]
+  },
+  {
+    "word": "partner",
+    "lemmas": [
+      "partner",
+      "partners",
+      "partnership",
+      "partnerships"
+    ]
+  },
+  {
+    "word": "philosophy",
+    "lemmas": [
+      "philosophy",
+      "philosopher",
+      "philosophers",
+      "philosophical",
+      "philosophically",
+      "philosophies",
+      "philosophise",
+      "philosophised",
+      "philosophises",
+      "philosophising",
+      "philosophize",
+      "philosophized",
+      "philosophizes",
+      "philosophizing"
+    ]
+  },
+  {
+    "word": "physical",
+    "lemmas": [
+      "physical",
+      "physically"
+    ]
+  },
+  {
+    "word": "proportion",
+    "lemmas": [
+      "proportion",
+      "disproportion",
+      "disproportionate",
+      "disproportionately",
+      "proportional",
+      "proportionally",
+      "proportionate",
+      "proportionately",
+      "proportions"
+    ]
+  },
+  {
+    "word": "publish",
+    "lemmas": [
+      "publish",
+      "published",
+      "publisher",
+      "publishers",
+      "publishes",
+      "publishing",
+      "unpublished"
+    ]
+  },
+  {
+    "word": "react",
+    "lemmas": [
+      "react",
+      "reacted",
+      "reacts",
+      "reacting",
+      "reaction",
+      "reactionaries",
+      "reactionary",
+      "reactions",
+      "reactive",
+      "reactivate",
+      "reactivation",
+      "reactor",
+      "reactors"
+    ]
+  },
+  {
+    "word": "register",
+    "lemmas": [
+      "register",
+      "deregister",
+      "deregistered",
+      "deregistering",
+      "deregisters",
+      "deregistration",
+      "registered",
+      "registering",
+      "registers",
+      "registration"
+    ]
+  },
+  {
+    "word": "rely",
+    "lemmas": [
+      "rely",
+      "reliability",
+      "reliable",
+      "reliably",
+      "reliance",
+      "reliant",
+      "relied",
+      "relies",
+      "relying",
+      "unreliable"
+    ]
+  },
+  {
+    "word": "remove",
+    "lemmas": [
+      "remove",
+      "removable",
+      "removal",
+      "removals",
+      "removed",
+      "removes",
+      "removing"
+    ]
+  },
+  {
+    "word": "scheme",
+    "lemmas": [
+      "scheme",
+      "schematic",
+      "schematically",
+      "schemed",
+      "schemes",
+      "scheming"
+    ]
+  },
+  {
+    "word": "sequence",
+    "lemmas": [
+      "sequence",
+      "sequenced",
+      "sequences",
+      "sequencing",
+      "sequential",
+      "sequentially"
+    ]
+  },
+  {
+    "word": "sex",
+    "lemmas": [
+      "sex",
+      "sexes",
+      "sexism",
+      "sexual",
+      "sexuality",
+      "sexually"
+    ]
+  },
+  {
+    "word": "shift",
+    "lemmas": [
+      "shift",
+      "shifted",
+      "shifting",
+      "shifts"
+    ]
+  },
+  {
+    "word": "specify",
+    "lemmas": [
+      "specify",
+      "specifiable",
+      "specified",
+      "specifies",
+      "specifying",
+      "unspecified"
+    ]
+  },
+  {
+    "word": "sufficient",
+    "lemmas": [
+      "sufficient",
+      "sufficiency",
+      "insufficient",
+      "insufficiently",
+      "sufficiently"
+    ]
+  },
+  {
+    "word": "task",
+    "lemmas": [
+      "task",
+      "tasks"
+    ]
+  },
+  {
+    "word": "technical",
+    "lemmas": [
+      "technical",
+      "technically"
+    ]
+  },
+  {
+    "word": "technique",
+    "lemmas": [
+      "technique",
+      "techniques"
+    ]
+  },
+  {
+    "word": "technology",
+    "lemmas": [
+      "technology",
+      "technological",
+      "technologically"
+    ]
+  },
+  {
+    "word": "valid",
+    "lemmas": [
+      "valid",
+      "invalidate",
+      "invalidity",
+      "validate",
+      "validated",
+      "validating",
+      "validation",
+      "validity",
+      "validly"
+    ]
+  },
+  {
+    "word": "volume",
+    "lemmas": [
+      "volume",
+      "volumes",
+      "vol"
+    ]
+  },
+  {
+    "word": "access",
+    "lemmas": [
+      "access",
+      "accessed",
+      "accesses",
+      "accessibility",
+      "accessible",
+      "accessing",
+      "inaccessible"
+    ]
+  },
+  {
+    "word": "adequate",
+    "lemmas": [
+      "adequate",
+      "adequacy",
+      "adequately",
+      "inadequacies",
+      "inadequacy",
+      "inadequate",
+      "inadequately"
+    ]
+  },
+  {
+    "word": "annual",
+    "lemmas": [
+      "annual",
+      "annually"
+    ]
+  },
+  {
+    "word": "apparent",
+    "lemmas": [
+      "apparent",
+      "apparently"
+    ]
+  },
+  {
+    "word": "approximate",
+    "lemmas": [
+      "approximate",
+      "approximated",
+      "approximately",
+      "approximates",
+      "approximating",
+      "approximation",
+      "approximations"
+    ]
+  },
+  {
+    "word": "attitude",
+    "lemmas": [
+      "attitude",
+      "attitudes"
+    ]
+  },
+  {
+    "word": "attribute",
+    "lemmas": [
+      "attribute",
+      "attributable",
+      "attributed",
+      "attributes",
+      "attributing",
+      "attribution"
+    ]
+  },
+  {
+    "word": "civil",
+    "lemmas": [
+      "civil"
+    ]
+  },
+  {
+    "word": "code",
+    "lemmas": [
+      "code",
+      "coded",
+      "codes",
+      "coding"
+    ]
+  },
+  {
+    "word": "commit",
+    "lemmas": [
+      "commit",
+      "commitment",
+      "commitments",
+      "commits",
+      "committed",
+      "committing"
+    ]
+  },
+  {
+    "word": "communicate",
+    "lemmas": [
+      "communicate",
+      "communicable",
+      "communicated",
+      "communicates",
+      "communicating",
+      "communication",
+      "communications",
+      "communicative",
+      "communicatively",
+      "uncommunicative"
+    ]
+  },
+  {
+    "word": "concentrate",
+    "lemmas": [
+      "concentrate",
+      "concentrated",
+      "concentrates",
+      "concentrating",
+      "concentration"
+    ]
+  },
+  {
+    "word": "confer",
+    "lemmas": [
+      "confer",
+      "conference",
+      "conferences",
+      "conferred",
+      "conferring",
+      "confers"
+    ]
+  },
+  {
+    "word": "contrast",
+    "lemmas": [
+      "contrast",
+      "contrasted",
+      "contrasting",
+      "contrastive",
+      "contrasts"
+    ]
+  },
+  {
+    "word": "cycle",
+    "lemmas": [
+      "cycle",
+      "cycled",
+      "cycles",
+      "cyclic",
+      "cyclical",
+      "cycling"
+    ]
+  },
+  {
+    "word": "debate",
+    "lemmas": [
+      "debate",
+      "debatable",
+      "debated",
+      "debates",
+      "debating"
+    ]
+  },
+  {
+    "word": "despite",
+    "lemmas": [
+      "despite"
+    ]
+  },
+  {
+    "word": "dimension",
+    "lemmas": [
+      "dimension",
+      "dimensional",
+      "dimensions",
+      "multidimensional"
+    ]
+  },
+  {
+    "word": "domestic",
+    "lemmas": [
+      "domestic",
+      "domestically",
+      "domesticate",
+      "domesticated",
+      "domesticating",
+      "domestics"
+    ]
+  },
+  {
+    "word": "emerge",
+    "lemmas": [
+      "emerge",
+      "emerged",
+      "emergence",
+      "emergent",
+      "emerges",
+      "emerging"
+    ]
+  },
+  {
+    "word": "error",
+    "lemmas": [
+      "error",
+      "erroneous",
+      "erroneously",
+      "errors"
+    ]
+  },
+  {
+    "word": "ethnic",
+    "lemmas": [
+      "ethnic",
+      "ethnicity"
+    ]
+  },
+  {
+    "word": "goal",
+    "lemmas": [
+      "goal",
+      "goals"
+    ]
+  },
+  {
+    "word": "grant",
+    "lemmas": [
+      "grant",
+      "granted",
+      "granting",
+      "grants"
+    ]
+  },
+  {
+    "word": "hence",
+    "lemmas": [
+      "hence"
+    ]
+  },
+  {
+    "word": "hypothesis",
+    "lemmas": [
+      "hypothesis",
+      "hypotheses",
+      "hypothesise",
+      "hypothesised",
+      "hypothesises",
+      "hypothesising",
+      "hypothesize",
+      "hypothesized",
+      "hypothesizes",
+      "hypothesizing",
+      "hypothetical",
+      "hypothetically"
+    ]
+  },
+  {
+    "word": "implement",
+    "lemmas": [
+      "implement",
+      "implementation",
+      "implemented",
+      "implementing",
+      "implements"
+    ]
+  },
+  {
+    "word": "implicate",
+    "lemmas": [
+      "implicate",
+      "implicated",
+      "implicates",
+      "implicating",
+      "implication",
+      "implications"
+    ]
+  },
+  {
+    "word": "impose",
+    "lemmas": [
+      "impose",
+      "imposed",
+      "imposes",
+      "imposing",
+      "imposition"
+    ]
+  },
+  {
+    "word": "integrate",
+    "lemmas": [
+      "integrate",
+      "integrated",
+      "integrates",
+      "integrating",
+      "integration"
+    ]
+  },
+  {
+    "word": "internal",
+    "lemmas": [
+      "internal",
+      "internalise",
+      "internalised",
+      "internalises",
+      "internalising",
+      "internalize",
+      "internalized",
+      "internalizes",
+      "internalizing",
+      "internally"
+    ]
+  },
+  {
+    "word": "investigate",
+    "lemmas": [
+      "investigate",
+      "investigated",
+      "investigates",
+      "investigating",
+      "investigation",
+      "investigations",
+      "investigative",
+      "investigator",
+      "investigators"
+    ]
+  },
+  {
+    "word": "job",
+    "lemmas": [
+      "job",
+      "jobs"
+    ]
+  },
+  {
+    "word": "label",
+    "lemmas": [
+      "label",
+      "labeled",
+      "labeling",
+      "labelled",
+      "labelling",
+      "labels"
+    ]
+  },
+  {
+    "word": "mechanism",
+    "lemmas": [
+      "mechanism",
+      "mechanisms"
+    ]
+  },
+  {
+    "word": "obvious",
+    "lemmas": [
+      "obvious",
+      "obviously"
+    ]
+  },
+  {
+    "word": "occupy",
+    "lemmas": [
+      "occupy",
+      "occupancy",
+      "occupant",
+      "occupants",
+      "occupation",
+      "occupational",
+      "occupations",
+      "occupied",
+      "occupier",
+      "occupiers",
+      "occupies",
+      "occupying"
+    ]
+  },
+  {
+    "word": "option",
+    "lemmas": [
+      "option",
+      "optional",
+      "options"
+    ]
+  },
+  {
+    "word": "output",
+    "lemmas": [
+      "output",
+      "outputs"
+    ]
+  },
+  {
+    "word": "overall",
+    "lemmas": [
+      "overall"
+    ]
+  },
+  {
+    "word": "parallel",
+    "lemmas": [
+      "parallel",
+      "paralleled",
+      "parallelled",
+      "parallelling",
+      "parallels",
+      "unparalleled"
+    ]
+  },
+  {
+    "word": "parameter",
+    "lemmas": [
+      "parameter",
+      "parameters"
+    ]
+  },
+  {
+    "word": "phase",
+    "lemmas": [
+      "phase",
+      "phased",
+      "phases",
+      "phasing"
+    ]
+  },
+  {
+    "word": "predict",
+    "lemmas": [
+      "predict",
+      "predictability",
+      "predictable",
+      "predictably",
+      "predicted",
+      "predicting",
+      "prediction",
+      "predictions",
+      "predicts",
+      "unpredictability",
+      "unpredictable"
+    ]
+  },
+  {
+    "word": "principal",
+    "lemmas": [
+      "principal",
+      "principally"
+    ]
+  },
+  {
+    "word": "prior",
+    "lemmas": [
+      "prior"
+    ]
+  },
+  {
+    "word": "professional",
+    "lemmas": [
+      "professional",
+      "professionally",
+      "professionals",
+      "professionalism"
+    ]
+  },
+  {
+    "word": "project",
+    "lemmas": [
+      "project",
+      "projected",
+      "projecting",
+      "projection",
+      "projections",
+      "projects"
+    ]
+  },
+  {
+    "word": "promote",
+    "lemmas": [
+      "promote",
+      "promoted",
+      "promoter",
+      "promoters",
+      "promotes",
+      "promoting",
+      "promotion",
+      "promotions"
+    ]
+  },
+  {
+    "word": "regime",
+    "lemmas": [
+      "regime",
+      "regimes"
+    ]
+  },
+  {
+    "word": "resolve",
+    "lemmas": [
+      "resolve",
+      "resolution",
+      "resolved",
+      "resolves",
+      "resolving",
+      "unresolved"
+    ]
+  },
+  {
+    "word": "retain",
+    "lemmas": [
+      "retain",
+      "retained",
+      "retaining",
+      "retainer",
+      "retainers",
+      "retains",
+      "retention",
+      "retentive"
+    ]
+  },
+  {
+    "word": "series",
+    "lemmas": [
+      "series"
+    ]
+  },
+  {
+    "word": "statistic",
+    "lemmas": [
+      "statistic",
+      "statistician",
+      "statisticians",
+      "statistical",
+      "statistically",
+      "statistics"
+    ]
+  },
+  {
+    "word": "status",
+    "lemmas": [
+      "status"
+    ]
+  },
+  {
+    "word": "stress",
+    "lemmas": [
+      "stress",
+      "stressed",
+      "stresses",
+      "stressful",
+      "stressing",
+      "unstressed"
+    ]
+  },
+  {
+    "word": "subsequent",
+    "lemmas": [
+      "subsequent",
+      "subsequently"
+    ]
+  },
+  {
+    "word": "sum",
+    "lemmas": [
+      "sum",
+      "summation",
+      "summed",
+      "summing",
+      "sums"
+    ]
+  },
+  {
+    "word": "summary",
+    "lemmas": [
+      "summary",
+      "summaries",
+      "summarise",
+      "summarised",
+      "summarises",
+      "summarising",
+      "summarisation",
+      "summarisations",
+      "summarization",
+      "summarizations",
+      "summarize",
+      "summarized",
+      "summarizes",
+      "summarizing"
+    ]
+  },
+  {
+    "word": "undertake",
+    "lemmas": [
+      "undertake",
+      "undertaken",
+      "undertakes",
+      "undertaking",
+      "undertook"
+    ]
+  },
+  {
+    "word": "academy",
+    "lemmas": [
+      "academy",
+      "academia",
+      "academic",
+      "academically",
+      "academics",
+      "academies"
+    ]
+  },
+  {
+    "word": "adjust",
+    "lemmas": [
+      "adjust",
+      "adjusted",
+      "adjusting",
+      "adjustment",
+      "adjustments",
+      "adjusts",
+      "readjust",
+      "readjusted",
+      "readjusting",
+      "readjustment",
+      "readjustments",
+      "readjusts"
+    ]
+  },
+  {
+    "word": "alter",
+    "lemmas": [
+      "alter",
+      "alterable",
+      "alteration",
+      "alterations",
+      "altered",
+      "altering",
+      "alternate",
+      "alternating",
+      "alters",
+      "unalterable",
+      "unaltered"
+    ]
+  },
+  {
+    "word": "amend",
+    "lemmas": [
+      "amend",
+      "amended",
+      "amending",
+      "amendment",
+      "amendments",
+      "amends"
+    ]
+  },
+  {
+    "word": "aware",
+    "lemmas": [
+      "aware",
+      "awareness",
+      "unaware"
+    ]
+  },
+  {
+    "word": "capacity",
+    "lemmas": [
+      "capacity",
+      "capacities",
+      "incapacitate",
+      "incapacitated"
+    ]
+  },
+  {
+    "word": "challenge",
+    "lemmas": [
+      "challenge",
+      "challenged",
+      "challenger",
+      "challengers",
+      "challenges",
+      "challenging"
+    ]
+  },
+  {
+    "word": "clause",
+    "lemmas": [
+      "clause",
+      "clauses"
+    ]
+  },
+  {
+    "word": "compound",
+    "lemmas": [
+      "compound",
+      "compounded",
+      "compounding",
+      "compounds"
+    ]
+  },
+  {
+    "word": "conflict",
+    "lemmas": [
+      "conflict",
+      "conflicted",
+      "conflicting",
+      "conflicts"
+    ]
+  },
+  {
+    "word": "consult",
+    "lemmas": [
+      "consult",
+      "consultancy",
+      "consultant",
+      "consultants",
+      "consultation",
+      "consultations",
+      "consultative",
+      "consulted",
+      "consults",
+      "consulting"
+    ]
+  },
+  {
+    "word": "contact",
+    "lemmas": [
+      "contact",
+      "contactable",
+      "contacted",
+      "contacting",
+      "contacts"
+    ]
+  },
+  {
+    "word": "decline",
+    "lemmas": [
+      "decline",
+      "declined",
+      "declines",
+      "declining"
+    ]
+  },
+  {
+    "word": "discrete",
+    "lemmas": [
+      "discrete",
+      "discretely",
+      "discretion",
+      "discretionary",
+      "indiscrete",
+      "indiscretion"
+    ]
+  },
+  {
+    "word": "draft",
+    "lemmas": [
+      "draft",
+      "drafted",
+      "drafting",
+      "drafts",
+      "redraft",
+      "redrafted",
+      "redrafting",
+      "redrafts"
+    ]
+  },
+  {
+    "word": "enable",
+    "lemmas": [
+      "enable",
+      "enabled",
+      "enables",
+      "enabling"
+    ]
+  },
+  {
+    "word": "energy",
+    "lemmas": [
+      "energy",
+      "energetic",
+      "energetically",
+      "energies"
+    ]
+  },
+  {
+    "word": "enforce",
+    "lemmas": [
+      "enforce",
+      "enforced",
+      "enforcement",
+      "enforces",
+      "enforcing"
+    ]
+  },
+  {
+    "word": "entity",
+    "lemmas": [
+      "entity",
+      "entities"
+    ]
+  },
+  {
+    "word": "equivalent",
+    "lemmas": [
+      "equivalent",
+      "equivalence"
+    ]
+  },
+  {
+    "word": "evolve",
+    "lemmas": [
+      "evolve",
+      "evolution",
+      "evolved",
+      "evolving",
+      "evolves",
+      "evolutionary",
+      "evolutionist",
+      "evolutionists"
+    ]
+  },
+  {
+    "word": "expand",
+    "lemmas": [
+      "expand",
+      "expanded",
+      "expanding",
+      "expands",
+      "expansion",
+      "expansionism",
+      "expansive"
+    ]
+  },
+  {
+    "word": "expose",
+    "lemmas": [
+      "expose",
+      "exposed",
+      "exposes",
+      "exposing",
+      "exposure",
+      "exposures"
+    ]
+  },
+  {
+    "word": "external",
+    "lemmas": [
+      "external",
+      "externalisation",
+      "externalise",
+      "externalised",
+      "externalises",
+      "externalising",
+      "externality",
+      "externalization",
+      "externalize",
+      "externalized",
+      "externalizes",
+      "externalizing",
+      "externally"
+    ]
+  },
+  {
+    "word": "facilitate",
+    "lemmas": [
+      "facilitate",
+      "facilitated",
+      "facilitates",
+      "facilities",
+      "facilitating",
+      "facilitation",
+      "facilitator",
+      "facilitators",
+      "facility"
+    ]
+  },
+  {
+    "word": "fundamental",
+    "lemmas": [
+      "fundamental",
+      "fundamentally"
+    ]
+  },
+  {
+    "word": "generate",
+    "lemmas": [
+      "generate",
+      "generated",
+      "generates",
+      "generating"
+    ]
+  },
+  {
+    "word": "generation",
+    "lemmas": [
+      "generation",
+      "generations"
+    ]
+  },
+  {
+    "word": "image",
+    "lemmas": [
+      "image",
+      "imagery",
+      "images"
+    ]
+  },
+  {
+    "word": "liberal",
+    "lemmas": [
+      "liberal",
+      "liberalise",
+      "liberalism",
+      "liberalisation",
+      "liberalised",
+      "liberalises",
+      "liberalising",
+      "liberalization",
+      "liberalize",
+      "liberalized",
+      "liberalizes",
+      "liberalizing",
+      "liberate",
+      "liberated",
+      "liberates",
+      "liberation",
+      "liberations",
+      "liberating",
+      "liberator",
+      "liberators",
+      "liberally",
+      "liberals"
+    ]
+  },
+  {
+    "word": "licence",
+    "lemmas": [
+      "licence",
+      "licences",
+      "license",
+      "licensed",
+      "licensing",
+      "licenses",
+      "unlicensed"
+    ]
+  },
+  {
+    "word": "logic",
+    "lemmas": [
+      "logic",
+      "illogical",
+      "illogically",
+      "logical",
+      "logically",
+      "logician",
+      "logicians"
+    ]
+  },
+  {
+    "word": "margin",
+    "lemmas": [
+      "margin",
+      "marginal",
+      "marginally",
+      "margins"
+    ]
+  },
+  {
+    "word": "medical",
+    "lemmas": [
+      "medical",
+      "medically"
+    ]
+  },
+  {
+    "word": "mental",
+    "lemmas": [
+      "mental",
+      "mentality",
+      "mentally"
+    ]
+  },
+  {
+    "word": "modify",
+    "lemmas": [
+      "modify",
+      "modification",
+      "modifications",
+      "modified",
+      "modifies",
+      "modifying",
+      "unmodified"
+    ]
+  },
+  {
+    "word": "monitor",
+    "lemmas": [
+      "monitor",
+      "monitored",
+      "monitoring",
+      "monitors",
+      "unmonitored"
+    ]
+  },
+  {
+    "word": "network",
+    "lemmas": [
+      "network",
+      "networked",
+      "networking",
+      "networks"
+    ]
+  },
+  {
+    "word": "notion",
+    "lemmas": [
+      "notion",
+      "notions"
+    ]
+  },
+  {
+    "word": "objective",
+    "lemmas": [
+      "objective",
+      "objectively",
+      "objectivity"
+    ]
+  },
+  {
+    "word": "orient",
+    "lemmas": [
+      "orient",
+      "orientate",
+      "orientated",
+      "orientates",
+      "orientation",
+      "orientating",
+      "oriented",
+      "orienting",
+      "orients",
+      "reorient",
+      "reorientation"
+    ]
+  },
+  {
+    "word": "perspective",
+    "lemmas": [
+      "perspective",
+      "perspectives"
+    ]
+  },
+  {
+    "word": "precise",
+    "lemmas": [
+      "precise",
+      "imprecise",
+      "precisely",
+      "precision"
+    ]
+  },
+  {
+    "word": "prime",
+    "lemmas": [
+      "prime",
+      "primacy"
+    ]
+  },
+  {
+    "word": "psychology",
+    "lemmas": [
+      "psychology",
+      "psychological",
+      "psychologically",
+      "psychologist",
+      "psychologists"
+    ]
+  },
+  {
+    "word": "pursue",
+    "lemmas": [
+      "pursue",
+      "pursued",
+      "pursues",
+      "pursuing",
+      "pursuit",
+      "pursuits"
+    ]
+  },
+  {
+    "word": "ratio",
+    "lemmas": [
+      "ratio",
+      "ratios"
+    ]
+  },
+  {
+    "word": "reject",
+    "lemmas": [
+      "reject",
+      "rejected",
+      "rejecting",
+      "rejection",
+      "rejects",
+      "rejections"
+    ]
+  },
+  {
+    "word": "revenue",
+    "lemmas": [
+      "revenue",
+      "revenues"
+    ]
+  },
+  {
+    "word": "stable",
+    "lemmas": [
+      "stable",
+      "instability",
+      "stabilisation",
+      "stabilise",
+      "stabilised",
+      "stabilises",
+      "stabilising",
+      "stabilization",
+      "stabilize",
+      "stabilized",
+      "stabilizes",
+      "stabilizing",
+      "stability",
+      "unstable"
+    ]
+  },
+  {
+    "word": "style",
+    "lemmas": [
+      "style",
+      "styled",
+      "styles",
+      "styling",
+      "stylish",
+      "stylise",
+      "stylised",
+      "stylises",
+      "stylising",
+      "stylize",
+      "stylized",
+      "stylizes",
+      "stylizing"
+    ]
+  },
+  {
+    "word": "substitute",
+    "lemmas": [
+      "substitute",
+      "substituted",
+      "substitutes",
+      "substituting",
+      "substitution"
+    ]
+  },
+  {
+    "word": "sustain",
+    "lemmas": [
+      "sustain",
+      "sustainable",
+      "sustainability",
+      "sustained",
+      "sustaining",
+      "sustains",
+      "sustenance",
+      "unsustainable"
+    ]
+  },
+  {
+    "word": "symbol",
+    "lemmas": [
+      "symbol",
+      "symbolic",
+      "symbolically",
+      "symbolise",
+      "symbolises",
+      "symbolised",
+      "symbolising",
+      "symbolism",
+      "symbolize",
+      "symbolized",
+      "symbolizes",
+      "symbolizing",
+      "symbols"
+    ]
+  },
+  {
+    "word": "target",
+    "lemmas": [
+      "target",
+      "targeted",
+      "targeting",
+      "targets"
+    ]
+  },
+  {
+    "word": "transit",
+    "lemmas": [
+      "transit",
+      "transited",
+      "transiting",
+      "transition",
+      "transitional",
+      "transitions",
+      "transitory",
+      "transits"
+    ]
+  },
+  {
+    "word": "trend",
+    "lemmas": [
+      "trend",
+      "trends"
+    ]
+  },
+  {
+    "word": "version",
+    "lemmas": [
+      "version",
+      "versions"
+    ]
+  },
+  {
+    "word": "welfare",
+    "lemmas": [
+      "welfare"
+    ]
+  },
+  {
+    "word": "whereas",
+    "lemmas": [
+      "whereas"
+    ]
+  },
+  {
+    "word": "abstract",
+    "lemmas": [
+      "abstract",
+      "abstraction",
+      "abstractions",
+      "abstractly",
+      "abstracts"
+    ]
+  },
+  {
+    "word": "accurate",
+    "lemmas": [
+      "accurate",
+      "accuracy",
+      "accurately",
+      "inaccuracy",
+      "inaccuracies",
+      "inaccurate"
+    ]
+  },
+  {
+    "word": "acknowledge",
+    "lemmas": [
+      "acknowledge",
+      "acknowledged",
+      "acknowledges",
+      "acknowledging",
+      "acknowledgement",
+      "acknowledgemens"
+    ]
+  },
+  {
+    "word": "aggregate",
+    "lemmas": [
+      "aggregate",
+      "aggregated",
+      "aggregates",
+      "aggregating",
+      "aggregation"
+    ]
+  },
+  {
+    "word": "allocate",
+    "lemmas": [
+      "allocate",
+      "allocated",
+      "allocates",
+      "allocating",
+      "allocation",
+      "allocations"
+    ]
+  },
+  {
+    "word": "assign",
+    "lemmas": [
+      "assign",
+      "assigned",
+      "assigning",
+      "assignment",
+      "assignments",
+      "assigns",
+      "reassign",
+      "reassigned",
+      "reassigning",
+      "reassigns",
+      "unassigned"
+    ]
+  },
+  {
+    "word": "attach",
+    "lemmas": [
+      "attach",
+      "attached",
+      "attaches",
+      "attaching",
+      "attachment",
+      "attachments",
+      "unattached"
+    ]
+  },
+  {
+    "word": "author",
+    "lemmas": [
+      "author",
+      "authored",
+      "authoring",
+      "authors",
+      "authorship"
+    ]
+  },
+  {
+    "word": "bond",
+    "lemmas": [
+      "bond",
+      "bonded",
+      "bonding",
+      "bonds"
+    ]
+  },
+  {
+    "word": "brief",
+    "lemmas": [
+      "brief",
+      "brevity",
+      "briefed",
+      "briefing",
+      "briefly",
+      "briefs"
+    ]
+  },
+  {
+    "word": "capable",
+    "lemmas": [
+      "capable",
+      "capabilities",
+      "capability",
+      "incapable"
+    ]
+  },
+  {
+    "word": "cite",
+    "lemmas": [
+      "cite",
+      "citation",
+      "citations",
+      "cited",
+      "citing",
+      "cites"
+    ]
+  },
+  {
+    "word": "cooperate",
+    "lemmas": [
+      "cooperate",
+      "cooperated",
+      "cooperates",
+      "cooperating",
+      "cooperation",
+      "cooperative",
+      "cooperatively",
+      "co-operate",
+      "co‑operated",
+      "co‑operates",
+      "co‑operation",
+      "co‑operative",
+      "co‑operatively"
+    ]
+  },
+  {
+    "word": "discriminate",
+    "lemmas": [
+      "discriminate",
+      "discriminated",
+      "discriminates",
+      "discriminating",
+      "discrimination"
+    ]
+  },
+  {
+    "word": "display",
+    "lemmas": [
+      "display",
+      "displayed",
+      "displaying",
+      "displays"
+    ]
+  },
+  {
+    "word": "diverse",
+    "lemmas": [
+      "diverse",
+      "diversely",
+      "diversification",
+      "diversified",
+      "diversifies",
+      "diversify",
+      "diversifying",
+      "diversity"
+    ]
+  },
+  {
+    "word": "domain",
+    "lemmas": [
+      "domain",
+      "domains"
+    ]
+  },
+  {
+    "word": "edit",
+    "lemmas": [
+      "edit",
+      "edited",
+      "editing",
+      "edition",
+      "editions",
+      "editor",
+      "editorial",
+      "editorials",
+      "editors",
+      "edits"
+    ]
+  },
+  {
+    "word": "enhance",
+    "lemmas": [
+      "enhance",
+      "enhanced",
+      "enhancement",
+      "enhances",
+      "enhancing"
+    ]
+  },
+  {
+    "word": "estate",
+    "lemmas": [
+      "estate",
+      "estates"
+    ]
+  },
+  {
+    "word": "exceed",
+    "lemmas": [
+      "exceed",
+      "exceeded",
+      "exceeding",
+      "exceeds"
+    ]
+  },
+  {
+    "word": "expert",
+    "lemmas": [
+      "expert",
+      "expertise",
+      "expertly",
+      "experts"
+    ]
+  },
+  {
+    "word": "explicit",
+    "lemmas": [
+      "explicit",
+      "explicitly"
+    ]
+  },
+  {
+    "word": "federal",
+    "lemmas": [
+      "federal",
+      "federation",
+      "federations"
+    ]
+  },
+  {
+    "word": "fee",
+    "lemmas": [
+      "fee",
+      "fees"
+    ]
+  },
+  {
+    "word": "flexible",
+    "lemmas": [
+      "flexible",
+      "flexibility",
+      "inflexible",
+      "inflexibility"
+    ]
+  },
+  {
+    "word": "furthermore",
+    "lemmas": [
+      "furthermore"
+    ]
+  },
+  {
+    "word": "gender",
+    "lemmas": [
+      "gender",
+      "genders"
+    ]
+  },
+  {
+    "word": "ignorant",
+    "lemmas": [
+      "ignorant",
+      "ignorance",
+      "ignore",
+      "ignored",
+      "ignores",
+      "ignoring"
+    ]
+  },
+  {
+    "word": "incentive",
+    "lemmas": [
+      "incentive",
+      "incentives"
+    ]
+  },
+  {
+    "word": "incidence",
+    "lemmas": [
+      "incidence",
+      "incident",
+      "incidentally",
+      "incidents"
+    ]
+  },
+  {
+    "word": "incorporate",
+    "lemmas": [
+      "incorporate",
+      "incorporated",
+      "incorporates",
+      "incorporating",
+      "incorporation"
+    ]
+  },
+  {
+    "word": "index",
+    "lemmas": [
+      "index",
+      "indexed",
+      "indexes",
+      "indexing"
+    ]
+  },
+  {
+    "word": "inhibit",
+    "lemmas": [
+      "inhibit",
+      "inhibited",
+      "inhibiting",
+      "inhibition",
+      "inhibitions",
+      "inhibits"
+    ]
+  },
+  {
+    "word": "initiate",
+    "lemmas": [
+      "initiate",
+      "initiated",
+      "initiates",
+      "initiating",
+      "initiation",
+      "initiations",
+      "initiative",
+      "initiatives",
+      "initiator",
+      "initiators"
+    ]
+  },
+  {
+    "word": "input",
+    "lemmas": [
+      "input",
+      "inputs"
+    ]
+  },
+  {
+    "word": "instruct",
+    "lemmas": [
+      "instruct",
+      "instruction",
+      "instructed",
+      "instructing",
+      "instructions",
+      "instructive",
+      "instructor",
+      "instructors",
+      "instructs"
+    ]
+  },
+  {
+    "word": "intelligent",
+    "lemmas": [
+      "intelligent",
+      "intelligence",
+      "intelligently",
+      "unintelligent"
+    ]
+  },
+  {
+    "word": "interval",
+    "lemmas": [
+      "interval",
+      "intervals"
+    ]
+  },
+  {
+    "word": "lecture",
+    "lemmas": [
+      "lecture",
+      "lectured",
+      "lecturer",
+      "lecturers",
+      "lectures",
+      "lecturing"
+    ]
+  },
+  {
+    "word": "migrate",
+    "lemmas": [
+      "migrate",
+      "migrant",
+      "migrants",
+      "migrated",
+      "migrates",
+      "migrating",
+      "migration",
+      "migrations",
+      "migratory"
+    ]
+  },
+  {
+    "word": "minimum",
+    "lemmas": [
+      "minimum"
+    ]
+  },
+  {
+    "word": "ministry",
+    "lemmas": [
+      "ministry",
+      "ministered",
+      "ministering",
+      "ministerial",
+      "ministries"
+    ]
+  },
+  {
+    "word": "motive",
+    "lemmas": [
+      "motive",
+      "motivate",
+      "motivated",
+      "motivates",
+      "motivating",
+      "motivation",
+      "motivations",
+      "motives",
+      "unmotivated"
+    ]
+  },
+  {
+    "word": "neutral",
+    "lemmas": [
+      "neutral",
+      "neutralisation",
+      "neutralise",
+      "neutralised",
+      "neutralises",
+      "neutralising",
+      "neutrality",
+      "neutralization",
+      "neutralize",
+      "neutralized",
+      "neutralizes",
+      "neutralizing"
+    ]
+  },
+  {
+    "word": "nevertheless",
+    "lemmas": [
+      "nevertheless"
+    ]
+  },
+  {
+    "word": "overseas",
+    "lemmas": [
+      "overseas"
+    ]
+  },
+  {
+    "word": "precede",
+    "lemmas": [
+      "precede",
+      "preceded",
+      "precedence",
+      "precedent",
+      "precedes",
+      "preceding",
+      "unprecedented"
+    ]
+  },
+  {
+    "word": "presume",
+    "lemmas": [
+      "presume",
+      "presumably",
+      "presumed",
+      "presumes",
+      "presuming",
+      "presumption",
+      "presumptions",
+      "presumptuous"
+    ]
+  },
+  {
+    "word": "rational",
+    "lemmas": [
+      "rational",
+      "irrational",
+      "rationalisation",
+      "rationalisations",
+      "rationalise",
+      "rationalised",
+      "rationalises",
+      "rationalising",
+      "rationalism",
+      "rationality",
+      "rationalization",
+      "rationalizations",
+      "rationalize",
+      "rationalized",
+      "rationalizes",
+      "rationally"
+    ]
+  },
+  {
+    "word": "recover",
+    "lemmas": [
+      "recover",
+      "recoverable",
+      "recovered",
+      "recovering",
+      "recovers",
+      "recovery"
+    ]
+  },
+  {
+    "word": "reveal",
+    "lemmas": [
+      "reveal",
+      "revealed",
+      "revealing",
+      "reveals",
+      "revelation",
+      "revelations"
+    ]
+  },
+  {
+    "word": "scope",
+    "lemmas": [
+      "scope"
+    ]
+  },
+  {
+    "word": "subsidy",
+    "lemmas": [
+      "subsidy",
+      "subsidiary",
+      "subsidies",
+      "subsidise",
+      "subsidised",
+      "subsidises",
+      "subsidising",
+      "subsidize",
+      "subsidized",
+      "subsidizes",
+      "subsidizing"
+    ]
+  },
+  {
+    "word": "tape",
+    "lemmas": [
+      "tape",
+      "taped",
+      "tapes",
+      "taping"
+    ]
+  },
+  {
+    "word": "trace",
+    "lemmas": [
+      "trace",
+      "traceable",
+      "traced",
+      "traces",
+      "tracing"
+    ]
+  },
+  {
+    "word": "transform",
+    "lemmas": [
+      "transform",
+      "transformation",
+      "transformations",
+      "transformed",
+      "transforming",
+      "transforms"
+    ]
+  },
+  {
+    "word": "transport",
+    "lemmas": [
+      "transport",
+      "transportation",
+      "transported",
+      "transporter",
+      "transporters",
+      "transporting",
+      "transports"
+    ]
+  },
+  {
+    "word": "underlie",
+    "lemmas": [
+      "underlie",
+      "underlay",
+      "underlies",
+      "underlying"
+    ]
+  },
+  {
+    "word": "utilise",
+    "lemmas": [
+      "utilise",
+      "utilisation",
+      "utilised",
+      "utilises",
+      "utilising",
+      "utiliser",
+      "utilisers",
+      "utility",
+      "utilities",
+      "utilization",
+      "utilize",
+      "utilized",
+      "utilizes",
+      "utilizing",
+      "adapt",
+      "adaptability",
+      "adaptable",
+      "adaptation",
+      "adaptations",
+      "adapted",
+      "adapting",
+      "adaptive",
+      "adapts"
+    ]
+  },
+  {
+    "word": "adult",
+    "lemmas": [
+      "adult",
+      "adulthood",
+      "adults"
+    ]
+  },
+  {
+    "word": "advocate",
+    "lemmas": [
+      "advocate",
+      "advocacy",
+      "advocated",
+      "advocates",
+      "advocating"
+    ]
+  },
+  {
+    "word": "aid",
+    "lemmas": [
+      "aid",
+      "aided",
+      "aiding",
+      "aids",
+      "unaided"
+    ]
+  },
+  {
+    "word": "channel",
+    "lemmas": [
+      "channel",
+      "channelled",
+      "channelling",
+      "channels"
+    ]
+  },
+  {
+    "word": "chemical",
+    "lemmas": [
+      "chemical",
+      "chemically",
+      "chemicals"
+    ]
+  },
+  {
+    "word": "classic",
+    "lemmas": [
+      "classic",
+      "classical",
+      "classics"
+    ]
+  },
+  {
+    "word": "comprehensive",
+    "lemmas": [
+      "comprehensive",
+      "comprehensively"
+    ]
+  },
+  {
+    "word": "comprise",
+    "lemmas": [
+      "comprise",
+      "comprised",
+      "comprises",
+      "comprising"
+    ]
+  },
+  {
+    "word": "confirm",
+    "lemmas": [
+      "confirm",
+      "confirmation",
+      "confirmed",
+      "confirming",
+      "confirms"
+    ]
+  },
+  {
+    "word": "contrary",
+    "lemmas": [
+      "contrary",
+      "contrarily"
+    ]
+  },
+  {
+    "word": "convert",
+    "lemmas": [
+      "convert",
+      "conversion",
+      "conversions",
+      "converted",
+      "convertible",
+      "converting",
+      "converts"
+    ]
+  },
+  {
+    "word": "couple",
+    "lemmas": [
+      "couple",
+      "coupled",
+      "coupling",
+      "couples"
+    ]
+  },
+  {
+    "word": "decade",
+    "lemmas": [
+      "decade",
+      "decades"
+    ]
+  },
+  {
+    "word": "definite",
+    "lemmas": [
+      "definite",
+      "definitely",
+      "definitive",
+      "indefinite",
+      "indefinitely"
+    ]
+  },
+  {
+    "word": "deny",
+    "lemmas": [
+      "deny",
+      "deniable",
+      "denial",
+      "denials",
+      "denied",
+      "denies",
+      "denying",
+      "undeniable"
+    ]
+  },
+  {
+    "word": "differentiate",
+    "lemmas": [
+      "differentiate",
+      "differentiated",
+      "differentiates",
+      "differentiating",
+      "differentiation"
+    ]
+  },
+  {
+    "word": "dispose",
+    "lemmas": [
+      "dispose",
+      "disposable",
+      "disposal",
+      "disposed",
+      "disposes",
+      "disposing"
+    ]
+  },
+  {
+    "word": "dynamic",
+    "lemmas": [
+      "dynamic",
+      "dynamically",
+      "dynamics"
+    ]
+  },
+  {
+    "word": "eliminate",
+    "lemmas": [
+      "eliminate",
+      "eliminated",
+      "eliminates",
+      "eliminating",
+      "elimination"
+    ]
+  },
+  {
+    "word": "empirical",
+    "lemmas": [
+      "empirical",
+      "empirically",
+      "empiricism"
+    ]
+  },
+  {
+    "word": "equip",
+    "lemmas": [
+      "equip",
+      "equipment",
+      "equipped",
+      "equipping",
+      "equips"
+    ]
+  },
+  {
+    "word": "extract",
+    "lemmas": [
+      "extract",
+      "extracted",
+      "extracting",
+      "extraction",
+      "extracts"
+    ]
+  },
+  {
+    "word": "file",
+    "lemmas": [
+      "file",
+      "filed",
+      "files",
+      "filing"
+    ]
+  },
+  {
+    "word": "finite",
+    "lemmas": [
+      "finite",
+      "infinite",
+      "infinitely"
+    ]
+  },
+  {
+    "word": "foundation",
+    "lemmas": [
+      "foundation",
+      "foundations"
+    ]
+  },
+  {
+    "word": "globe",
+    "lemmas": [
+      "globe",
+      "global",
+      "globally",
+      "globalisation",
+      "globalization"
+    ]
+  },
+  {
+    "word": "grade",
+    "lemmas": [
+      "grade",
+      "graded",
+      "grades",
+      "grading"
+    ]
+  },
+  {
+    "word": "guarantee",
+    "lemmas": [
+      "guarantee",
+      "guaranteed",
+      "guaranteeing",
+      "guarantees"
+    ]
+  },
+  {
+    "word": "hierarchy",
+    "lemmas": [
+      "hierarchy",
+      "hierarchical",
+      "hierarchies"
+    ]
+  },
+  {
+    "word": "identical",
+    "lemmas": [
+      "identical",
+      "identically"
+    ]
+  },
+  {
+    "word": "ideology",
+    "lemmas": [
+      "ideology",
+      "ideological",
+      "ideologically",
+      "ideologies"
+    ]
+  },
+  {
+    "word": "infer",
+    "lemmas": [
+      "infer",
+      "inference",
+      "inferences",
+      "inferred",
+      "inferring",
+      "infers"
+    ]
+  },
+  {
+    "word": "innovate",
+    "lemmas": [
+      "innovate",
+      "innovation",
+      "innovated",
+      "innovates",
+      "innovating",
+      "innovations",
+      "innovative",
+      "innovator",
+      "innovators"
+    ]
+  },
+  {
+    "word": "insert",
+    "lemmas": [
+      "insert",
+      "inserted",
+      "inserting",
+      "insertion",
+      "inserts"
+    ]
+  },
+  {
+    "word": "intervene",
+    "lemmas": [
+      "intervene",
+      "intervened",
+      "intervenes",
+      "intervening",
+      "intervention",
+      "interventions"
+    ]
+  },
+  {
+    "word": "isolate",
+    "lemmas": [
+      "isolate",
+      "isolated",
+      "isolates",
+      "isolating",
+      "isolation",
+      "isolationism"
+    ]
+  },
+  {
+    "word": "media",
+    "lemmas": [
+      "media"
+    ]
+  },
+  {
+    "word": "mode",
+    "lemmas": [
+      "mode",
+      "modes"
+    ]
+  },
+  {
+    "word": "paradigm",
+    "lemmas": [
+      "paradigm",
+      "paradigms"
+    ]
+  },
+  {
+    "word": "phenomenon",
+    "lemmas": [
+      "phenomenon",
+      "phenomena",
+      "phenomenal"
+    ]
+  },
+  {
+    "word": "priority",
+    "lemmas": [
+      "priority",
+      "priorities",
+      "prioritisation",
+      "prioritise",
+      "prioritised",
+      "prioritises",
+      "prioritising",
+      "prioritization",
+      "prioritize",
+      "prioritized",
+      "prioritizes",
+      "prioritizing"
+    ]
+  },
+  {
+    "word": "prohibit",
+    "lemmas": [
+      "prohibit",
+      "prohibited",
+      "prohibiting",
+      "prohibition",
+      "prohibitions",
+      "prohibitive",
+      "prohibits"
+    ]
+  },
+  {
+    "word": "publication",
+    "lemmas": [
+      "publication",
+      "publications"
+    ]
+  },
+  {
+    "word": "quote",
+    "lemmas": [
+      "quote",
+      "quotation",
+      "quotations",
+      "quoted",
+      "quotes",
+      "quoting"
+    ]
+  },
+  {
+    "word": "release",
+    "lemmas": [
+      "release",
+      "released",
+      "releases",
+      "releasing"
+    ]
+  },
+  {
+    "word": "reverse",
+    "lemmas": [
+      "reverse",
+      "reversal",
+      "reversed",
+      "reverses",
+      "reversible",
+      "reversing",
+      "reversals",
+      "irreversible"
+    ]
+  },
+  {
+    "word": "simulate",
+    "lemmas": [
+      "simulate",
+      "simulated",
+      "simulates",
+      "simulating",
+      "simulation"
+    ]
+  },
+  {
+    "word": "sole",
+    "lemmas": [
+      "sole",
+      "solely"
+    ]
+  },
+  {
+    "word": "somewhat",
+    "lemmas": [
+      "somewhat"
+    ]
+  },
+  {
+    "word": "submit",
+    "lemmas": [
+      "submit",
+      "submission",
+      "submissions",
+      "submits",
+      "submitted",
+      "submitting"
+    ]
+  },
+  {
+    "word": "successor",
+    "lemmas": [
+      "successor",
+      "succession",
+      "successions",
+      "successive",
+      "successively",
+      "successors"
+    ]
+  },
+  {
+    "word": "survive",
+    "lemmas": [
+      "survive",
+      "survival",
+      "survived",
+      "survives",
+      "surviving",
+      "survivor",
+      "survivors"
+    ]
+  },
+  {
+    "word": "thesis",
+    "lemmas": [
+      "thesis",
+      "theses"
+    ]
+  },
+  {
+    "word": "topic",
+    "lemmas": [
+      "topic",
+      "topical",
+      "topics"
+    ]
+  },
+  {
+    "word": "transmit",
+    "lemmas": [
+      "transmit",
+      "transmission",
+      "transmissions",
+      "transmitted",
+      "transmitting",
+      "transmits"
+    ]
+  },
+  {
+    "word": "ultimate",
+    "lemmas": [
+      "ultimate",
+      "ultimately"
+    ]
+  },
+  {
+    "word": "unique",
+    "lemmas": [
+      "unique",
+      "uniquely",
+      "uniqueness"
+    ]
+  },
+  {
+    "word": "visible",
+    "lemmas": [
+      "visible",
+      "visibility",
+      "visibly",
+      "invisible",
+      "invisibility"
+    ]
+  },
+  {
+    "word": "voluntary",
+    "lemmas": [
+      "voluntary",
+      "voluntarily",
+      "volunteer",
+      "volunteering",
+      "volunteered",
+      "volunteers"
+    ]
+  },
+  {
+    "word": "abandon",
+    "lemmas": [
+      "abandon",
+      "abandoned",
+      "abandoning",
+      "abandonment",
+      "abandons"
+    ]
+  },
+  {
+    "word": "accompany",
+    "lemmas": [
+      "accompany",
+      "accompanied",
+      "accompanies",
+      "accompaniment",
+      "accompanying",
+      "unaccompanied"
+    ]
+  },
+  {
+    "word": "accumulate",
+    "lemmas": [
+      "accumulate",
+      "accumulated",
+      "accumulating",
+      "accumulation",
+      "accumulates"
+    ]
+  },
+  {
+    "word": "ambiguous",
+    "lemmas": [
+      "ambiguous",
+      "ambiguities",
+      "ambiguity",
+      "unambiguous",
+      "unambiguously"
+    ]
+  },
+  {
+    "word": "append",
+    "lemmas": [
+      "append",
+      "appendix",
+      "appended",
+      "appends",
+      "appending",
+      "appendices",
+      "appendixes"
+    ]
+  },
+  {
+    "word": "appreciate",
+    "lemmas": [
+      "appreciate",
+      "appreciable",
+      "appreciably",
+      "appreciated",
+      "appreciates",
+      "appreciating",
+      "appreciation",
+      "unappreciated"
+    ]
+  },
+  {
+    "word": "arbitrary",
+    "lemmas": [
+      "arbitrary",
+      "arbitrariness",
+      "arbitrarily"
+    ]
+  },
+  {
+    "word": "automate",
+    "lemmas": [
+      "automate",
+      "automatic",
+      "automated",
+      "automates",
+      "automating",
+      "automatically",
+      "automation"
+    ]
+  },
+  {
+    "word": "bias",
+    "lemmas": [
+      "bias",
+      "biased",
+      "biases",
+      "biasing",
+      "unbiased"
+    ]
+  },
+  {
+    "word": "chart",
+    "lemmas": [
+      "chart",
+      "charted",
+      "charting",
+      "charts",
+      "uncharted"
+    ]
+  },
+  {
+    "word": "clarify",
+    "lemmas": [
+      "clarify",
+      "clarification",
+      "clarified",
+      "clarifies",
+      "clarifying",
+      "clarity"
+    ]
+  },
+  {
+    "word": "commodity",
+    "lemmas": [
+      "commodity",
+      "commodities"
+    ]
+  },
+  {
+    "word": "complement",
+    "lemmas": [
+      "complement",
+      "complementary",
+      "complemented",
+      "complementing",
+      "complements"
+    ]
+  },
+  {
+    "word": "conform",
+    "lemmas": [
+      "conform",
+      "conformable",
+      "conformability",
+      "conformance",
+      "conformation",
+      "conformed",
+      "conforming",
+      "conformist",
+      "conformists",
+      "conformity",
+      "conforms",
+      "nonconformist",
+      "nonconformists",
+      "nonconformity",
+      "non-conformist",
+      "non-conformists",
+      "non-conformity"
+    ]
+  },
+  {
+    "word": "contemporary",
+    "lemmas": [
+      "contemporary",
+      "contemporaries"
+    ]
+  },
+  {
+    "word": "contradict",
+    "lemmas": [
+      "contradict",
+      "contradicted",
+      "contradicting",
+      "contradiction",
+      "contradictions",
+      "contradictory",
+      "contradicts"
+    ]
+  },
+  {
+    "word": "crucial",
+    "lemmas": [
+      "crucial",
+      "crucially"
+    ]
+  },
+  {
+    "word": "currency",
+    "lemmas": [
+      "currency",
+      "currencies"
+    ]
+  },
+  {
+    "word": "denote",
+    "lemmas": [
+      "denote",
+      "denotation",
+      "denotations",
+      "denoted",
+      "denotes",
+      "denoting"
+    ]
+  },
+  {
+    "word": "detect",
+    "lemmas": [
+      "detect",
+      "detectable",
+      "detected",
+      "detecting",
+      "detection",
+      "detective",
+      "detectives",
+      "detector",
+      "detectors",
+      "detects"
+    ]
+  },
+  {
+    "word": "deviate",
+    "lemmas": [
+      "deviate",
+      "deviated",
+      "deviates",
+      "deviating",
+      "deviation",
+      "deviations"
+    ]
+  },
+  {
+    "word": "displace",
+    "lemmas": [
+      "displace",
+      "displaced",
+      "displacement",
+      "displaces",
+      "displacing"
+    ]
+  },
+  {
+    "word": "drama",
+    "lemmas": [
+      "drama",
+      "dramas",
+      "dramatic",
+      "dramatically",
+      "dramatise",
+      "dramatised",
+      "dramatising",
+      "dramatises",
+      "dramatisation",
+      "dramatisations",
+      "dramatist",
+      "dramatists",
+      "dramatization",
+      "dramatizations",
+      "dramatize",
+      "dramatized",
+      "dramatizes",
+      "dramatizing"
+    ]
+  },
+  {
+    "word": "eventual",
+    "lemmas": [
+      "eventual",
+      "eventuality",
+      "eventually"
+    ]
+  },
+  {
+    "word": "exhibit",
+    "lemmas": [
+      "exhibit",
+      "exhibited",
+      "exhibiting",
+      "exhibition",
+      "exhibitions",
+      "exhibits"
+    ]
+  },
+  {
+    "word": "exploit",
+    "lemmas": [
+      "exploit",
+      "exploitation",
+      "exploited",
+      "exploiting",
+      "exploits"
+    ]
+  },
+  {
+    "word": "fluctuate",
+    "lemmas": [
+      "fluctuate",
+      "fluctuated",
+      "fluctuates",
+      "fluctuating",
+      "fluctuation",
+      "fluctuations"
+    ]
+  },
+  {
+    "word": "guideline",
+    "lemmas": [
+      "guideline",
+      "guidelines"
+    ]
+  },
+  {
+    "word": "highlight",
+    "lemmas": [
+      "highlight",
+      "highlighted",
+      "highlighting",
+      "highlights"
+    ]
+  },
+  {
+    "word": "implicit",
+    "lemmas": [
+      "implicit",
+      "implicitly"
+    ]
+  },
+  {
+    "word": "induce",
+    "lemmas": [
+      "induce",
+      "induced",
+      "induces",
+      "inducing",
+      "induction"
+    ]
+  },
+  {
+    "word": "inevitable",
+    "lemmas": [
+      "inevitable",
+      "inevitability",
+      "inevitably"
+    ]
+  },
+  {
+    "word": "infrastructure",
+    "lemmas": [
+      "infrastructure",
+      "infrastructures"
+    ]
+  },
+  {
+    "word": "inspect",
+    "lemmas": [
+      "inspect",
+      "inspected",
+      "inspecting",
+      "inspection",
+      "inspections",
+      "inspector",
+      "inspectors",
+      "inspects"
+    ]
+  },
+  {
+    "word": "intense",
+    "lemmas": [
+      "intense",
+      "intensely",
+      "intenseness",
+      "intensification",
+      "intensified",
+      "intensifies",
+      "intensify",
+      "intensifying",
+      "intension",
+      "intensity",
+      "intensive",
+      "intensively"
+    ]
+  },
+  {
+    "word": "manipulate",
+    "lemmas": [
+      "manipulate",
+      "manipulated",
+      "manipulates",
+      "manipulating",
+      "manipulation",
+      "manipulations",
+      "manipulative"
+    ]
+  },
+  {
+    "word": "minimise",
+    "lemmas": [
+      "minimise",
+      "minimised",
+      "minimises",
+      "minimising",
+      "minimize",
+      "minimized",
+      "minimizes",
+      "minimizing"
+    ]
+  },
+  {
+    "word": "nuclear",
+    "lemmas": [
+      "nuclear"
+    ]
+  },
+  {
+    "word": "offset",
+    "lemmas": [
+      "offset",
+      "offsets",
+      "offsetting"
+    ]
+  },
+  {
+    "word": "paragraph",
+    "lemmas": [
+      "paragraph",
+      "paragraphing",
+      "paragraphs"
+    ]
+  },
+  {
+    "word": "plus",
+    "lemmas": [
+      "plus",
+      "pluses"
+    ]
+  },
+  {
+    "word": "practitioner",
+    "lemmas": [
+      "practitioner",
+      "practitioners"
+    ]
+  },
+  {
+    "word": "predominant",
+    "lemmas": [
+      "predominant",
+      "predominance",
+      "predominantly",
+      "predominate",
+      "predominated",
+      "predominates",
+      "predominating"
+    ]
+  },
+  {
+    "word": "prospect",
+    "lemmas": [
+      "prospect",
+      "prospective",
+      "prospects"
+    ]
+  },
+  {
+    "word": "radical",
+    "lemmas": [
+      "radical",
+      "radically",
+      "radicals"
+    ]
+  },
+  {
+    "word": "random",
+    "lemmas": [
+      "random",
+      "randomly",
+      "randomness"
+    ]
+  },
+  {
+    "word": "reinforce",
+    "lemmas": [
+      "reinforce",
+      "reinforced",
+      "reinforcement",
+      "reinforcements",
+      "reinforces",
+      "reinforcing"
+    ]
+  },
+  {
+    "word": "restore",
+    "lemmas": [
+      "restore",
+      "restoration",
+      "restored",
+      "restores",
+      "restoring"
+    ]
+  },
+  {
+    "word": "revise",
+    "lemmas": [
+      "revise",
+      "revised",
+      "revises",
+      "revising",
+      "revision",
+      "revisions"
+    ]
+  },
+  {
+    "word": "schedule",
+    "lemmas": [
+      "schedule",
+      "reschedule",
+      "rescheduled",
+      "reschedules",
+      "rescheduling",
+      "scheduled",
+      "schedules",
+      "scheduling",
+      "unscheduled"
+    ]
+  },
+  {
+    "word": "tense",
+    "lemmas": [
+      "tense",
+      "tension",
+      "tensely",
+      "tenser",
+      "tensest",
+      "tensions"
+    ]
+  },
+  {
+    "word": "terminate",
+    "lemmas": [
+      "terminate",
+      "terminal",
+      "terminals",
+      "terminated",
+      "terminates",
+      "terminating",
+      "termination",
+      "terminations"
+    ]
+  },
+  {
+    "word": "theme",
+    "lemmas": [
+      "theme",
+      "themes",
+      "thematic",
+      "thematically"
+    ]
+  },
+  {
+    "word": "thereby",
+    "lemmas": [
+      "thereby"
+    ]
+  },
+  {
+    "word": "uniform",
+    "lemmas": [
+      "uniform",
+      "uniformity",
+      "uniformly"
+    ]
+  },
+  {
+    "word": "vehicle",
+    "lemmas": [
+      "vehicle",
+      "vehicles"
+    ]
+  },
+  {
+    "word": "via",
+    "lemmas": [
+      "via"
+    ]
+  },
+  {
+    "word": "virtual",
+    "lemmas": [
+      "virtual",
+      "virtually"
+    ]
+  },
+  {
+    "word": "visual",
+    "lemmas": [
+      "visual",
+      "visualise",
+      "visualised",
+      "visualising",
+      "visualisation",
+      "visualize",
+      "visualized",
+      "visualizing",
+      "visualization",
+      "visually"
+    ]
+  },
+  {
+    "word": "widespread",
+    "lemmas": [
+      "widespread"
+    ]
+  },
+  {
+    "word": "accommodate",
+    "lemmas": [
+      "accommodate",
+      "accommodated",
+      "accommodates",
+      "accommodating",
+      "accommodation"
+    ]
+  },
+  {
+    "word": "analogy",
+    "lemmas": [
+      "analogy",
+      "analogies",
+      "analogous"
+    ]
+  },
+  {
+    "word": "anticipate",
+    "lemmas": [
+      "anticipate",
+      "anticipated",
+      "anticipates",
+      "anticipating",
+      "anticipation",
+      "unanticipated"
+    ]
+  },
+  {
+    "word": "assure",
+    "lemmas": [
+      "assure",
+      "assurance",
+      "assurances",
+      "assured",
+      "assuredly",
+      "assures",
+      "assuring"
+    ]
+  },
+  {
+    "word": "attain",
+    "lemmas": [
+      "attain",
+      "attainable",
+      "attained",
+      "attaining",
+      "attainment",
+      "attainments",
+      "attains",
+      "unattainable"
+    ]
+  },
+  {
+    "word": "behalf",
+    "lemmas": [
+      "behalf"
+    ]
+  },
+  {
+    "word": "bulk",
+    "lemmas": [
+      "bulk",
+      "bulky"
+    ]
+  },
+  {
+    "word": "cease",
+    "lemmas": [
+      "cease",
+      "ceased",
+      "ceaseless",
+      "ceases",
+      "ceasing"
+    ]
+  },
+  {
+    "word": "coherent",
+    "lemmas": [
+      "coherent",
+      "coherence",
+      "coherently",
+      "incoherent",
+      "incoherently"
+    ]
+  },
+  {
+    "word": "coincide",
+    "lemmas": [
+      "coincide",
+      "coincided",
+      "coincides",
+      "coinciding",
+      "coincidence",
+      "coincidences",
+      "coincident",
+      "coincidental"
+    ]
+  },
+  {
+    "word": "commence",
+    "lemmas": [
+      "commence",
+      "commenced",
+      "commences",
+      "commencement",
+      "commencing",
+      "recommences",
+      "recommenced",
+      "recommencing"
+    ]
+  },
+  {
+    "word": "compatible",
+    "lemmas": [
+      "compatible",
+      "compatibility",
+      "incompatibility",
+      "incompatible"
+    ]
+  },
+  {
+    "word": "concurrent",
+    "lemmas": [
+      "concurrent",
+      "concurrently"
+    ]
+  },
+  {
+    "word": "confine",
+    "lemmas": [
+      "confine",
+      "confined",
+      "confines",
+      "confining",
+      "unconfined"
+    ]
+  },
+  {
+    "word": "controversy",
+    "lemmas": [
+      "controversy",
+      "controversies",
+      "controversial",
+      "controversially",
+      "uncontroversial"
+    ]
+  },
+  {
+    "word": "converse",
+    "lemmas": [
+      "converse",
+      "conversely"
+    ]
+  },
+  {
+    "word": "device",
+    "lemmas": [
+      "device",
+      "devices"
+    ]
+  },
+  {
+    "word": "devote",
+    "lemmas": [
+      "devote",
+      "devoted",
+      "devotedly",
+      "devotes",
+      "devoting",
+      "devotion",
+      "devotions"
+    ]
+  },
+  {
+    "word": "diminish",
+    "lemmas": [
+      "diminish",
+      "diminished",
+      "diminishes",
+      "diminishing",
+      "diminution",
+      "undiminished"
+    ]
+  },
+  {
+    "word": "distort",
+    "lemmas": [
+      "distort",
+      "distorted",
+      "distorting",
+      "distortion",
+      "distortions",
+      "distorts"
+    ]
+  },
+  {
+    "word": "duration",
+    "lemmas": [
+      "duration"
+    ]
+  },
+  {
+    "word": "erode",
+    "lemmas": [
+      "erode",
+      "eroded",
+      "erodes",
+      "eroding",
+      "erosion"
+    ]
+  },
+  {
+    "word": "ethic",
+    "lemmas": [
+      "ethic",
+      "ethical",
+      "ethically",
+      "ethics",
+      "unethical"
+    ]
+  },
+  {
+    "word": "format",
+    "lemmas": [
+      "format",
+      "formatted",
+      "formatting",
+      "formats"
+    ]
+  },
+  {
+    "word": "found",
+    "lemmas": [
+      "found",
+      "founded",
+      "founder",
+      "founders",
+      "founding",
+      "unfounded"
+    ]
+  },
+  {
+    "word": "inherent",
+    "lemmas": [
+      "inherent",
+      "inherently"
+    ]
+  },
+  {
+    "word": "insight",
+    "lemmas": [
+      "insight",
+      "insightful",
+      "insights"
+    ]
+  },
+  {
+    "word": "integral",
+    "lemmas": [
+      "integral"
+    ]
+  },
+  {
+    "word": "intermediate",
+    "lemmas": [
+      "intermediate"
+    ]
+  },
+  {
+    "word": "manual",
+    "lemmas": [
+      "manual",
+      "manually",
+      "manuals"
+    ]
+  },
+  {
+    "word": "mature",
+    "lemmas": [
+      "mature",
+      "immature",
+      "immaturity",
+      "maturation",
+      "maturational",
+      "matured",
+      "matures",
+      "maturing",
+      "maturity"
+    ]
+  },
+  {
+    "word": "mediate",
+    "lemmas": [
+      "mediate",
+      "mediated",
+      "mediates",
+      "mediating",
+      "mediation"
+    ]
+  },
+  {
+    "word": "medium",
+    "lemmas": [
+      "medium"
+    ]
+  },
+  {
+    "word": "military",
+    "lemmas": [
+      "military"
+    ]
+  },
+  {
+    "word": "minimal",
+    "lemmas": [
+      "minimal",
+      "minimalisation",
+      "minimalise",
+      "minimalises",
+      "minimalised",
+      "minimalising",
+      "minimalist",
+      "minimalists",
+      "minimalistic",
+      "minimalization",
+      "minimalize",
+      "minimalized",
+      "minimalizes",
+      "minimalizing",
+      "minimally"
+    ]
+  },
+  {
+    "word": "mutual",
+    "lemmas": [
+      "mutual",
+      "mutually"
+    ]
+  },
+  {
+    "word": "norm",
+    "lemmas": [
+      "norm",
+      "norms"
+    ]
+  },
+  {
+    "word": "overlap",
+    "lemmas": [
+      "overlap",
+      "overlapped",
+      "overlapping",
+      "overlaps"
+    ]
+  },
+  {
+    "word": "passive",
+    "lemmas": [
+      "passive",
+      "passively",
+      "passivity"
+    ]
+  },
+  {
+    "word": "portion",
+    "lemmas": [
+      "portion",
+      "portions"
+    ]
+  },
+  {
+    "word": "preliminary",
+    "lemmas": [
+      "preliminary",
+      "preliminaries"
+    ]
+  },
+  {
+    "word": "protocol",
+    "lemmas": [
+      "protocol",
+      "protocols"
+    ]
+  },
+  {
+    "word": "qualitative",
+    "lemmas": [
+      "qualitative",
+      "qualitatively"
+    ]
+  },
+  {
+    "word": "refine",
+    "lemmas": [
+      "refine",
+      "refined",
+      "refinement",
+      "refinements",
+      "refines",
+      "refining"
+    ]
+  },
+  {
+    "word": "relax",
+    "lemmas": [
+      "relax",
+      "relaxation",
+      "relaxed",
+      "relaxes",
+      "relaxing"
+    ]
+  },
+  {
+    "word": "restrain",
+    "lemmas": [
+      "restrain",
+      "restrained",
+      "restraining",
+      "restrains",
+      "restraint",
+      "restraints",
+      "unrestrained"
+    ]
+  },
+  {
+    "word": "revolution",
+    "lemmas": [
+      "revolution",
+      "revolutionary",
+      "revolutionaries",
+      "revolutionise",
+      "revolutionised",
+      "revolutionises",
+      "revolutionising",
+      "revolutionist",
+      "revolutionists",
+      "revolutionize",
+      "revolutionized",
+      "revolutionizes",
+      "revolutionizing",
+      "revolutions"
+    ]
+  },
+  {
+    "word": "rigid",
+    "lemmas": [
+      "rigid",
+      "rigidities",
+      "rigidity",
+      "rigidly"
+    ]
+  },
+  {
+    "word": "route",
+    "lemmas": [
+      "route",
+      "routed",
+      "routes",
+      "routing"
+    ]
+  },
+  {
+    "word": "scenario",
+    "lemmas": [
+      "scenario",
+      "scenarios"
+    ]
+  },
+  {
+    "word": "sphere",
+    "lemmas": [
+      "sphere",
+      "spheres",
+      "spherical",
+      "spherically"
+    ]
+  },
+  {
+    "word": "subordinate",
+    "lemmas": [
+      "subordinate",
+      "subordinates",
+      "subordination"
+    ]
+  },
+  {
+    "word": "supplement",
+    "lemmas": [
+      "supplement",
+      "supplementary",
+      "supplemented",
+      "supplementing",
+      "supplements"
+    ]
+  },
+  {
+    "word": "suspend",
+    "lemmas": [
+      "suspend",
+      "suspended",
+      "suspending",
+      "suspends",
+      "suspension"
+    ]
+  },
+  {
+    "word": "team",
+    "lemmas": [
+      "team",
+      "teamed",
+      "teaming",
+      "teams"
+    ]
+  },
+  {
+    "word": "temporary",
+    "lemmas": [
+      "temporary",
+      "temporarily"
+    ]
+  },
+  {
+    "word": "trigger",
+    "lemmas": [
+      "trigger",
+      "triggered",
+      "triggering",
+      "triggers"
+    ]
+  },
+  {
+    "word": "unify",
+    "lemmas": [
+      "unify",
+      "unification",
+      "unified",
+      "unifies",
+      "unifying"
+    ]
+  },
+  {
+    "word": "violate",
+    "lemmas": [
+      "violate",
+      "violated",
+      "violates",
+      "violating",
+      "violation",
+      "violations"
+    ]
+  },
+  {
+    "word": "vision",
+    "lemmas": [
+      "vision",
+      "visions"
+    ]
+  },
+  {
+    "word": "adjacent",
+    "lemmas": [
+      "adjacent"
+    ]
+  },
+  {
+    "word": "albeit",
+    "lemmas": [
+      "albeit"
+    ]
+  },
+  {
+    "word": "assemble",
+    "lemmas": [
+      "assemble",
+      "assembled",
+      "assembles",
+      "assemblies",
+      "assembling",
+      "assembly"
+    ]
+  },
+  {
+    "word": "collapse",
+    "lemmas": [
+      "collapse",
+      "collapsed",
+      "collapses",
+      "collapsible",
+      "collapsing"
+    ]
+  },
+  {
+    "word": "colleague",
+    "lemmas": [
+      "colleague",
+      "colleagues"
+    ]
+  },
+  {
+    "word": "compile",
+    "lemmas": [
+      "compile",
+      "compilation",
+      "compilations",
+      "compiled",
+      "compiles",
+      "compiling"
+    ]
+  },
+  {
+    "word": "conceive",
+    "lemmas": [
+      "conceive",
+      "conceivable",
+      "conceivably",
+      "conceived",
+      "conceives",
+      "conceiving",
+      "inconceivable",
+      "inconceivably"
+    ]
+  },
+  {
+    "word": "convince",
+    "lemmas": [
+      "convince",
+      "convinced",
+      "convinces",
+      "convincing",
+      "convincingly",
+      "unconvinced"
+    ]
+  },
+  {
+    "word": "depress",
+    "lemmas": [
+      "depress",
+      "depressed",
+      "depresses",
+      "depressing",
+      "depression"
+    ]
+  },
+  {
+    "word": "encounter",
+    "lemmas": [
+      "encounter",
+      "encountered",
+      "encountering",
+      "encounters"
+    ]
+  },
+  {
+    "word": "enormous",
+    "lemmas": [
+      "enormous",
+      "enormity",
+      "enormously"
+    ]
+  },
+  {
+    "word": "forthcoming",
+    "lemmas": [
+      "forthcoming"
+    ]
+  },
+  {
+    "word": "incline",
+    "lemmas": [
+      "incline",
+      "inclination",
+      "inclinations",
+      "inclined",
+      "inclines",
+      "inclining"
+    ]
+  },
+  {
+    "word": "integrity",
+    "lemmas": [
+      "integrity"
+    ]
+  },
+  {
+    "word": "intrinsic",
+    "lemmas": [
+      "intrinsic",
+      "intrinsically"
+    ]
+  },
+  {
+    "word": "invoke",
+    "lemmas": [
+      "invoke",
+      "invoked",
+      "invokes",
+      "invoking"
+    ]
+  },
+  {
+    "word": "levy",
+    "lemmas": [
+      "levy",
+      "levies"
+    ]
+  },
+  {
+    "word": "likewise",
+    "lemmas": [
+      "likewise"
+    ]
+  },
+  {
+    "word": "nonetheless",
+    "lemmas": [
+      "nonetheless"
+    ]
+  },
+  {
+    "word": "notwithstanding",
+    "lemmas": [
+      "notwithstanding"
+    ]
+  },
+  {
+    "word": "odd",
+    "lemmas": [
+      "odd",
+      "odds"
+    ]
+  },
+  {
+    "word": "ongoing",
+    "lemmas": [
+      "ongoing"
+    ]
+  },
+  {
+    "word": "panel",
+    "lemmas": [
+      "panel",
+      "panelled",
+      "panelling",
+      "panels"
+    ]
+  },
+  {
+    "word": "persist",
+    "lemmas": [
+      "persist",
+      "persisted",
+      "persistence",
+      "persistent",
+      "persistently",
+      "persisting",
+      "persists"
+    ]
+  },
+  {
+    "word": "pose",
+    "lemmas": [
+      "pose",
+      "posed",
+      "poses",
+      "posing"
+    ]
+  },
+  {
+    "word": "reluctance",
+    "lemmas": [
+      "reluctance",
+      "reluctant",
+      "reluctantly"
+    ]
+  },
+  {
+    "word": "so‑called",
+    "lemmas": [
+      "so‑called"
+    ]
+  },
+  {
+    "word": "straightforward",
+    "lemmas": [
+      "straightforward"
+    ]
+  },
+  {
+    "word": "undergo",
+    "lemmas": [
+      "undergo",
+      "undergoes",
+      "undergoing",
+      "undergone",
+      "underwent"
+    ]
+  },
+  {
+    "word": "whereby",
+    "lemmas": [
+      "whereby"
+    ]
+  }
+]

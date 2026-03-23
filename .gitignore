@@ -1,0 +1,16 @@
+# Node.js
+node_modules/
+npm-debug.log
+package-lock.json
+
+# Python
+gramformer-env/
+__pycache__/
+*.pyc
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
