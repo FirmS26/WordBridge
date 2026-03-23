@@ -1,4 +1,12 @@
 {
+  "dependencies": {
+    "@saplingai/sapling-js": "^1.0.37",
+    "aws-sdk": "^2.1693.0",
+    "buffer": "^6.0.3",
+    "ieee754": "^1.2.1",
+    "mime-db": "^1.54.0",
+    "mime-types": "^3.0.2",
+    "pg": "^8.20.0"
   "name": "demo",
   "version": "1.0.0",
   "main": "index.js",
