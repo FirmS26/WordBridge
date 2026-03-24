@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WordBridge - Words</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="words.css" />
+</head>
+<body>
+  <div class="page-container">
+    <div class="top-bar">
+      <div class="logo">WordBridge</div>
+      <a class="home-button" href="index.html">← Home</a>
+    </div>
+
+    <div class="main-card">
+      <h1 class="title">Academic Word List</h1>
+      <p class="subtitle">
+        Search words and browse them by alphabet letter.
+      </p>
+
+      <div class="search-container">
+        <input
+          type="text"
+          id="searchInput"
+          class="search-input"
+          placeholder="Search for a word..."
+        />
+      </div>
+
+      <div id="letterNav" class="letter-nav"></div>
+
+      <div id="resultCount" class="result-count">
+        Select a letter or search for a word.
+      </div>
+
+      <div id="groupedWords"></div>
+    </div>
+  </div>
+
+  <script>
+    const searchInput = document.getElementById("searchInput");
+    const letterNav = document.getElementById("letterNav");
+    const resultCount = document.getElementById("resultCount");
+    const groupedWords = document.getElementById("groupedWords");
+
+    const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
+    let allWords = [];
+    let selectedLetter = null;
+
+    function renderLetterNav() {
+      letterNav.innerHTML = "";
+
+      const availableLetters = new Set(
+        allWords
+          .filter(word => /^[A-Za-z]/.test(word))
+          .map(word => word.charAt(0).toUpperCase())
+      );
+
+      letters.forEach(letter => {
+        const button = document.createElement("button");
+        button.textContent = letter;
+        button.className = "letter-button";
+
+        if (!availableLetters.has(letter)) {
+          button.classList.add("disabled");
+          button.disabled = true;
+        }
+
+        if (selectedLetter === letter) {
+          button.classList.add("active");
+        }
+
+        button.addEventListener("click", () => {
+          selectedLetter = letter;
+          searchInput.value = "";
+          renderLetterNav();
+          renderWords();
+        });
+
+        letterNav.appendChild(button);
+      });
+    }
+
+    function showWords(words, headingText = "") {
+      groupedWords.innerHTML = "";
+
+      if (words.length === 0) {
+        groupedWords.innerHTML = '<div class="message">No words found.</div>';
+        return;
+      }
+
+      const section = document.createElement("section");
+      section.className = "letter-section";
+
+      if (headingText) {
+        const heading = document.createElement("h2");
+        heading.className = "letter-heading";
+        heading.textContent = headingText;
+        section.appendChild(heading);
+      }
+
+      const list = document.createElement("ul");
+      list.className = "word-list";
+
+      words.forEach(word => {
+        const item = document.createElement("li");
+        item.className = "word-list-item";
+
+        const link = document.createElement("a");
+        link.className = "word-item-link";
+        link.href = `word.html?word=${encodeURIComponent(word)}`;
+        link.textContent = word;
+
+        item.appendChild(link);
+        list.appendChild(item);
+      });
+
+      section.appendChild(list);
+      groupedWords.appendChild(section);
+    }
+
+    function renderWords() {
+      const searchText = searchInput.value.trim().toLowerCase();
+
+      if (searchText !== "") {
+        selectedLetter = null;
+        renderLetterNav();
+
+        const filteredWords = allWords.filter(word =>
+          word.toLowerCase().includes(searchText)
+        );
+
+        resultCount.textContent =
+          `${filteredWords.length} word${filteredWords.length !== 1 ? "s" : ""} found`;
+
+        showWords(filteredWords, "Search Results");
+        return;
+      }
+
+      if (selectedLetter) {
+        const filteredWords = allWords.filter(
+          word => word.charAt(0).toUpperCase() === selectedLetter
+        );
+
+        resultCount.textContent =
+          `${filteredWords.length} word${filteredWords.length !== 1 ? "s" : ""} in ${selectedLetter}`;
+
+        showWords(filteredWords, selectedLetter);
+        return;
+      }
+
+      resultCount.textContent = "Select a letter or search for a word.";
+      groupedWords.innerHTML = "";
+    }
+
+    async function loadWords() {
+      try {
+        const response = await fetch("./awl-words.json");
+
+        if (!response.ok) {
+          throw new Error(`HTTP error: ${response.status}`);
+        }
+
+        const data = await response.json();
+
+        if (!Array.isArray(data)) {
+          throw new Error("awl-words.json must contain an array of words.");
+        }
+
+        allWords = [...new Set(data)]
+          .filter(word => typeof word === "string" && word.trim() !== "")
+          .map(word => word.trim())
+          .sort((a, b) => a.localeCompare(b));
+
+        renderLetterNav();
+        renderWords();
+      } catch (error) {
+        console.error("Error loading words:", error);
+        resultCount.textContent = "Failed to load words.";
+        groupedWords.innerHTML =
+          '<div class="message">Could not load the word list.</div>';
+      }
+    }
+
+    searchInput.addEventListener("input", () => {
+      renderWords();
+    });
+
+    loadWords();
+  </script>
+</body>
+</html>
