@@ -6,8 +6,13 @@
     "ieee754": "^1.2.1",
     "mime-db": "^1.54.0",
     "mime-types": "^3.0.2",
-    "pg": "^8.20.0"
-  "name": "demo",
+    "pg": "^8.20.0",
+    "body-parser": "^2.2.2",
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "sqlite3": "^5.1.7"
+  },
+  "name": "wordbridge",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -16,12 +21,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
-  "dependencies": {
-    "body-parser": "^2.2.2",
-    "buffer": "^6.0.3",
-    "cors": "^2.8.6",
-    "express": "^5.2.1",
-    "sqlite3": "^5.1.7"
-  }
+  "description": ""
 }
+
