@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial - WordBridge</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(145deg, #1B4A5E 0%, #2E7A6E 100%);
+            min-height: 100vh;
+            padding: 2rem 1rem;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        /* Navigation */
+        .nav-bar {
+            background: white;
+            border-radius: 60px;
+            padding: 0.8rem 1.5rem;
+            margin-bottom: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .nav-logo {
+            font-weight: 700;
+            color: #1B4A5E;
+            font-size: 1.2rem;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: #5A6B7A;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #1B4A5E;
+        }
+        
+        .profile-badge {
+            background: #FFB74D;
+            color: #1B4A5E;
+            padding: 0.3rem 1rem;
+            border-radius: 40px;
+            font-weight: 600;
+        }
+        
+        /* Page Header */
+        .page-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .page-header h1 {
+            color: white;
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        
+        .page-header p {
+            color: rgba(255,255,255,0.8);
+        }
+        
+        /* Tutorial Cards */
+        .tutorial-card {
+            background: white;
+            border-radius: 20px;
+            padding: 1.8rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+        
+        .tutorial-number {
+            display: inline-block;
+            background: #FFB74D;
+            color: #1B4A5E;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 36px;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        .tutorial-card h2 {
+            font-size: 1.5rem;
+            color: #1B4A5E;
+            margin-bottom: 1rem;
+        }
+        
+        .tutorial-card p {
+            color: #5A6B7A;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+        
+        .tutorial-card ul, .tutorial-card ol {
+            margin-left: 1.5rem;
+            color: #5A6B7A;
+            line-height: 1.8;
+        }
+        
+        .tutorial-card li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .example-box {
+            background: #F8F9FA;
+            border-left: 4px solid #FFB74D;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+        
+        .example-box strong {
+            color: #1B4A5E;
+        }
+        
+        .tip-box {
+            background: #FFF4E5;
+            border-radius: 12px;
+            padding: 1rem;
+            margin-top: 1rem;
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+        }
+        
+        .tip-icon {
+            font-size: 1.5rem;
+        }
+        
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .feature-card {
+            background: #F8F9FA;
+            border-radius: 12px;
+            padding: 1rem;
+            text-align: center;
+        }
+        
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .feature-title {
+            font-weight: 600;
+            color: #1B4A5E;
+            margin-bottom: 0.25rem;
+        }
+        
+        .feature-desc {
+            font-size: 0.85rem;
+            color: #5A6B7A;
+        }
+        
+        .start-btn {
+            background: #FFB74D;
+            color: #1B4A5E;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: inline-block;
+            text-decoration: none;
+        }
+        
+        .start-btn:hover {
+            background: #FFA726;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 183, 77, 0.3);
+        }
+        
+        .text-center {
+            text-align: center;
+        }
+        
+        .mt-4 {
+            margin-top: 1.5rem;
+        }
+        
+        @media (max-width: 600px) {
+            .grid-2 {
+                grid-template-columns: 1fr;
+            }
+            
+            .nav-links {
+                gap: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Navigation -->
+        <div class="nav-bar">
+            <div class="nav-logo">📚 WordBridge</div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="words.html">Learn</a>
+                <a href="review.html">Review</a>
+                <a href="profile.html" class="profile-badge">👤 Profile</a>
+            </div>
+        </div>
+
+        <!-- Page Header -->
+        <div class="page-header">
+            <h1>📖 How to Use WordBridge</h1>
+            <p>Your guide to mastering academic English</p>
+        </div>
+
+        <!-- Step 1 -->
+        <div class="tutorial-card">
+            <div class="tutorial-number">1</div>
+            <h2>Choose a Word to Learn</h2>
+            <p>Browse through the Academic Word List (AWL) and select a word you want to practice. Each word comes with:</p>
+            <ul>
+                <li><strong>Word Forms (Lemmas)</strong> - All versions of the word (e.g., analyse, analysed, analysis)</li>
+                <li><strong>Common Collocations</strong> - Words that frequently appear together (e.g., "analyse data", "conduct research")</li>
+                <li><strong>Example Sentences</strong> - Real academic usage examples</li>
+            </ul>
+            <div class="example-box">
+                <strong>📝 Example:</strong> Click on "analyse" to see its word family and collocations.
+            </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="tutorial-card">
+            <div class="tutorial-number">2</div>
+            <h2>Write Your Own Sentence</h2>
+            <p>Practice using the word in your own sentence. Try to:</p>
+            <ul>
+                <li>Use the word in its correct form (verb, noun, adjective, etc.)</li>
+                <li>Incorporate common collocations naturally</li>
+                <li>Write academic-style sentences</li>
+            </ul>
+            <div class="example-box">
+                <strong>✍️ Example:</strong> "The researcher will analyse the data carefully before drawing conclusions."
+            </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="tutorial-card">
+            <div class="tutorial-number">3</div>
+            <h2>Get Instant Feedback</h2>
+            <p>After submitting your sentence, WordBridge analyzes it and provides:</p>
+            <ul>
+                <li><strong>Grammar Check</strong> - Identifies common errors (coming soon)</li>
+                <li><strong>Word Form Check</strong> - Ensures you used the correct form</li>
+                <li><strong>Collocation Suggestions</strong> - Shows natural word combinations</li>
+            </ul>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="tutorial-card">
+            <div class="tutorial-number">4</div>
+            <h2>Review and Improve</h2>
+            <p>Words you struggle with will appear in your <strong>Review Page</strong> for focused practice. Track your progress:</p>
+            <div class="grid-2">
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <div class="feature-title">Learning Stats</div>
+                    <div class="feature-desc">Track words mastered and accuracy</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <div class="feature-title">Review Words</div>
+                    <div class="feature-desc">Focus on words you need to practice</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tips Section -->
+        <div class="tutorial-card">
+            <div class="tutorial-number">💡</div>
+            <h2>Tips for Success</h2>
+            <div class="tip-box">
+                <div class="tip-icon">🎓</div>
+                <div>
+                    <strong>Write in Context</strong><br>
+                    Don't just write simple sentences. Try to use words in academic contexts like research, analysis, or discussion.
+                </div>
+            </div>
+            <div class="tip-box">
+                <div class="tip-icon">📚</div>
+                <div>
+                    <strong>Review Regularly</strong><br>
+                    Check your Review Page frequently to practice words you've struggled with.
+                </div>
+            </div>
+            <div class="tip-box">
+                <div class="tip-icon">🔄</div>
+                <div>
+                    <strong>Learn from Mistakes</strong><br>
+                    Pay attention to feedback and try to understand why something is wrong.
+                </div>
+            </div>
+            <div class="tip-box">
+                <div class="tip-icon">📝</div>
+                <div>
+                    <strong>Keep a Vocabulary Journal</strong><br>
+                    Write down new words and your own example sentences.
+                </div>
+            </div>
+        </div>
+
+        <!-- Start Learning Button -->
+        <div class="text-center mt-4">
+            <a href="words.html" class="start-btn">🎯 Start Learning Now</a>
+        </div>
+    </div>
+</body>
+</html>
