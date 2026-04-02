@@ -1,9 +1,17 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const cors = require('cors');
-const sqlite3 = require('sqlite3').verbose();
-const path = require('path');
-const use_sapling = require('./use_sapling.js');
+import express from 'express';
+import bodyParser from 'body-parser';
+import cors from 'cors';
+import sqlite3 from 'sqlite3';
+import path from 'path';
+import { dirname } from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+import { getErrorMessage } from "./error_map.js"
+import { Client } from "@saplingai/sapling-js/client";
+
+const apiKey = '1ZVMSP3ZQ10U3VLEEMLU725YY0JS9LMS';
+const client = new Client(apiKey);
+
 
 const app = express();
 const PORT = 3000;
@@ -11,6 +19,10 @@ const PORT = 3000;
 // Middleware
 app.use(cors());
 app.use(bodyParser.json());
+
+    
+const __dirname = dirname(fileURLToPath(import.meta.url));
+
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Database connection
@@ -76,23 +88,29 @@ app.get('/api/words/:word', (req, res) => {
 // POST feedback on user sentence
 app.post('/api/feedback', (req, res) => {
   const { sentence } = req.body;
-
-      let guidance = null;
-      let correctAnswer = null;
-      let correctExample = null;
-
-      // Get error correction and correct sentence
-      use_sapling.getSaplingInfo(sentence).then((result) => {
-        console.log('result is' + result);
-      })
-
-      res.json({
-          guidance,
-          correctAnswer: correctExample
-        });
-
+      //send sentence to sapling
+      client.edits(sentence)
+      .then((response) =>{
+        //get and log response
+        console.log('response is: ');
+        let edit = response.data.edits[0];
+        console.log(response.data);
         
-  });
+        let sentence_one = sentence.slice(0, edit.start);
+        let sentence_two = sentence.slice(edit.end, sentence.length);
+        let fullSentence = sentence_one + edit.replacement + sentence_two;
+        console.log("Correct sentence is " + fullSentence);
+
+        res.json({
+          fullSentence
+        });
+    });
+});
+
+   
+      
+
+
 
 // ==================== START SERVER ====================
 app.listen(PORT, () => {
