@@ -97,9 +97,7 @@ app.post('/api/feedback', (req, res) => {
       .then((response) =>{
 
         try {
-          console.log('response is: ');
           let edit = response.data.edits[0];
-          console.log(response.data);
           
           if (typeof edit.start === undefined) {
             fullSentence = sentence;
