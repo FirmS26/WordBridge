@@ -221,6 +221,7 @@
 
                 //document.getElementById('guidance').textContent = feedback.guidance;
                 document.getElementById('correct-answer').textContent = feedback.fullSentence;
+                document.getElementById('guidance').innerHTML = feedback.errorMessage;
 
             } catch (error) {
                 document.getElementById('guidance').innerHTML = 

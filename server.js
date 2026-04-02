@@ -89,6 +89,9 @@ app.get('/api/words/:word', (req, res) => {
 app.post('/api/feedback', (req, res) => {
   const { word, sentence } = req.body;
       let fullSentence = null;
+      let errorMessage = null;
+
+
       //send sentence to sapling
       client.edits(sentence)
       .then((response) =>{
@@ -106,6 +109,7 @@ app.post('/api/feedback', (req, res) => {
             let sentence_one = sentence.slice(0, edit.start);
             let sentence_two = sentence.slice(edit.end, sentence.length);
             fullSentence = sentence_one + edit.replacement + sentence_two;
+            errorMessage = edit.description;
           }
         }
 
@@ -119,14 +123,10 @@ app.post('/api/feedback', (req, res) => {
 
         }
         res.json({
-          fullSentence
+          fullSentence, errorMessage
         });
     });
 });
-
-
-   
-      
 
 
 
