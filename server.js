@@ -87,25 +87,43 @@ app.get('/api/words/:word', (req, res) => {
 
 // POST feedback on user sentence
 app.post('/api/feedback', (req, res) => {
-  const { sentence } = req.body;
+  const { word, sentence } = req.body;
+      let fullSentence = null;
       //send sentence to sapling
       client.edits(sentence)
       .then((response) =>{
-        //get and log response
-        console.log('response is: ');
-        let edit = response.data.edits[0];
-        console.log(response.data);
-        
-        let sentence_one = sentence.slice(0, edit.start);
-        let sentence_two = sentence.slice(edit.end, sentence.length);
-        let fullSentence = sentence_one + edit.replacement + sentence_two;
-        console.log("Correct sentence is " + fullSentence);
 
+        try {
+          console.log('response is: ');
+          let edit = response.data.edits[0];
+          console.log(response.data);
+          
+          if (typeof edit.start === undefined) {
+            fullSentence = sentence;
+          }
+
+          else {
+            let sentence_one = sentence.slice(0, edit.start);
+            let sentence_two = sentence.slice(edit.end, sentence.length);
+            fullSentence = sentence_one + edit.replacement + sentence_two;
+          }
+        }
+
+        catch (e) {
+          if (e instanceof TypeError) {
+            fullSentence = sentence;
+          }
+          else {
+            console.log("Your error is " + e);
+          }
+
+        }
         res.json({
           fullSentence
         });
     });
 });
+
 
    
       
