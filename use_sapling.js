@@ -5,14 +5,14 @@ const apiKey = '1ZVMSP3ZQ10U3VLEEMLU725YY0JS9LMS';
 const client = new Client(apiKey);
 
 
-export function getSaplingInfo(sentence){
+export async function getSaplingInfo(sentence){
     console.log(sentence);
-    client.edits('Apples aren real.')
-    .then((response) => {
+    client.edits(sentence)
+    .then((response) =>{
+        console.log('response is: ');
         console.log(response.data);
         let correctSentence = getNewSentence(sentence, response.replacement, response.start, response.end);
-
-        res.json ({"sentence":correctSentence});
+        return {"sentence":correctSentence}
     })
     
 }

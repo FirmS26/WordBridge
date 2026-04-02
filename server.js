@@ -65,6 +65,9 @@ app.get('/api/words/:word', (req, res) => {
           collocations: collRows.map(r => r.collocation),
           correctExample: wordRow.correct_example
         });
+
+
+
       });
     });
   });
@@ -79,11 +82,10 @@ app.post('/api/feedback', (req, res) => {
       let correctExample = null;
 
       // Get error correction and correct sentence
-      use_sapling.getSaplingInfo(sentence).then((response) => {
-        console.log('response is' + response);
-      });
+      use_sapling.getSaplingInfo(sentence).then((result) => {
+        console.log('result is' + result);
+      })
 
-      
       res.json({
           guidance,
           correctAnswer: correctExample
