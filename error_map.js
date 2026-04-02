@@ -37,12 +37,12 @@ error_map = {"M:PART":"You are missing a particle.",
 
 export function getErrorMessage(error,word) {
     let error_message = error_map.get(error);
-    let split = error.split(0,1);
-    if (split=="M") {
+    let splitted = error.split(0,2);
+    if (splitted[0]=="M") {
         return error_message + ` Try adding ${word}: `
     }
 
-    if (split=="R") {
+    if (splitted[0]=="R") {
         return error_message + ` Try using ${word}.`
     }
     

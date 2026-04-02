@@ -158,7 +158,7 @@
     </div>
 
     <div class="section correct">
-        <h2>✅ Example Sentence</h2>
+        <h2>Corrected Sentence:</h2>
         <p id="correct-answer"></p>
     </div>
 
@@ -216,8 +216,8 @@
                     body: JSON.stringify({ word, sentence })
                 });
                 
-                if (!feedbackRes.ok) throw new Error('Feedback failed');
                 const feedback = await feedbackRes.json();
+                console.log('getting feedback');
 
                 document.getElementById('guidance').textContent = feedback.guidance;
                 document.getElementById('correct-answer').textContent = feedback.correctAnswer;
