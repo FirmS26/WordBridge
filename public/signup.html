@@ -224,13 +224,17 @@
             
             // Basic validation
             if (name && email && password.length >= 6) {
+                
                 // For now, just show success message and redirect
-                alert('Account created! (Demo version)');
+                
+                alert('Account created!');
                 window.location.href = 'words.html'; // Go to word list
             } else {
                 alert('Please fill all fields correctly. Password must be at least 6 characters.');
             }
         });
+
+
     </script>
 </body>
 </html>

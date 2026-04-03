@@ -12,6 +12,7 @@ db.serialize(() => {
   db.run('DROP TABLE IF EXISTS collocations');
   db.run('DROP TABLE IF EXISTS lemmas');
   db.run('DROP TABLE IF EXISTS words');
+  db.run('DROP TABLE IF EXISTS users');
 
   // Create words table
   db.run(`
@@ -55,6 +56,10 @@ db.serialize(() => {
       FOREIGN KEY(word_id) REFERENCES words(id) ON DELETE CASCADE
     )
   `);
+  
+
+
+
 
   console.log('✅ Tables created successfully.');
 });
