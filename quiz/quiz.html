@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Quiz - WordBridge</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+    <div class="page">
+        <div class="topbar">
+            <a href="#">← Back to Home</a>
+            <a href="#">Word List</a>
+        </div>
+
+        <div class="hero">
+            <h1>🎯 Word Quiz</h1>
+            <p>Choose the correct academic word from the clues.</p>
+        </div>
+
+        <div class="quiz-card">
+            <div class="stats">
+                <div class="stat-box">
+                    <div class="stat-label">Score</div>
+                    <div class="stat-value" id="score">0</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-label">Question</div>
+                    <div class="stat-value" id="question-number">1</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-label">Streak</div>
+                    <div class="stat-value" id="streak">0</div>
+                </div>
+            </div>
+
+            <div id="quiz-area">
+                <div class="loading">Loading quiz...</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="quiz.js"></script>
+</body>
+</html>

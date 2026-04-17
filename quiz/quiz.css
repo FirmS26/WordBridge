@@ -1,0 +1,250 @@
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    background: linear-gradient(145deg, #1B4A5E 0%, #2E7A6E 100%);
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.page {
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.topbar a {
+    color: white;
+    text-decoration: none;
+    opacity: 0.92;
+    font-weight: 600;
+}
+
+.topbar a:hover {
+    text-decoration: underline;
+}
+
+.hero {
+    text-align: center;
+    color: white;
+    margin-bottom: 24px;
+}
+
+.hero h1 {
+    margin: 0 0 10px;
+    font-size: 2.8rem;
+    font-weight: 700;
+    text-shadow: 0 4px 8px rgba(0,0,0,0.22);
+}
+
+.hero p {
+    margin: 0;
+    font-size: 1.08rem;
+    color: rgba(255,255,255,0.9);
+}
+
+.quiz-card {
+    background: white;
+    border-radius: 24px;
+    box-shadow: 0 16px 40px rgba(0,0,0,0.20);
+    padding: 28px;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin-bottom: 24px;
+}
+
+.stat-box {
+    background: #F7FAFB;
+    border: 1px solid #DCE8E6;
+    border-radius: 18px;
+    padding: 16px;
+    text-align: center;
+}
+
+.stat-label {
+    font-size: 0.92rem;
+    color: #5A6B7A;
+    margin-bottom: 6px;
+}
+
+.stat-value {
+    font-size: 1.5rem;
+    color: #1B4A5E;
+    font-weight: 700;
+}
+
+.prompt-box {
+    background: #FFF7EB;
+    border-left: 6px solid #FFB74D;
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 18px;
+}
+
+.prompt-title {
+    font-size: 1.2rem;
+    color: #1B4A5E;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.clue-group {
+    margin-top: 14px;
+}
+
+.clue-label {
+    font-size: 0.95rem;
+    color: #5A6B7A;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.chip-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.chip {
+    background: #EAF4F2;
+    color: #1B4A5E;
+    padding: 8px 12px;
+    border-radius: 999px;
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+.option-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    margin-top: 20px;
+}
+
+.option-btn {
+    border: none;
+    border-radius: 18px;
+    padding: 18px;
+    font-size: 1.05rem;
+    font-weight: 700;
+    cursor: pointer;
+    background: #F6F8FA;
+    color: #1B4A5E;
+    transition: all 0.25s ease;
+    box-shadow: inset 0 0 0 2px #E1E7EC;
+}
+
+.option-btn:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: inset 0 0 0 2px #2E7A6E, 0 10px 18px rgba(27, 74, 94, 0.12);
+    background: white;
+}
+
+.option-btn.correct {
+    background: #E8F7EE;
+    box-shadow: inset 0 0 0 2px #38A169;
+    color: #1F6B43;
+}
+
+.option-btn.wrong {
+    background: #FFF0F0;
+    box-shadow: inset 0 0 0 2px #E57373;
+    color: #B44343;
+}
+
+.option-btn:disabled {
+    cursor: not-allowed;
+}
+
+.feedback {
+    min-height: 28px;
+    margin-top: 18px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1B4A5E;
+}
+
+.actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 18px;
+    flex-wrap: wrap;
+}
+
+.actions button,
+.actions a {
+    border: none;
+    border-radius: 999px;
+    padding: 14px 24px;
+    font-size: 1rem;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.primary-btn {
+    background: #FFB74D;
+    color: #1B4A5E;
+    box-shadow: 0 8px 18px rgba(255, 183, 77, 0.28);
+}
+
+.primary-btn:hover {
+    background: #FFA726;
+    transform: translateY(-2px);
+}
+
+.secondary-btn {
+    background: #EDF2F5;
+    color: #355061;
+}
+
+.secondary-btn:hover {
+    background: #E2EAEE;
+    transform: translateY(-2px);
+}
+
+.loading,
+.error-box {
+    text-align: center;
+    padding: 30px 20px;
+    color: #355061;
+}
+
+.error-box {
+    color: #B44343;
+    background: #FFF5F5;
+    border-radius: 16px;
+}
+
+@media (max-width: 700px) {
+    .hero h1 {
+        font-size: 2.1rem;
+    }
+
+    .stats,
+    .option-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .quiz-card {
+        padding: 20px;
+    }
+
+    .topbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
