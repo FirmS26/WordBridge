@@ -227,12 +227,37 @@
                 
                 // For now, just show success message and redirect
                 
+                makeAcc();
                 alert('Account created!');
                 window.location.href = 'words.html'; // Go to word list
             } else {
                 alert('Please fill all fields correctly. Password must be at least 6 characters.');
             }
         });
+
+
+        
+    async function makeAcc() {
+        
+        console.log('successfully calling function');
+        try {
+            const response = await fetch("/api/signup",{method: "POST"} );
+            
+            if (!response.ok) {
+                throw new Error(`HTTP error`);
+            } else {
+                console.log('recieved successful response from api');
+            }
+      } catch (error) {
+
+      }
+    }
+
+
+
+
+
+
 
 
     </script>

@@ -127,6 +127,31 @@ app.post('/api/feedback', (req, res) => {
 });
 
 
+// POST new account
+app.post('/api/signup', (req, res) => {
+  console.log('api got called');
+  /*const { name, email, password } = req.body;
+  const params = [name, email, password];*/
+  /*const name = req.params.name;
+  const email = req.params.email;
+  const password = req.params.password;*/
+
+  const name = "Jeff";
+  const email = "jeff@email.com";
+  const password = "password123";
+
+  
+
+  const sql = `INSERT INTO products(name, price) VALUES(?, ?,?)`;
+  try {
+    execute(db, sql, [name, email, password]);
+    console.log('api working');
+  } catch (err) {
+    console.log(err);
+  }
+
+});
+
 
 
 // ==================== START SERVER ====================
