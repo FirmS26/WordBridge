@@ -1,35 +1,445 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>AWL Demo</title>
-    <style>
-        body { font-family: Arial; max-width: 600px; margin: auto; padding: 2rem; }
-        ul { list-style: none; padding: 0; }
-        li { margin: 1rem 0; }
-        a { text-decoration: none; color: #0066cc; }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WordBridge - Words</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #1b4a5e 0%, #2e7a6e 100%);
+      color: #1b4a5e;
+      padding: 24px;
+    }
+
+    .page-container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 24px;
+      background: rgba(255, 255, 255, 0.95);
+      padding: 18px 22px;
+      border-radius: 22px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 1.75rem;
+      font-weight: 800;
+      color: #1b4a5e;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .nav-button {
+      text-decoration: none;
+      background: #eaf1f5;
+      color: #1b4a5e;
+      padding: 10px 18px;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: 0.2s ease;
+    }
+
+    .nav-button:hover {
+      background: #d4e2e8;
+    }
+
+    .home-button {
+      text-decoration: none;
+      background: #ffb74d;
+      color: #1b4a5e;
+      padding: 12px 22px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 1rem;
+      transition: 0.2s ease;
+      box-shadow: 0 6px 14px rgba(255, 183, 77, 0.35);
+    }
+
+    .home-button:hover {
+      background: #ffa726;
+      transform: translateY(-2px);
+    }
+
+    .main-card {
+      background: #ffffff;
+      border-radius: 28px;
+      padding: 32px;
+      box-shadow: 0 14px 32px rgba(0, 0, 0, 0.14);
+    }
+
+    .title {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: #1b4a5e;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      font-size: 1.08rem;
+      color: #5f7280;
+      margin-bottom: 26px;
+    }
+
+    .search-container {
+      margin-bottom: 22px;
+    }
+
+    .search-input {
+      width: 100%;
+      padding: 16px 18px;
+      font-size: 1.08rem;
+      border: 2px solid #dfe7ec;
+      border-radius: 16px;
+      outline: none;
+      transition: 0.2s ease;
+    }
+
+    .search-input:focus {
+      border-color: #2e7a6e;
+      box-shadow: 0 0 0 4px rgba(46, 122, 110, 0.12);
+    }
+
+    .letter-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 22px;
+    }
+
+    .letter-button {
+      border: none;
+      background: #eaf1f5;
+      color: #1b4a5e;
+      font-size: 0.98rem;
+      font-weight: 700;
+      padding: 10px 14px;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: 0.2s ease;
+    }
+
+    .letter-button:hover:not(:disabled) {
+      background: #ffb74d;
+      color: #1b4a5e;
+    }
+
+    .letter-button.active {
+      background: #ffb74d;
+      color: #1b4a5e;
+    }
+
+    .letter-button.disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
+
+    .result-count {
+      font-size: 1.02rem;
+      font-weight: 600;
+      color: #5f7280;
+      margin-bottom: 18px;
+    }
+
+    .letter-section {
+      margin-bottom: 28px;
+    }
+
+    .letter-heading {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #1b4a5e;
+      margin-bottom: 16px;
+      border-left: 5px solid #ffb74d;
+      padding-left: 16px;
+    }
+
+    .word-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 12px;
+      list-style: none;
+    }
+
+    .word-list-item {
+      margin: 0;
+      padding: 0;
+    }
+
+    .word-item-link {
+      display: block;
+      text-decoration: none;
+      background: #f8fafc;
+      border: 2px solid #edf2f6;
+      border-radius: 18px;
+      padding: 14px 18px;
+      color: #1b4a5e;
+      font-size: 1.08rem;
+      font-weight: 600;
+      transition: 0.2s ease;
+    }
+
+    .word-item-link:hover {
+      background: #fff4e4;
+      border-color: #ffb74d;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+    }
+
+    .message {
+      text-align: center;
+      font-size: 1.1rem;
+      color: #5f7280;
+      padding: 30px 0;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        padding: 16px;
+      }
+
+      .main-card {
+        padding: 22px;
+      }
+
+      .title {
+        font-size: 1.8rem;
+      }
+
+      .logo {
+        font-size: 1.45rem;
+      }
+
+      .word-list {
+        grid-template-columns: 1fr;
+      }
+
+      .word-item-link {
+        font-size: 1rem;
+        padding: 12px 16px;
+      }
+
+      .top-bar {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
 </head>
 <body>
-    <h1>Academic Word List (Demo)</h1>
-    <ul id="word-list">
-        <!-- Words will be loaded here -->
-    </ul>
+  <div class="page-container">
+    <div class="top-bar">
+      <div class="logo">📚 WordBridge</div>
+      <div class="nav-links">
+        <a class="nav-button" href="index.html">Home</a>
+        <a class="nav-button" href="review.html">Review</a>
+        <a class="nav-button" href="tutorial.html">Help</a>
+        <a class="home-button" href="profile.html">👤 My Profile</a>
+      </div>
+    </div>
 
-    <script>
-        fetch('/api/words')
-            .then(res => res.json())
-            .then(words => {
-                const list = document.getElementById('word-list');
-                words.forEach(word => {
-                    const li = document.createElement('li');
-                    const a = document.createElement('a');
-                    a.href = `word.html?word=${encodeURIComponent(word)}`;
-                    a.textContent = word;
-                    li.appendChild(a);
-                    list.appendChild(li);
-                });
-            })
-            .catch(err => console.error('Error loading words:', err));
-    </script>
+    <div class="main-card">
+      <h1 class="title">Academic Word List</h1>
+      <p class="subtitle">
+        Browse 570 AWL words by letter or search to start practicing.
+      </p>
+
+      <div class="search-container">
+        <input
+          type="text"
+          id="searchInput"
+          class="search-input"
+          placeholder="Search for a word..."
+        />
+      </div>
+
+      <div id="letterNav" class="letter-nav"></div>
+
+      <div id="resultCount" class="result-count">
+        Select a letter or search for a word.
+      </div>
+
+      <div id="groupedWords"></div>
+    </div>
+  </div>
+
+  <script>
+    const searchInput = document.getElementById("searchInput");
+    const letterNav = document.getElementById("letterNav");
+    const resultCount = document.getElementById("resultCount");
+    const groupedWords = document.getElementById("groupedWords");
+
+    const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
+    let allWords = [];
+    let selectedLetter = null;
+
+    function renderLetterNav() {
+      letterNav.innerHTML = "";
+
+      const availableLetters = new Set(
+        allWords
+          .filter(word => /^[A-Za-z]/.test(word))
+          .map(word => word.charAt(0).toUpperCase())
+      );
+
+      letters.forEach(letter => {
+        const button = document.createElement("button");
+        button.textContent = letter;
+        button.className = "letter-button";
+
+        if (!availableLetters.has(letter)) {
+          button.classList.add("disabled");
+          button.disabled = true;
+        }
+
+        if (selectedLetter === letter) {
+          button.classList.add("active");
+        }
+
+        button.addEventListener("click", () => {
+          selectedLetter = letter;
+          searchInput.value = "";
+          renderLetterNav();
+          renderWords();
+        });
+
+        letterNav.appendChild(button);
+      });
+    }
+
+    function showWords(words, headingText = "") {
+      groupedWords.innerHTML = "";
+
+      if (words.length === 0) {
+        groupedWords.innerHTML = '<div class="message">No words found.</div>';
+        return;
+      }
+
+      const section = document.createElement("section");
+      section.className = "letter-section";
+
+      if (headingText) {
+        const heading = document.createElement("h2");
+        heading.className = "letter-heading";
+        heading.textContent = headingText;
+        section.appendChild(heading);
+      }
+
+      const list = document.createElement("ul");
+      list.className = "word-list";
+
+      words.forEach(word => {
+        const item = document.createElement("li");
+        item.className = "word-list-item";
+
+        const link = document.createElement("a");
+        link.className = "word-item-link";
+        link.href = `word.html?word=${encodeURIComponent(word)}`;
+        link.textContent = word;
+
+        item.appendChild(link);
+        list.appendChild(item);
+      });
+
+      section.appendChild(list);
+      groupedWords.appendChild(section);
+    }
+
+    function renderWords() {
+      const searchText = searchInput.value.trim().toLowerCase();
+
+      if (searchText !== "") {
+        selectedLetter = null;
+        renderLetterNav();
+
+        const filteredWords = allWords.filter(word =>
+          word.toLowerCase().includes(searchText)
+        );
+
+        resultCount.textContent =
+          `${filteredWords.length} word${filteredWords.length !== 1 ? "s" : ""} found`;
+
+        showWords(filteredWords, "Search Results");
+        return;
+      }
+
+      if (selectedLetter) {
+        const filteredWords = allWords.filter(
+          word => word.charAt(0).toUpperCase() === selectedLetter
+        );
+
+        resultCount.textContent =
+          `${filteredWords.length} word${filteredWords.length !== 1 ? "s" : ""} in ${selectedLetter}`;
+
+        showWords(filteredWords, selectedLetter);
+        return;
+      }
+
+      resultCount.textContent = "Select a letter or search for a word.";
+      groupedWords.innerHTML = "";
+    }
+
+    async function loadWords() {
+      try {
+        const response = await fetch("/api/words");
+
+        if (!response.ok) {
+          throw new Error(`HTTP error: ${response.status}`);
+        }
+
+        const data = await response.json();
+
+        if (!Array.isArray(data)) {
+          throw new Error("Word list must be an array.");
+        }
+
+        allWords = [...new Set(data)]
+          .filter(word => typeof word === "string" && word.trim() !== "")
+          .map(word => word.trim())
+          .sort((a, b) => a.localeCompare(b));
+
+        renderLetterNav();
+        renderWords();
+      } catch (error) {
+        console.error("Error loading words:", error);
+        resultCount.textContent = "Failed to load words.";
+        groupedWords.innerHTML =
+          '<div class="message">Could not load the word list.</div>';
+      }
+    }
+
+    searchInput.addEventListener("input", () => {
+      renderWords();
+    });
+
+    loadWords();
+  </script>
 </body>
 </html>
