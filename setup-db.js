@@ -70,7 +70,7 @@ db.serialize(() => {
     db.run(`
     CREATE TABLE user_scores (
       user_id INTEGER,
-      word_id INTEGER,
+      word STRING,
       attempt_time STRING,
       results STRING,
       FOREIGN KEY(user_id) REFERENCES users(user_id) ON DELETE CASCADE,
