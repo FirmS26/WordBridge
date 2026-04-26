@@ -9,7 +9,7 @@ import { fileURLToPath } from 'node:url';
 import { getErrorMessage } from "./error_map.js"
 import { Client } from "@saplingai/sapling-js/client";
 
-const apiKey = '1ZVMSP3ZQ10U3VLEEMLU725YY0JS9LMS';
+const apiKey = 'WNCO3DI2MG77P3GX4MH1F72QAOPNCRRH';
 const client = new Client(apiKey);
 
 
@@ -90,6 +90,8 @@ app.post('/api/feedback', (req, res) => {
   const { word, sentence } = req.body;
       let fullSentence = null;
       let errorMessage = null;
+      let basicerror = null;
+      let status = false;
 
 
       //send sentence to sapling
@@ -108,22 +110,33 @@ app.post('/api/feedback', (req, res) => {
             let sentence_two = sentence.slice(edit.end, sentence.length);
             fullSentence = sentence_one + edit.replacement + sentence_two;
             errorMessage = edit.description;
+            basicerror = edit.error_type;
           }
+
+          //get user_id
+          //let cookie = document.cookie;
+          db.all('INSERT INTO user_scores (user_id, word_id, results), VALUES (?, ?, ?);', [user, word, basicerror], (err, results) => {
+            if (err) {
+              results.status(500).json({ error: err.message });
+              return;
+            }
+          })
         }
 
         catch (e) {
           if (e instanceof TypeError) {
-            fullSentence = sentence;
+            status = true;
           }
           else {
             console.log("Your error is " + e);
           }
-
         }
+
         res.json({
-          fullSentence, errorMessage
+          status, fullSentence, errorMessage
         });
     });
+    
 });
 
 

@@ -87,7 +87,7 @@
             color: #27ae60;
             font-weight: 500;
         }
-        
+
         .button-group {
             display: flex;
             gap: 1rem;
@@ -133,6 +133,8 @@
             border-radius: 5px;
             margin: 1rem 0;
         }
+
+        
     </style>
 </head>
 <body>
@@ -168,7 +170,8 @@
     </div>
 
     <div class="section correct">
-        <h2>Corrected Sentence:</h2>
+        <button onclick="showAnswer()"><h2>View Corrected Sentence</h2></button>
+        
         <p id="correct-answer"></p>
     </div>
 
@@ -178,9 +181,14 @@
     </div>
 
     <script>
+        let finalSentence = null;
         function tryAgain() {
             const word = document.getElementById('word').textContent;
             window.location.href = `word.html?word=${encodeURIComponent(word)}`;
+        }
+
+        function showAnswer() {
+            document.getElementById('correct-answer').textContent = finalSentence;
         }
 
         (async () => {
@@ -228,9 +236,14 @@
                 
                 const feedback = await feedbackRes.json();
 
-                //document.getElementById('guidance').textContent = feedback.guidance;
-                document.getElementById('correct-answer').textContent = feedback.fullSentence;
-                document.getElementById('guidance').innerHTML = feedback.errorMessage;
+                if (feedback.status == true) {
+                    document.getElementById('guidance').innerHTML = 'Correct!';
+                }
+
+                else if (feedback.status==false){
+                    document.getElementById('guidance').textContent = feedback.errorMessage;
+                    finalSentence = feedback.fullSentence;
+                }
 
             } catch (error) {
                 document.getElementById('guidance').innerHTML = 
