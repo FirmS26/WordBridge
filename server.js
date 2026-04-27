@@ -159,20 +159,7 @@ app.post('/api/signup', (req, res) => {
   
   const { name, email, password } = req.body;
 
-  /*console.log(req.body);
-  console.log(name, email, password);*/
-  /*
-  const params = [name, email, password];*/
-  /*const name = req.body.name;
-  const email = req.body.email;
-  const password = req.body.password;*/
 
-  /*
-  const name = "Jeff";
-  const email = "jeff@email.com";
-  const password = "password123";
-*/
-  
 
   const sql = `INSERT INTO users(name, email, password) VALUES(?, ?,?)`;
   db.all(sql, [name, email, password], (err, result) => {
@@ -189,29 +176,14 @@ app.post('/api/signup', (req, res) => {
 app.use(express.json())
 app.post('/api/auth', (req, res) => {
   
-
-  console.log("verifying user data");
-
-
-
-
   const { email, password } = req.body;
   const sql = "SELECT * FROM users WHERE email = ? AND password = ?";
   db.all(sql, [email, password], (err, result) => {
 
-
-
-    //console.log("Query Result:", result);
-
     if (result.length > 0) {
-      //res.status(200).json({ message: "Login successful", user: result[0] });
-      //console.log("User ID ", result[0]);
-      //res = result[0].user_id;
       res.status(200).json({ user: result[0].user_id });
     } else {
-      //res.status(401).send("Invalid email or password");
       console.log("No user found ");
-      //res = 0;
       res.status(401).json({ user: 0});
     }
 
@@ -226,15 +198,48 @@ app.get('/api/login', (req, res) => {
     req.session.user =
         { id: 1, username: 'example' };
     res.send('Logged in');
-});
+});*/
 
+// get all account info
+app.use(express.json())
 app.get('/api/profile', (req, res) => {
-    // resend user data
-    const user = req.session.user;
-    res.send(`Welcome ${user.username}`);
+
+  const { id } = req.body;
+  const sql = "SELECT * FROM users WHERE user_id = ?";
+  db.all(sql, [id], (err, result) => {
+
+    if (result.length > 0) {
+      res.status(200).json({ user: result[0] });
+    } else {
+      console.log("No user found ");
+      res.status(401).json({ user: 0});
+    }
+
+  });
 });
 
 
+// get all results info
+app.use(express.json())
+app.get('/api/profile', (req, res) => {
+
+  const { id, word } = req.body;
+  const sql = "SELECT * FROM user_scores WHERE user_id = ? AND word = ?";
+  db.all(sql, [id, word], (err, result) => {
+
+    if (result.length > 0) {
+      res.status(200).json({ user: result[0] });
+    } else {
+      console.log("No attempts found ");
+      res.status(401).json({ user: 0});
+    }
+
+  });
+});
+
+
+
+/*
 app.get('/api/logout',
     (req, res) => {
         // log out
