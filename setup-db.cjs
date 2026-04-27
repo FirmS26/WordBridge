@@ -75,32 +75,7 @@ db.serialize(() => {
       word string,
       attempt_time STRING,
       results STRING,
-      FOREIGN KEY(user_id) REFERENCES users(user_id) ON DELETE CASCADE,
-      FOREIGN KEY(word_id) REFERENCES words(id) ON DELETE CASCADE
-    )
-  `);//if time is too much work just increment per user so that it can be ordered just w/o showing exact time
-  //or maybe they'll just be in order automatically
-
-
-  
-  db.run(`
-    CREATE TABLE users (
-      user_id INTEGER PRIMARY KEY AUTOINCREMENT,
-      name STRING NOT NULL,
-      email STRING NOT NULL,
-      password STRING NOT NULL
-    )
-  `);//Add time of account creation? Let users select their starting level? Split up first and last name?
-    //Add "UNIQUE" constraints
-    
-    db.run(`
-    CREATE TABLE user_scores (
-      user_id INTEGER,
-      word STRING,
-      attempt_time STRING,
-      results STRING,
-      FOREIGN KEY(user_id) REFERENCES users(user_id) ON DELETE CASCADE,
-      FOREIGN KEY(word_id) REFERENCES words(id) ON DELETE CASCADE
+      FOREIGN KEY(user_id) REFERENCES users(user_id) ON DELETE CASCADE
     )
   `);//if time is too much work just increment per user so that it can be ordered just w/o showing exact time
   //or maybe they'll just be in order automatically
