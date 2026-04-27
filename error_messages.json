@@ -1,0 +1,23 @@
+const error_map - new Map();
+
+
+[
+  {"error":"M:PART", "response":"You are missing a particle."},
+  {"error":"M:PUNCT", "response":"You are missing some punctuation."},
+  {"error":"M:CONJ", "response":"You are missing conjugation."},
+  {"error":"M:DET", "response":"You are missing a determiner."},
+  {"error":"M:DET:ART", "response":"You are missing a particle."},
+  {"error":"M:PREP", "response":"You are missing a preposition."},
+  {"error":"M:PRON", "response":"You are missing a preposition."},
+  {"error":"M:VERB", "response":"You are missing a verb."},
+  {"error":"M:ADJ", "response":"You are missing an adjective."},
+  {"error":"M:NOUN", "response":"You are missing a noun."},
+  {"error":"M:NOUN:POSS", "response":"You are missing a possessive noun."},
+  {"error":"M:OTHER", "response":"You are missing something."},
+  {"error":"R:PREP", "response":"You are missing a particle."},
+  {"error":"R:ADJ", "response":"You are missing a particle."},
+  {"error":"R:ADJ", "response":"You are missing a particle."},
+  
+  
+
+  ]

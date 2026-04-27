@@ -234,16 +234,55 @@
             // Get form values
             const email = document.querySelector('input[type="email"]').value;
             const password = document.querySelector('input[type="password"]').value;
-            
+
+            console.log(email, password, " login attempt");
+            loginAttempt(email, password);
+            //console.log("results:",loginResult);
+
             // Basic validation
-            if (email && password) {
+            /*if (loginResult != 0) {
+
+
                 // Demo login - just show success message and redirect
-                alert('Welcome back! (Demo login)');
+                alert('Welcome back!');
                 window.location.href = 'words.html';
             } else {
                 alert('Please enter both email and password.');
-            }
+            }*/
         });
+
+
+
+async function loginAttempt(form_email, form_password) {
+        
+        console.log("auth func call");
+        try {
+            const response = await fetch("/api/auth",{
+                method: "POST",
+                headers: {'Content-Type': 'application/json'}, 
+                body: JSON.stringify({
+                    email: form_email,
+                    password: form_password})
+            } );
+
+            console.log("finished call");
+            
+                const data = await response.json();
+                console.log('user id ', data.user);
+                if (data.user != 0){
+                    console.log("success");
+                    alert('Welcome back!');
+                    window.location.href = 'words.html';
+                } else{
+                    console.log("fail");
+                    alert('Please enter both email and password.');
+                }
+      } catch (error) {
+
+      }
+      
+    }
+
     </script>
 </body>
 </html>
