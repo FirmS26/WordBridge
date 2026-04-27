@@ -19,7 +19,8 @@ const PORT = 3000;
 // Middleware
 app.use(cors());
 app.use(bodyParser.json());
-
+app.use(express.json());
+app.use(express.urlencoded()) 
     
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
@@ -128,27 +129,33 @@ app.post('/api/feedback', (req, res) => {
 
 
 // POST new account
+app.use(express.json())
 app.post('/api/signup', (req, res) => {
-  console.log('api got called');
-  /*const { name, email, password } = req.body;
-  const params = [name, email, password];*/
-  /*const name = req.params.name;
-  const email = req.params.email;
-  const password = req.params.password;*/
+  
+  const { name, email, password } = req.body;
 
+  /*console.log(req.body);
+  console.log(name, email, password);*/
+  /*
+  const params = [name, email, password];*/
+  /*const name = req.body.name;
+  const email = req.body.email;
+  const password = req.body.password;*/
+
+  /*
   const name = "Jeff";
   const email = "jeff@email.com";
   const password = "password123";
-
+*/
   
 
-  const sql = `INSERT INTO products(name, price) VALUES(?, ?,?)`;
-  try {
-    execute(db, sql, [name, email, password]);
-    console.log('api working');
-  } catch (err) {
-    console.log(err);
-  }
+  const sql = `INSERT INTO users(name, email, password) VALUES(?, ?,?)`;
+  db.all(sql, [name, email, password], (err, result) => {
+    if (err) {
+      return res.status(500).send(err);
+    }
+    res.status(201).send(`User added with ID`);
+  });
 
 });
 

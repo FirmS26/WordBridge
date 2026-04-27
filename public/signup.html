@@ -227,7 +227,7 @@
                 
                 // For now, just show success message and redirect
                 
-                makeAcc();
+                makeAcc(name, email, password);
                 alert('Account created!');
                 window.location.href = 'words.html'; // Go to word list
             } else {
@@ -237,11 +237,18 @@
 
 
         
-    async function makeAcc() {
+    async function makeAcc(form_name, form_email, form_password) {
         
-        console.log('successfully calling function');
+        console.log(form_name, form_email, form_password);
         try {
-            const response = await fetch("/api/signup",{method: "POST"} );
+            const response = await fetch("/api/signup",{
+                method: "POST",
+                headers: {'Content-Type': 'application/json'}, 
+                body: JSON.stringify({
+                    name: form_name,
+                    email: form_email,
+                    password: form_password})
+            } );
             
             if (!response.ok) {
                 throw new Error(`HTTP error`);
