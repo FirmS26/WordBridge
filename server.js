@@ -21,6 +21,8 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(express.json());
 app.use(express.urlencoded()) 
+
+
     
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
@@ -28,6 +30,29 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Database connection
 const db = new sqlite3.Database(path.join(__dirname, 'awl.db'));
+
+//Session
+import session from 'express-session';
+import MongoStore from 'connect-mongo';
+
+/*app.use(session({
+    secret: 'very-secret-key',
+    resave: false,
+    saveUninitialized: false,
+    store: MongoStore.create({
+      mongoUrl: "mongodb://localhost:27017/",
+    }),
+    cookie: {
+        secure: true,
+        // Enable only for HTTPS
+        httpOnly: true,
+        // Prevent client-side access to cookies
+        sameSite: 'strict'
+        // Mitigate CSRF attacks
+    }
+}));*/
+
+
 
 // ==================== API ROUTES ====================
 
@@ -160,6 +185,68 @@ app.post('/api/signup', (req, res) => {
 });
 
 
+// check if acc pw is real
+app.use(express.json())
+app.post('/api/auth', (req, res) => {
+  
+
+  console.log("verifying user data");
+
+
+
+
+  const { email, password } = req.body;
+  const sql = "SELECT * FROM users WHERE email = ? AND password = ?";
+  db.all(sql, [email, password], (err, result) => {
+
+
+
+    //console.log("Query Result:", result);
+
+    if (result.length > 0) {
+      //res.status(200).json({ message: "Login successful", user: result[0] });
+      //console.log("User ID ", result[0]);
+      //res = result[0].user_id;
+      res.status(200).json({ user: result[0].user_id });
+    } else {
+      //res.status(401).send("Invalid email or password");
+      console.log("No user found ");
+      //res = 0;
+      res.status(401).json({ user: 0});
+    }
+
+  });
+});
+
+
+/*
+app.get('/api/login', (req, res) => {
+    // set logged in
+    console.log("logged in");
+    req.session.user =
+        { id: 1, username: 'example' };
+    res.send('Logged in');
+});
+
+app.get('/api/profile', (req, res) => {
+    // resend user data
+    const user = req.session.user;
+    res.send(`Welcome ${user.username}`);
+});
+
+
+app.get('/api/logout',
+    (req, res) => {
+        // log out
+        req.session.destroy((err) => {
+            if (err) {
+                console.error(err);
+                res.status(500).send('Error logging out');
+            } else {
+                res.send('Logged out');
+            }
+        });
+    });*/
 
 // ==================== START SERVER ====================
 app.listen(PORT, () => {
