@@ -11,35 +11,23 @@
             margin: 0 auto; 
             padding: 2rem;
             line-height: 1.6;
-            background: linear-gradient(135deg, #1b4a5e 0%, #2e7a6e 100%);
-            color: #1b4a5e;
+            color: #333;
+            background: #f8f9fa;
         }
         
         h1 { 
-            
-            color: #e8f4fc;;
+            color: #2c3e50;
             border-bottom: 3px solid #3498db;
             padding-bottom: 0.5rem;
             margin-bottom: 2rem;
         }
         
         .word-highlight {
-            /*color: #3498db;
+            color: #3498db;
             font-weight: bold;
             background: #e8f4fc;
             padding: 0.2rem 0.5rem;
             border-radius: 4px;
-            background: #ffb74d;
-            color: #1b4a5e;*/
-            background: #FFB74D;
-            color: #1B4A5E;
-            padding: 8px 20px;
-            border-radius: 40px;
-            display: inline-block;
-            font-size: 1.5rem;
-            font-weight: 700;
-            /*margin: 20px 0 20px 30px;*/
-            box-shadow: 0 4px 8px rgba(255, 183, 77, 0.3);
         }
         
         .user-sentence {
@@ -180,7 +168,7 @@
     </div>
 
     <div class="section correct">
-        <h2>Corrected Sentence:</h2>
+        <h2>✅ Example Sentence</h2>
         <p id="correct-answer"></p>
     </div>
 
@@ -238,11 +226,11 @@
                     body: JSON.stringify({ word, sentence })
                 });
                 
+                if (!feedbackRes.ok) throw new Error('Feedback failed');
                 const feedback = await feedbackRes.json();
 
-                //document.getElementById('guidance').textContent = feedback.guidance;
-                document.getElementById('correct-answer').textContent = feedback.fullSentence;
-                document.getElementById('guidance').innerHTML = feedback.errorMessage;
+                document.getElementById('guidance').textContent = feedback.guidance;
+                document.getElementById('correct-answer').textContent = feedback.correctAnswer;
 
             } catch (error) {
                 document.getElementById('guidance').innerHTML = 
