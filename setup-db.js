@@ -56,8 +56,7 @@ db.serialize(() => {
     )
   `);
 
-  
-  db.run(`
+    db.run(`
     CREATE TABLE users (
       user_id INTEGER PRIMARY KEY AUTOINCREMENT,
       name STRING NOT NULL,
@@ -76,10 +75,7 @@ db.serialize(() => {
       FOREIGN KEY(user_id) REFERENCES users(user_id) ON DELETE CASCADE,
       FOREIGN KEY(word_id) REFERENCES words(id) ON DELETE CASCADE
     )
-  `);//if time is too much work just increment per user so that it can be ordered just w/o showing exact time
-  //or maybe they'll just be in order automatically
-
-
+  `);//
 
   console.log('✅ Tables created successfully.');
 });
