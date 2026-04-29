@@ -8,6 +8,7 @@ import { fileURLToPath } from 'node:url';
 
 import { getErrorMessage } from "./error_map.js"
 import { Client } from "@saplingai/sapling-js/client";
+import axios from 'axios';
 
 const apiKey = 'WNCO3DI2MG77P3GX4MH1F72QAOPNCRRH';
 const client = new Client(apiKey);
@@ -126,8 +127,7 @@ app.post('/api/feedback', (req, res) => {
             basicerror = edit.error_type;
           }
 
-          //get user_id
-          //let cookie = document.cookie;
+          console.log(req.cookies());
           db.all('INSERT INTO user_scores (user_id, word_id, results), VALUES (?, ?, ?);', [user, word, basicerror], (err, results) => {
             if (err) {
               results.status(500).json({ error: err.message });
@@ -149,7 +149,6 @@ app.post('/api/feedback', (req, res) => {
           status, fullSentence, errorMessage
       });
     });
-
 });
 
 
