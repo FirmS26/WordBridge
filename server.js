@@ -121,7 +121,8 @@ app.post('/api/feedback', (req, res) => {
             let sentence_two = sentence.slice(edit.end, sentence.length);
             fullSentence = sentence_one + edit.replacement + sentence_two;
             errorMessage = edit.description;
-            basicerror = edit.error_type;
+            //basicerror = edit.error_type;
+            basicerror = edit.general_error_type;
           }
 
           const user = req.session.user;
@@ -291,30 +292,38 @@ app.get('/api/review-words', (req, res) => {
     const user = req.session.user;
     const id = user.user_id;
     const sql = `
-                SELECT 
-                    word, 
-                    COUNT(*) AS total_count, 
-                    MAX(attempt_time) AS most_recent
-                FROM user_scores
-                WHERE user_id = ?
-                GROUP BY word
-                ORDER BY most_recent DESC;
+        SELECT word, total_count, most_recent, results
+        FROM (
+              SELECT 
+                  word, 
+                  results, 
+                  attempt_time AS most_recent,
+                  COUNT(*) OVER (PARTITION BY word) AS total_count,
+                  ROW_NUMBER() OVER (PARTITION BY word ORDER BY attempt_time DESC) as rank
+              FROM user_scores
+              WHERE user_id = ?
+          ) 
+          WHERE rank = 1
+          ORDER BY most_recent DESC
         `;
 
         db.all(sql, [id], (err, result) => {
             
             // The results will be an array of objects
             // Example: [{ user_id: 1, word: 'apple', tally: '5', last_attempt: 2026-04-28... }]
-            console.log("User Word Stats:", result);
+            //console.log("User Word Stats:", result);
             
-            
-            const reviewWords = results.map(row => ({
-              word: row.word,
-              count: row.count,
-              lastAttempt: row.lastAttempt,
-              difficulty: row.count > 5 ? 'hard' : row.count > 2 ? 'medium' : 'easy',
-              commonMistake: 'Review spelling' 
-            }));
+            console.log(result)
+
+
+            const reviewWords = result.map(row => ({
+            word: row.word,
+            errors: row.total_count,
+            lastAttempt: row.most_recent,
+            // Accessing the specific result of the last attempt:
+            difficulty: row.total_count > 5 ? 'hard' : row.total_count > 2 ? 'medium' : 'easy',
+            commonMistake: row.results
+    }));
         
           
 
