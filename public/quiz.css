@@ -1,0 +1,106 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(145deg, #1B4A5E, #2E7A6E);
+    margin: 0;
+    padding: 30px;
+    min-height: 100vh;
+}
+
+.page {
+    max-width: 900px;
+    margin: auto;
+    color: white;
+}
+
+.topbar {
+    margin-bottom: 20px;
+}
+
+.topbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.page > p {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.quiz-card {
+    background: white;
+    color: #1B4A5E;
+    padding: 24px;
+    border-radius: 20px;
+    margin-bottom: 24px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.mistake-text {
+    text-align: center;
+    color: #1B4A5E;
+}
+
+.chips {
+    margin: 10px 0 20px;
+}
+
+.chip {
+    display: inline-block;
+    background: #EAF4F2;
+    color: #1B4A5E;
+    padding: 8px 12px;
+    margin: 5px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.option-btn {
+    padding: 14px;
+    border: none;
+    border-radius: 14px;
+    background: #F0F4F5;
+    color: #1B4A5E;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.option-btn:hover {
+    background: #FFB74D;
+}
+
+.option-btn.correct {
+    background: #2ECC71;
+    color: white;
+}
+
+.option-btn.wrong {
+    background: #E74C3C;
+    color: white;
+}
+
+.option-btn:disabled {
+    cursor: not-allowed;
+}
+
+.feedback {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+@media (max-width: 600px) {
+    .options {
+        grid-template-columns: 1fr;
+    }
+}
