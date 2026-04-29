@@ -28,6 +28,17 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Database connection
 const db = new sqlite3.Database(path.join(__dirname, 'awl.db'));
 
+import session from 'express-session';
+import cookieParser from 'cookie-parser';
+app.use(cookieParser());
+
+app.use(
+	session({
+		secret: "it's-a-secret-key",
+		resave: false,
+		saveUninitialized: false,
+	})
+);
 // ==================== API ROUTES ====================
 
 // GET all words
@@ -113,30 +124,28 @@ app.post('/api/feedback', (req, res) => {
             basicerror = edit.error_type;
           }
 
-          //get user_id
+          const user = req.session.user;
           //let cookie = document.cookie;
-          db.all('INSERT INTO user_scores (user_id, word_id, results), VALUES (?, ?, ?);', [user, word, basicerror], (err, results) => {
+          db.all('INSERT INTO user_scores (user_id, word, attempt_time, results) VALUES (?, ?, current_date, ?);', [user.user_id, word, basicerror], (err, results) => {
             if (err) {
-              results.status(500).json({ error: err.message });
-              return;
+              
+              return res.status(500).json({ error: err.message });
             }
+            res.json({ status, fullSentence, errorMessage});
           })
+          
         }
 
-        catch (e) {
-          if (e instanceof TypeError) {
-            status = true;
-          }
-          else {
-            console.log("Your error is " + e);
-          }
+
+       catch (e) {
+        console.error(e);
+        if (!res.headersSent) {
+          res.status(500).json({ error: "Internal processing error" });
         }
 
-        res.json({
-          status, fullSentence, errorMessage
-        });
-    });
-    
+        
+    }});
+
 });
 
 
