@@ -239,7 +239,7 @@
 
         async function makeAcc(form_name, form_email, form_password) {
         
-        console.log(form_name, form_email, form_password);
+        
         try {
             const response = await fetch("/api/signup",{
                 method: "POST",
@@ -253,11 +253,31 @@
             if (!response.ok) {
                 throw new Error(`HTTP error`);
             } else {
-                console.log('recieved successful response from api');
+
             }
       } catch (error) {
 
       }
+
+
+    try {
+            const response = await fetch("/api/session-set",{
+                method: "POST",
+                headers: {'Content-Type': 'application/json'}, 
+                body: JSON.stringify({
+                    email: form_email})
+            } );
+            
+            if (!response.ok) {
+                throw new Error(`HTTP error`);
+            } else {
+
+            }
+      } catch (error) {
+
+      }
+
+
     }
 
 

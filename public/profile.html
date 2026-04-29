@@ -297,7 +297,7 @@
         <!-- Profile Header -->
         <div class="card profile-header">
             <div class="avatar">
-                JD
+                👤
             </div>
             <h3 class="profile-name">John Doe</h3>
             <p class="profile-email">john@email.com</p>
@@ -398,6 +398,33 @@
                 window.location.href = 'index.html';
             }
         }
+
+        async function getUserInfo() {
+            let response;
+                try {
+                    response = await fetch("/api/session-get",{
+                        method: "GET",
+                        headers: {'Content-Type': 'application/json'} 
+                });
+                    if (!response.ok) {
+                        throw new Error(`HTTP error`);
+                    } else {
+
+                    }
+            } catch (error) {
+
+            }
+
+            const userInfo = await response.json();
+            document.getElementsByClassName("profile-name")[0].textContent = userInfo.name;
+            document.getElementsByClassName("profile-email")[0].textContent = userInfo.email;
+            //console.log(userInfo.name);
+
+
+            }
+
+        getUserInfo();
+
     </script>
 </body>
 </html>

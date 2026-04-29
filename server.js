@@ -30,6 +30,16 @@ const db = new sqlite3.Database(path.join(__dirname, 'awl.db'));
 
 //session
 import session from 'express-session';
+import cookieParser from 'cookie-parser';
+app.use(cookieParser());
+
+app.use(
+	session({
+		secret: "it's-a-secret-key",
+		resave: false,
+		saveUninitialized: false,
+	})
+);
 
 // ==================== API ROUTES ====================
 
@@ -139,7 +149,7 @@ app.post('/api/feedback', (req, res) => {
           status, fullSentence, errorMessage
       });
     });
-<<<<<<< HEAD
+
 });
 
 
@@ -148,6 +158,8 @@ app.use(express.json())
 app.post('/api/signup', (req, res) => {
   
   const { name, email, password } = req.body;
+
+
 
 
   const sql = `INSERT INTO users(name, email, password) VALUES(?, ?,?)`;
@@ -166,25 +178,18 @@ app.use(express.json())
 app.post('/api/auth', (req, res) => {
   
 
-  console.log("verifying user data");
-
-
-
 
   const { email, password } = req.body;
   const sql = "SELECT * FROM users WHERE email = ? AND password = ?";
   db.all(sql, [email, password], (err, result) => {
 
-
-
-
     if (result.length > 0) {
-
+      req.session.user = { user_id: result[0].user_id, name: result[0].name, email: result[0].email, password: result[0].password };
+		  res.cookie("sessionId", req.sessionID);
       res.status(200).json({ user: result[0].user_id });
     } else {
 
       console.log("No user found ");
-
       res.status(401).json({ user: 0});
     }
 
@@ -192,15 +197,17 @@ app.post('/api/auth', (req, res) => {
 });
 
 
-// get all account info
+// set session
 app.use(express.json())
-app.get('/api/profile', (req, res) => {
+app.get('/api/session-set', (req, res) => {
 
-  const { id } = req.body;
-  const sql = "SELECT * FROM users WHERE user_id = ?";
+  const { email } = req.body;
+  const sql = "SELECT * FROM users WHERE email = ?";
   db.all(sql, [id], (err, result) => {
 
     if (result.length > 0) {
+      req.session.user = { user_id: result[0].user_id, name: result[0].name, email: result[0].email, password: result[0].password };
+		  res.cookie("sessionId", req.sessionID);
       res.status(200).json({ user: result[0] });
     } else {
       console.log("No user found ");
@@ -209,6 +216,23 @@ app.get('/api/profile', (req, res) => {
 
   });
 });
+
+
+// get user from session
+app.use(express.json())
+app.get('/api/session-get', (req, res) => {
+
+  const userData = req.session.user; 
+
+    if (userData) {
+      res.send(userData);
+    } else {
+      res.status(401).send('Please log in first.');
+    }
+
+});
+
+
 
 // get all results info
 app.use(express.json())
@@ -232,13 +256,6 @@ app.get('/api/profile', (req, res) => {
 });
 
 /*
-app.get('/api/login', (req, res) => {
-    // set logged in
-    console.log("logged in");
-    req.session.user =
-        { id: 1, username: 'example' };
-    res.send('Logged in');
-});
 
 
 

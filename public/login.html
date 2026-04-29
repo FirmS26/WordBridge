@@ -237,12 +237,14 @@
             
             
             loginAttempt(email, password);
+
+            
         });
 
 
         async function loginAttempt(form_email, form_password) {
         
-        console.log("auth func call");
+
         try {
             const response = await fetch("/api/auth",{
                 method: "POST",
@@ -254,8 +256,10 @@
 
             
                 const data = await response.json();
-                console.log('user id ', data.user);
+
                 if (data.user != 0){
+
+
 
                     alert('Welcome back!');
                     window.location.href = 'words.html';
