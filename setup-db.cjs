@@ -12,6 +12,8 @@ db.serialize(() => {
   db.run('DROP TABLE IF EXISTS collocations');
   db.run('DROP TABLE IF EXISTS lemmas');
   db.run('DROP TABLE IF EXISTS words');
+  db.run('DROP TABLE IF EXISTS users');
+  db.run('DROP TABLE IF EXISTS user_scores');
 
   // Create words table
   db.run(`
@@ -72,8 +74,7 @@ db.serialize(() => {
       word STRING,
       attempt_time STRING,
       results STRING,
-      FOREIGN KEY(user_id) REFERENCES users(user_id) ON DELETE CASCADE,
-      FOREIGN KEY(word_id) REFERENCES words(id) ON DELETE CASCADE
+      FOREIGN KEY(user_id) REFERENCES users(user_id) ON DELETE CASCADE
     )
   `);//
 

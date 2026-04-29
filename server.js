@@ -28,6 +28,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Database connection
 const db = new sqlite3.Database(path.join(__dirname, 'awl.db'));
 
+//session
+import session from 'express-session';
+
 // ==================== API ROUTES ====================
 
 // GET all words
@@ -138,6 +141,119 @@ app.post('/api/feedback', (req, res) => {
     });
 
 });
+
+
+// POST new account
+app.use(express.json())
+app.post('/api/signup', (req, res) => {
+  
+  const { name, email, password } = req.body;
+
+
+  const sql = `INSERT INTO users(name, email, password) VALUES(?, ?,?)`;
+  db.all(sql, [name, email, password], (err, result) => {
+    if (err) {
+      return res.status(500).send(err);
+    }
+    res.status(201).send(`User added with ID`);
+  });
+
+});
+
+
+// check if acc pw is real
+app.use(express.json())
+app.post('/api/auth', (req, res) => {
+  
+
+  console.log("verifying user data");
+
+
+
+
+  const { email, password } = req.body;
+  const sql = "SELECT * FROM users WHERE email = ? AND password = ?";
+  db.all(sql, [email, password], (err, result) => {
+
+
+
+
+    if (result.length > 0) {
+
+      res.status(200).json({ user: result[0].user_id });
+    } else {
+
+      console.log("No user found ");
+
+      res.status(401).json({ user: 0});
+    }
+
+  });
+});
+
+
+// get all account info
+app.use(express.json())
+app.get('/api/profile', (req, res) => {
+
+  const { id } = req.body;
+  const sql = "SELECT * FROM users WHERE user_id = ?";
+  db.all(sql, [id], (err, result) => {
+
+    if (result.length > 0) {
+      res.status(200).json({ user: result[0] });
+    } else {
+      console.log("No user found ");
+      res.status(401).json({ user: 0});
+    }
+
+  });
+});
+
+// get all results info
+app.use(express.json())
+app.get('/api/profile', (req, res) => {
+    // resend user data
+    const user = req.session.user;
+    res.send(`Welcome ${user.username}`);
+
+  const { id, word } = req.body;
+  const sql = "SELECT * FROM user_scores WHERE user_id = ? AND word = ?";
+  db.all(sql, [id, word], (err, result) => {
+
+    if (result.length > 0) {
+      res.status(200).json({ user: result[0] });
+    } else {
+      console.log("No attempts found ");
+      res.status(401).json({ user: 0});
+    }
+
+  });
+});
+
+/*
+app.get('/api/login', (req, res) => {
+    // set logged in
+    console.log("logged in");
+    req.session.user =
+        { id: 1, username: 'example' };
+    res.send('Logged in');
+});
+
+
+
+app.get('/api/logout',
+    (req, res) => {
+        // log out
+        req.session.destroy((err) => {
+            if (err) {
+                console.error(err);
+                res.status(500).send('Error logging out');
+            } else {
+                res.send('Logged out');
+            }
+        });
+    });*/
 
 
 

@@ -224,13 +224,44 @@
             
             // Basic validation
             if (name && email && password.length >= 6) {
-                // For now, just show success message and redirect
-                alert('Account created! (Demo version)');
+
+                makeAcc(name, email, password);
+                alert('Account created!');
                 window.location.href = 'words.html'; // Go to word list
             } else {
                 alert('Please fill all fields correctly. Password must be at least 6 characters.');
             }
         });
+
+
+
+
+
+        async function makeAcc(form_name, form_email, form_password) {
+        
+        console.log(form_name, form_email, form_password);
+        try {
+            const response = await fetch("/api/signup",{
+                method: "POST",
+                headers: {'Content-Type': 'application/json'}, 
+                body: JSON.stringify({
+                    name: form_name,
+                    email: form_email,
+                    password: form_password})
+            } );
+            
+            if (!response.ok) {
+                throw new Error(`HTTP error`);
+            } else {
+                console.log('recieved successful response from api');
+            }
+      } catch (error) {
+
+      }
+    }
+
+
+    
     </script>
 </body>
 </html>
