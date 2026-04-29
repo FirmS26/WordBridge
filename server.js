@@ -28,19 +28,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Database connection
 const db = new sqlite3.Database(path.join(__dirname, 'awl.db'));
 
-//session
-import session from 'express-session';
-import cookieParser from 'cookie-parser';
-app.use(cookieParser());
-
-app.use(
-	session({
-		secret: "it's-a-secret-key",
-		resave: false,
-		saveUninitialized: false,
-	})
-);
-
 // ==================== API ROUTES ====================
 
 // GET all words
@@ -126,28 +113,30 @@ app.post('/api/feedback', (req, res) => {
             basicerror = edit.error_type;
           }
 
-          const user = req.session.user;
+          //get user_id
           //let cookie = document.cookie;
-          db.all('INSERT INTO user_scores (user_id, word, attempt_time, results) VALUES (?, ?, current_date, ?);', [user.user_id, word, basicerror], (err, results) => {
+          db.all('INSERT INTO user_scores (user_id, word_id, results), VALUES (?, ?, ?);', [user, word, basicerror], (err, results) => {
             if (err) {
-              
-              return res.status(500).json({ error: err.message });
+              results.status(500).json({ error: err.message });
+              return;
             }
-            res.json({ status, fullSentence, errorMessage});
           })
-          
         }
 
-
-       catch (e) {
-        console.error(e);
-        if (!res.headersSent) {
-          res.status(500).json({ error: "Internal processing error" });
+        catch (e) {
+          if (e instanceof TypeError) {
+            status = true;
+          }
+          else {
+            console.log("Your error is " + e);
+          }
         }
 
-        
-    }});
-
+        res.json({
+          status, fullSentence, errorMessage
+        });
+    });
+    
 });
 
 
@@ -172,7 +161,7 @@ app.post('/api/signup', (req, res) => {
 
 
 // check if acc pw is real
-app.use(express.json())
+
 app.post('/api/auth', (req, res) => {
   
 
@@ -196,7 +185,6 @@ app.post('/api/auth', (req, res) => {
 
 
 // set session
-app.use(express.json())
 app.get('/api/session-set', (req, res) => {
 
   const { email } = req.body;
@@ -217,7 +205,6 @@ app.get('/api/session-set', (req, res) => {
 
 
 // get user from session
-app.use(express.json())
 app.get('/api/session-get', (req, res) => {
 
   const userData = req.session.user; 
@@ -233,7 +220,6 @@ app.get('/api/session-get', (req, res) => {
 
 
 // get all results info
-app.use(express.json())
 app.get('/api/profile', (req, res) => {
     // resend user data
     const user = req.session.user;
