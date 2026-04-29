@@ -139,7 +139,7 @@ app.post('/api/feedback', (req, res) => {
           status, fullSentence, errorMessage
       });
     });
-
+<<<<<<< HEAD
 });
 
 
