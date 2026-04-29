@@ -267,7 +267,7 @@ app.get('/api/logout',
 
 // Temporary review words.
 // Later, this can come from user_scores or backend feedback.
-const reviewWords = [
+/*const reviewWords = [
     { word: 'analyse', errors: 7, lastAttempt: '2024-03-26', difficulty: 'hard', commonMistake: 'verb form' },
     { word: 'approach', errors: 4, lastAttempt: '2024-03-25', difficulty: 'medium', commonMistake: 'preposition' },
     { word: 'context', errors: 3, lastAttempt: '2024-03-24', difficulty: 'medium', commonMistake: 'article usage' },
@@ -280,11 +280,47 @@ const reviewWords = [
     { word: 'theory', errors: 4, lastAttempt: '2024-03-17', difficulty: 'medium', commonMistake: 'vs hypothesis' },
     { word: 'indicate', errors: 5, lastAttempt: '2024-03-16', difficulty: 'hard', commonMistake: 'verb tense' },
     { word: 'obtain', errors: 2, lastAttempt: '2024-03-15', difficulty: 'easy', commonMistake: 'collocation' }
-];
+];*/
+
+
 
 // Send review words to review page and quiz page
 app.get('/api/review-words', (req, res) => {
-    res.json(reviewWords);
+
+    //let reviewWords = [];
+    const user = req.session.user;
+    const id = user.user_id;
+    const sql = `
+                SELECT 
+                    word, 
+                    COUNT(*) AS total_count, 
+                    MAX(attempt_time) AS most_recent
+                FROM user_scores
+                WHERE user_id = ?
+                GROUP BY word
+                ORDER BY most_recent DESC;
+        `;
+
+        db.all(sql, [id], (err, result) => {
+            
+            // The results will be an array of objects
+            // Example: [{ user_id: 1, word: 'apple', tally: '5', last_attempt: 2026-04-28... }]
+            console.log("User Word Stats:", result);
+            
+            
+            const reviewWords = results.map(row => ({
+              word: row.word,
+              count: row.count,
+              lastAttempt: row.lastAttempt,
+              difficulty: row.count > 5 ? 'hard' : row.count > 2 ? 'medium' : 'easy',
+              commonMistake: 'Review spelling' 
+            }));
+        
+          
+
+
+            res.json(reviewWords);
+        });
 });
 
 
