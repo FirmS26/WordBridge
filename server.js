@@ -126,29 +126,27 @@ app.post('/api/feedback', (req, res) => {
             basicerror = edit.error_type;
           }
 
-          //get user_id
+          const user = req.session.user;
           //let cookie = document.cookie;
-          db.all('INSERT INTO user_scores (user_id, word_id, results), VALUES (?, ?, ?);', [user, word, basicerror], (err, results) => {
+          db.all('INSERT INTO user_scores (user_id, word, results) VALUES (?, ?, ?);', [user.user_id, word, basicerror], (err, results) => {
             if (err) {
-              results.status(500).json({ error: err.message });
-              return;
+              
+              return res.status(500).json({ error: err.message });
             }
+            res.json({ status, fullSentence, errorMessage});
           })
+          
         }
 
-        catch (e) {
-          if (e instanceof TypeError) {
-            status = true;
-          }
-          else {
-            console.log(e);
-          }
+
+       catch (e) {
+        console.error(e);
+        if (!res.headersSent) {
+          res.status(500).json({ error: "Internal processing error" });
         }
 
-        res.json({
-          status, fullSentence, errorMessage
-      });
-    });
+        
+    }});
 
 });
 
