@@ -111,12 +111,9 @@ app.post('/api/feedback', (req, res) => {
 
         try {
           let edit = response.data.edits[0];
-          
-          if (typeof edit.start === undefined) {
-            fullSentence = sentence;
-          }
-
-          else {
+          console.log(response.data.edits[0]);
+          if (typeof edit !== 'undefined') {
+            if (typeof edit.start==='undefined'){
             let sentence_one = sentence.slice(0, edit.start);
             let sentence_two = sentence.slice(edit.end, sentence.length);
             fullSentence = sentence_one + edit.replacement + sentence_two;
@@ -124,6 +121,14 @@ app.post('/api/feedback', (req, res) => {
             //basicerror = edit.error_type;
             basicerror = edit.general_error_type;
           }
+
+          }
+           else {
+            fullSentence = sentence;
+          }
+         
+
+          
 
           const user = req.session.user;
           //let cookie = document.cookie;
