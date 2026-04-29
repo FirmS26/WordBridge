@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Review - WordBridge</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
     <style>
         * {
             margin: 0;
@@ -25,6 +24,7 @@
             margin: 0 auto;
         }
         
+        /* Navigation */
         .nav-bar {
             background: white;
             border-radius: 60px;
@@ -52,6 +52,11 @@
             text-decoration: none;
             color: #5A6B7A;
             font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #1B4A5E;
         }
         
         .profile-badge {
@@ -62,6 +67,7 @@
             font-weight: 600;
         }
         
+        /* Page Header */
         .page-header {
             text-align: center;
             margin-bottom: 2rem;
@@ -72,6 +78,7 @@
             font-size: 2rem;
             font-weight: 700;
             margin-bottom: 0.5rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
         }
         
         .page-header p {
@@ -79,6 +86,7 @@
             font-size: 1rem;
         }
         
+        /* Stats Summary */
         .stats-summary {
             background: white;
             border-radius: 20px;
@@ -87,6 +95,11 @@
             display: flex;
             justify-content: space-around;
             text-align: center;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+        
+        .stat-item {
+            flex: 1;
         }
         
         .stat-number {
@@ -101,6 +114,7 @@
             margin-top: 0.25rem;
         }
         
+        /* Filter Tabs */
         .filter-tabs {
             display: flex;
             gap: 0.5rem;
@@ -116,6 +130,7 @@
             color: white;
             font-weight: 500;
             cursor: pointer;
+            transition: all 0.3s;
         }
         
         .filter-btn.active {
@@ -123,6 +138,11 @@
             color: #1B4A5E;
         }
         
+        .filter-btn:hover {
+            background: rgba(255,255,255,0.3);
+        }
+        
+        /* Word Cards */
         .word-card {
             background: white;
             border-radius: 16px;
@@ -131,6 +151,13 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            transition: all 0.3s;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        
+        .word-card:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
         
         .word-info {
@@ -149,7 +176,6 @@
             gap: 1rem;
             font-size: 0.8rem;
             color: #7f8c8d;
-            flex-wrap: wrap;
         }
         
         .difficulty-badge {
@@ -175,6 +201,7 @@
         }
         
         .error-count {
+            font-size: 0.8rem;
             color: #E74C3C;
         }
         
@@ -186,10 +213,25 @@
             border-radius: 30px;
             font-weight: 600;
             cursor: pointer;
+            transition: all 0.3s;
         }
         
         .review-btn:hover {
             background: #FFA726;
+            transform: translateY(-2px);
+        }
+        
+        .empty-state {
+            text-align: center;
+            padding: 3rem;
+            background: white;
+            border-radius: 20px;
+            color: #5A6B7A;
+        }
+        
+        .empty-state-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
         }
         
         .note {
@@ -201,24 +243,32 @@
             font-size: 0.85rem;
             color: #5A6B7A;
         }
-
+        
         @media (max-width: 600px) {
             .word-card {
                 flex-direction: column;
+                text-align: center;
                 gap: 1rem;
-                align-items: flex-start;
             }
-
+            
             .stats-summary {
                 flex-direction: column;
                 gap: 1rem;
             }
+            
+            .nav-links {
+                gap: 0.8rem;
+            }
+            
+            .nav-links a {
+                font-size: 0.85rem;
+            }
         }
     </style>
 </head>
-
 <body>
     <div class="container">
+        <!-- Navigation -->
         <div class="nav-bar">
             <div class="nav-logo">📚 WordBridge</div>
             <div class="nav-links">
@@ -229,14 +279,16 @@
             </div>
         </div>
 
+        <!-- Page Header -->
         <div class="page-header">
             <h1>📝 Words to Review</h1>
             <p>Practice these words until you master them</p>
         </div>
 
+        <!-- Stats Summary (Placeholder Data) -->
         <div class="stats-summary">
             <div class="stat-item">
-                <div class="stat-number" id="total-review-count">0</div>
+                <div class="stat-number" id="total-review-count">12</div>
                 <div class="stat-label">Needs Review</div>
             </div>
             <div class="stat-item">
@@ -249,54 +301,74 @@
             </div>
         </div>
 
+        <!-- Filter Tabs -->
         <div class="filter-tabs">
             <button class="filter-btn active" data-filter="all">All Review Words</button>
-            <button class="filter-btn" data-filter="hard">Hard</button>
-            <button class="filter-btn" data-filter="medium">Medium</button>
-            <button class="filter-btn" data-filter="easy">Easy</button>
+            <button class="filter-btn" data-filter="hard">Hard (5+ errors)</button>
+            <button class="filter-btn" data-filter="medium">Medium (2-4 errors)</button>
+            <button class="filter-btn" data-filter="easy">Easy (1 error)</button>
         </div>
 
+        <!-- Word List Container -->
         <div id="word-list-container"></div>
 
+        <!-- Note about data -->
         <div class="note">
-            💡 <strong>Note:</strong> These review words are based on user feedback. Click Practice Quiz to practice each word.
+            💡 <strong>Note:</strong> This is a preview of your review words. As you practice more, your 
+            actual review list will populate here based on your learning progress. Words you struggle with 
+            will appear here for focused practice.
         </div>
     </div>
 
     <script>
-        let reviewWords = [];
+        // PLACEHOLDER DATA - This will be replaced by real backend data later
+        // These are examples of words that might appear in a user's review list
+        const reviewWords = [
+            { word: "analyse", errors: 7, lastAttempt: "2024-03-26", difficulty: "hard", commonMistake: "verb form" },
+            { word: "approach", errors: 4, lastAttempt: "2024-03-25", difficulty: "medium", commonMistake: "preposition" },
+            { word: "context", errors: 3, lastAttempt: "2024-03-24", difficulty: "medium", commonMistake: "article usage" },
+            { word: "significant", errors: 2, lastAttempt: "2024-03-23", difficulty: "easy", commonMistake: "spelling" },
+            { word: "assess", errors: 5, lastAttempt: "2024-03-22", difficulty: "hard", commonMistake: "noun vs verb" },
+            { word: "establish", errors: 3, lastAttempt: "2024-03-21", difficulty: "medium", commonMistake: "collocation" },
+            { word: "concept", errors: 1, lastAttempt: "2024-03-20", difficulty: "easy", commonMistake: "definition" },
+            { word: "methodology", errors: 6, lastAttempt: "2024-03-19", difficulty: "hard", commonMistake: "pronunciation" },
+            { word: "variable", errors: 2, lastAttempt: "2024-03-18", difficulty: "easy", commonMistake: "plural form" },
+            { word: "theory", errors: 4, lastAttempt: "2024-03-17", difficulty: "medium", commonMistake: "vs hypothesis" },
+            { word: "indicate", errors: 5, lastAttempt: "2024-03-16", difficulty: "hard", commonMistake: "verb tense" },
+            { word: "obtain", errors: 2, lastAttempt: "2024-03-15", difficulty: "easy", commonMistake: "collocation" }
+        ];
 
-        async function loadReviewWords() {
-            const response = await fetch('/api/review-words');
-
-            if (!response.ok) {
-                throw new Error('Could not load review words.');
-            }
-
-            reviewWords = await response.json();
-        }
-
+        // Calculate stats
         function updateStats() {
-            document.getElementById('total-review-count').textContent = reviewWords.length;
-            document.getElementById('mastered-count').textContent = 28;
-            document.getElementById('accuracy').textContent = '73%';
+            const totalReview = reviewWords.length;
+            const masteredCount = 28; // Placeholder
+            const accuracy = 73; // Placeholder
+            
+            document.getElementById('total-review-count').textContent = totalReview;
+            document.getElementById('mastered-count').textContent = masteredCount;
+            document.getElementById('accuracy').textContent = accuracy + '%';
         }
 
+        // Render word list based on filter
         function renderWordList(filter = 'all') {
             const container = document.getElementById('word-list-container');
             
             let filteredWords = reviewWords;
-
-            if (filter !== 'all') {
-                filteredWords = reviewWords.filter(word => word.difficulty === filter);
+            if (filter === 'hard') {
+                filteredWords = reviewWords.filter(w => w.difficulty === 'hard');
+            } else if (filter === 'medium') {
+                filteredWords = reviewWords.filter(w => w.difficulty === 'medium');
+            } else if (filter === 'easy') {
+                filteredWords = reviewWords.filter(w => w.difficulty === 'easy');
             }
-
+            
             if (filteredWords.length === 0) {
                 container.innerHTML = `
-                    <div class="word-card">
-                        <div class="word-info">
-                            <div class="word-title">No words to review</div>
-                        </div>
+                    <div class="empty-state">
+                        <div class="empty-state-icon">🎉</div>
+                        <h3>No words to review!</h3>
+                        <p>Great job! Keep practicing to maintain your streak.</p>
+                        <a href="words.html" style="color: #FFB74D;">Continue learning →</a>
                     </div>
                 `;
                 return;
@@ -308,56 +380,42 @@
                         <div class="word-title">${word.word}</div>
                         <div class="word-details">
                             <span class="difficulty-badge difficulty-${word.difficulty}">
-                                ${word.difficulty}
+                                ${word.difficulty === 'hard' ? '⚠️ Hard' : word.difficulty === 'medium' ? '📘 Medium' : '✅ Easy'}
                             </span>
                             <span>📅 Last: ${word.lastAttempt}</span>
                             <span class="error-count">❌ ${word.errors} errors</span>
                             <span>💡 ${word.commonMistake}</span>
                         </div>
                     </div>
-
                     <button class="review-btn" onclick="reviewWord('${word.word}')">
-                        Practice Quiz →
+                        Practice → 
                     </button>
                 </div>
             `).join('');
         }
 
+        // Review a specific word
         function reviewWord(word) {
-            window.location.href = `quiz.html?word=${encodeURIComponent(word)}`;
+            // This will redirect to the practice page with that word
+            window.location.href = `word.html?word=${encodeURIComponent(word)}&review=true`;
         }
 
+        // Set up filter buttons
         function setupFilters() {
             const buttons = document.querySelectorAll('.filter-btn');
-
-            buttons.forEach(button => {
-                button.addEventListener('click', () => {
-                    buttons.forEach(item => item.classList.remove('active'));
-                    button.classList.add('active');
-                    renderWordList(button.dataset.filter);
+            buttons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    buttons.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    renderWordList(btn.dataset.filter);
                 });
             });
         }
 
-        async function initReviewPage() {
-            try {
-                await loadReviewWords();
-                updateStats();
-                renderWordList('all');
-                setupFilters();
-            } catch (error) {
-                document.getElementById('word-list-container').innerHTML = `
-                    <div class="word-card">
-                        <div class="word-info">
-                            <div class="word-title">Could not load review words.</div>
-                        </div>
-                    </div>
-                `;
-                console.error(error);
-            }
-        }
-
-        initReviewPage();
+        // Initialize page
+        updateStats();
+        renderWordList('all');
+        setupFilters();
     </script>
 </body>
 </html>

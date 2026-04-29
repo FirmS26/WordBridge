@@ -270,6 +270,27 @@ app.get('/api/logout',
         });
     });*/
 
+// Temporary review words.
+// Later, this can come from user_scores or backend feedback.
+const reviewWords = [
+    { word: 'analyse', errors: 7, lastAttempt: '2024-03-26', difficulty: 'hard', commonMistake: 'verb form' },
+    { word: 'approach', errors: 4, lastAttempt: '2024-03-25', difficulty: 'medium', commonMistake: 'preposition' },
+    { word: 'context', errors: 3, lastAttempt: '2024-03-24', difficulty: 'medium', commonMistake: 'article usage' },
+    { word: 'significant', errors: 2, lastAttempt: '2024-03-23', difficulty: 'easy', commonMistake: 'spelling' },
+    { word: 'assess', errors: 5, lastAttempt: '2024-03-22', difficulty: 'hard', commonMistake: 'noun vs verb' },
+    { word: 'establish', errors: 3, lastAttempt: '2024-03-21', difficulty: 'medium', commonMistake: 'collocation' },
+    { word: 'concept', errors: 1, lastAttempt: '2024-03-20', difficulty: 'easy', commonMistake: 'definition' },
+    { word: 'methodology', errors: 6, lastAttempt: '2024-03-19', difficulty: 'hard', commonMistake: 'pronunciation' },
+    { word: 'variable', errors: 2, lastAttempt: '2024-03-18', difficulty: 'easy', commonMistake: 'plural form' },
+    { word: 'theory', errors: 4, lastAttempt: '2024-03-17', difficulty: 'medium', commonMistake: 'vs hypothesis' },
+    { word: 'indicate', errors: 5, lastAttempt: '2024-03-16', difficulty: 'hard', commonMistake: 'verb tense' },
+    { word: 'obtain', errors: 2, lastAttempt: '2024-03-15', difficulty: 'easy', commonMistake: 'collocation' }
+];
+
+// Send review words to review page and quiz page
+app.get('/api/review-words', (req, res) => {
+    res.json(reviewWords);
+});
 
 
 // ==================== START SERVER ====================
