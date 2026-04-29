@@ -28,19 +28,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Database connection
 const db = new sqlite3.Database(path.join(__dirname, 'awl.db'));
 
-//session
-import session from 'express-session';
-import cookieParser from 'cookie-parser';
-app.use(cookieParser());
-
-app.use(
-	session({
-		secret: "it's-a-secret-key",
-		resave: false,
-		saveUninitialized: false,
-	})
-);
-
 // ==================== API ROUTES ====================
 
 // GET all words
