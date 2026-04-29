@@ -8,7 +8,6 @@ import { fileURLToPath } from 'node:url';
 
 import { getErrorMessage } from "./error_map.js"
 import { Client } from "@saplingai/sapling-js/client";
-import axios from 'axios';
 
 const apiKey = 'WNCO3DI2MG77P3GX4MH1F72QAOPNCRRH';
 const client = new Client(apiKey);
@@ -28,19 +27,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Database connection
 const db = new sqlite3.Database(path.join(__dirname, 'awl.db'));
-
-//session
-import session from 'express-session';
-import cookieParser from 'cookie-parser';
-app.use(cookieParser());
-
-app.use(
-	session({
-		secret: "it's-a-secret-key",
-		resave: false,
-		saveUninitialized: false,
-	})
-);
 
 // ==================== API ROUTES ====================
 
@@ -127,7 +113,8 @@ app.post('/api/feedback', (req, res) => {
             basicerror = edit.error_type;
           }
 
-          console.log(req.cookies());
+          //get user_id
+          //let cookie = document.cookie;
           db.all('INSERT INTO user_scores (user_id, word_id, results), VALUES (?, ?, ?);', [user, word, basicerror], (err, results) => {
             if (err) {
               results.status(500).json({ error: err.message });
@@ -141,14 +128,15 @@ app.post('/api/feedback', (req, res) => {
             status = true;
           }
           else {
-            console.log(e);
+            console.log("Your error is " + e);
           }
         }
 
         res.json({
           status, fullSentence, errorMessage
-      });
+        });
     });
+    
 });
 
 
