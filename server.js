@@ -128,15 +128,15 @@ app.post('/api/feedback', (req, res) => {
             status = true;
           }
           else {
-            console.log("Your error is " + e);
+            console.log(e);
           }
         }
 
         res.json({
           status, fullSentence, errorMessage
-        });
+      });
     });
-    
+
 });
 
 

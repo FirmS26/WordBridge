@@ -13,22 +13,6 @@ __pycache__/
 Thumbs.db
 
 # Environment
-.env
-setup-db.js
-server.js
-seed-from-json.js
-public/words.html
-public/word.html
-public/tutorial.html
-public/signup.html
-public/review.html
-public/result.html
-public/profile.html
-public/login.html
-public/index_.html
-public/index.html
-package.json
-package-lock.json
 node_modules/yallist/yallist.js
 node_modules/yallist/README.md
 node_modules/yallist/package.json
