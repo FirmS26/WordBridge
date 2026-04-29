@@ -128,7 +128,7 @@ app.post('/api/feedback', (req, res) => {
 
           const user = req.session.user;
           //let cookie = document.cookie;
-          db.all('INSERT INTO user_scores (user_id, word, results) VALUES (?, ?, ?);', [user.user_id, word, basicerror], (err, results) => {
+          db.all('INSERT INTO user_scores (user_id, word, attempt_time, results) VALUES (?, ?, current_date, ?);', [user.user_id, word, basicerror], (err, results) => {
             if (err) {
               
               return res.status(500).json({ error: err.message });
