@@ -9,7 +9,7 @@ import { fileURLToPath } from 'node:url';
 import { getErrorMessage } from "./error_map.js"
 import { Client } from "@saplingai/sapling-js/client";
 
-const apiKey = '1ZVMSP3ZQ10U3VLEEMLU725YY0JS9LMS';
+const apiKey = 'WNCO3DI2MG77P3GX4MH1F72QAOPNCRRH';
 const client = new Client(apiKey);
 
 
@@ -19,9 +19,6 @@ const PORT = 3000;
 // Middleware
 app.use(cors());
 app.use(bodyParser.json());
-app.use(express.json());
-app.use(express.urlencoded()) 
-
 
     
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -31,6 +28,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Database connection
 const db = new sqlite3.Database(path.join(__dirname, 'awl.db'));
 
+<<<<<<< HEAD
 //Session
 import session from 'express-session';
 
@@ -38,6 +36,8 @@ import session from 'express-session';
 
 
 
+=======
+>>>>>>> e4f4a34e5eb9f0b2b7dc35279a62cb52fe8e2a00
 // ==================== API ROUTES ====================
 
 // GET all words
@@ -100,6 +100,8 @@ app.post('/api/feedback', (req, res) => {
   const { word, sentence } = req.body;
       let fullSentence = null;
       let errorMessage = null;
+      let basicerror = null;
+      let status = false;
 
 
       //send sentence to sapling
@@ -118,22 +120,33 @@ app.post('/api/feedback', (req, res) => {
             let sentence_two = sentence.slice(edit.end, sentence.length);
             fullSentence = sentence_one + edit.replacement + sentence_two;
             errorMessage = edit.description;
+            basicerror = edit.error_type;
           }
+
+          //get user_id
+          //let cookie = document.cookie;
+          db.all('INSERT INTO user_scores (user_id, word_id, results), VALUES (?, ?, ?);', [user, word, basicerror], (err, results) => {
+            if (err) {
+              results.status(500).json({ error: err.message });
+              return;
+            }
+          })
         }
 
         catch (e) {
           if (e instanceof TypeError) {
-            fullSentence = sentence;
+            status = true;
           }
           else {
-            console.log("Your error is " + e);
+            console.log(e);
           }
-
         }
+
         res.json({
-          fullSentence, errorMessage
-        });
+          status, fullSentence, errorMessage
+      });
     });
+<<<<<<< HEAD
 });
 
 
@@ -151,10 +164,13 @@ app.post('/api/signup', (req, res) => {
     }
     res.status(201).send(`User added with ID`);
   });
+=======
+>>>>>>> e4f4a34e5eb9f0b2b7dc35279a62cb52fe8e2a00
 
 });
 
 
+<<<<<<< HEAD
 // check if acc pw is real
 app.use(express.json())
 app.post('/api/auth', (req, res) => {
@@ -252,6 +268,8 @@ app.get('/api/logout',
             }
         });
     });*/
+=======
+>>>>>>> e4f4a34e5eb9f0b2b7dc35279a62cb52fe8e2a00
 
 // ==================== START SERVER ====================
 app.listen(PORT, () => {

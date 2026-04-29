@@ -234,6 +234,7 @@
             // Get form values
             const email = document.querySelector('input[type="email"]').value;
             const password = document.querySelector('input[type="password"]').value;
+<<<<<<< HEAD
 
 
             loginAttempt(email, password);
@@ -271,6 +272,18 @@ async function loginAttempt(form_email, form_password) {
       
     }
 
+=======
+            
+            // Basic validation
+            if (email && password) {
+                // Demo login - just show success message and redirect
+                alert('Welcome back! (Demo login)');
+                window.location.href = 'words.html';
+            } else {
+                alert('Please enter both email and password.');
+            }
+        });
+>>>>>>> e4f4a34e5eb9f0b2b7dc35279a62cb52fe8e2a00
     </script>
 </body>
 </html>
