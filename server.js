@@ -111,9 +111,14 @@ app.post('/api/feedback', (req, res) => {
 
         try {
           let edit = response.data.edits[0];
-          console.log(response.data.edits[0]);
-          if (typeof edit !== 'undefined') {
-            if (typeof edit.start==='undefined'){
+          
+          
+          if (typeof edit?.start === 'undefined') {
+            fullSentence = sentence;
+            status = true;
+          }
+
+          else {
             let sentence_one = sentence.slice(0, edit.start);
             let sentence_two = sentence.slice(edit.end, sentence.length);
             fullSentence = sentence_one + edit.replacement + sentence_two;
@@ -121,14 +126,6 @@ app.post('/api/feedback', (req, res) => {
             //basicerror = edit.error_type;
             basicerror = edit.general_error_type;
           }
-
-          }
-           else {
-            fullSentence = sentence;
-          }
-         
-
-          
 
           const user = req.session.user;
           //let cookie = document.cookie;
@@ -299,17 +296,20 @@ app.get('/api/review-words', (req, res) => {
     const sql = `
         SELECT word, total_count, most_recent, results
         FROM (
-              SELECT 
-                  word, 
-                  results, 
-                  attempt_time AS most_recent,
-                  COUNT(*) OVER (PARTITION BY word) AS total_count,
-                  ROW_NUMBER() OVER (PARTITION BY word ORDER BY attempt_time DESC) as rank
-              FROM user_scores
-              WHERE user_id = ?
-          ) 
-          WHERE rank = 1
-          ORDER BY most_recent DESC
+            SELECT 
+                word, 
+                results, 
+                attempt_time AS most_recent,
+                COUNT(results) OVER (PARTITION BY word) AS non_null_count,
+                COUNT(*) OVER (PARTITION BY word) AS total_count,
+                ROW_NUMBER() OVER (PARTITION BY word ORDER BY attempt_time DESC) as rank
+            FROM user_scores
+            WHERE user_id = ?
+        ) 
+        WHERE rank = 1 
+          AND results IS NOT NULL
+          AND non_null_count > (total_count - non_null_count)
+        ORDER BY most_recent DESC
         `;
 
         db.all(sql, [id], (err, result) => {
@@ -334,6 +334,46 @@ app.get('/api/review-words', (req, res) => {
 
 
             res.json(reviewWords);
+        });
+});
+
+
+
+app.get('/api/user-stats', (req, res) => {
+
+
+    const user = req.session.user;
+    const id = user.user_id;
+    const sql = `
+      WITH WordStats AS (
+          SELECT 
+              word,
+              COUNT(results) AS incorrect_count,
+              COUNT(*) AS total_count,
+              (COUNT(*) - COUNT(results)) AS correct_count
+          FROM user_scores
+          WHERE user_id = ?
+          GROUP BY word
+      )
+      SELECT 
+          SUM(CASE WHEN correct_count > incorrect_count THEN 1 ELSE 0 END) AS mastered_words,
+          SUM(CASE WHEN incorrect_count >= correct_count THEN 1 ELSE 0 END) AS practice_words
+      FROM WordStats;
+        `;
+
+        db.all(sql, [id], (err, result) => {
+            
+            
+            console.log(result)
+
+
+            const userStats = result.map(row => ({
+            mastered: row.mastered_words,
+            practice: row.practice_words,
+            total: row.mastered_words + row.practice_words
+    }));
+      
+            res.json(userStats);
         });
 });
 

@@ -276,10 +276,23 @@
             reviewWords = await response.json();
         }
 
+        let userStats = [];
+
+        async function loadUserStats() {
+            const response = await fetch('/api/user-stats');
+
+            if (!response.ok) {
+                throw new Error('Could not load user stats.');
+            }
+
+            userStats = await response.json();
+            console.log(userStats);
+        }
+
         function updateStats() {
             document.getElementById('total-review-count').textContent = reviewWords.length;
-            document.getElementById('mastered-count').textContent = 28;
-            document.getElementById('accuracy').textContent = '73%';
+            document.getElementById('mastered-count').textContent = userStats[0].mastered;
+            document.getElementById('accuracy').textContent = (userStats[0].mastered/userStats[0].total*100)+'%';
         }
 
         function renderWordList(filter = 'all') {
@@ -342,6 +355,7 @@
         async function initReviewPage() {
             try {
                 await loadReviewWords();
+                await loadUserStats();
                 updateStats();
                 renderWordList('all');
                 setupFilters();
